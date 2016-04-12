@@ -1,9 +1,9 @@
 {
-  "name": "ghost",
-  "version": "0.7.8",
-  "description": "Just a blogging platform.",
-  "author": "Ghost Foundation",
-  "homepage": "http://ghost.org",
+  "name": "fedes-website",
+  "version": "0.0.1",
+  "description": "fedes website",
+  "author": "noggalito",
+  "homepage": "https://github.com/noggalito/fedes",
   "keywords": [
     "ghost",
     "blog",
@@ -11,10 +11,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/TryGhost/Ghost.git"
+    "url": "git://github.com/noggalito/fedes.git"
   },
-  "bugs": "https://github.com/TryGhost/Ghost/issues",
-  "contributors": "https://github.com/TryGhost/Ghost/graphs/contributors",
+  "bugs": "https://github.com/noggalito/fedes/issues",
+  "contributors": "https://github.com/noggalito/fedes/graphs/contributors",
   "license": "MIT",
   "main": "./core/index",
   "scripts": {
