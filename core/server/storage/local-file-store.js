@@ -1,15 +1,15 @@
 // # Local File System Image Storage module
 // The (default) module for storing images, using the local file system
 
-var serveStatic = require('express').static,
-    fs          = require('fs-extra'),
-    path        = require('path'),
-    util        = require('util'),
-    Promise     = require('bluebird'),
-    errors      = require('../errors'),
-    config      = require('../config'),
-    utils       = require('../utils'),
-    baseStore   = require('./base');
+var express   = require('express'),
+    fs        = require('fs-extra'),
+    path      = require('path'),
+    util      = require('util'),
+    Promise   = require('bluebird'),
+    errors    = require('../errors'),
+    config    = require('../config'),
+    utils     = require('../utils'),
+    baseStore = require('./base');
 
 function LocalFileStore() {
 }
@@ -52,8 +52,7 @@ LocalFileStore.prototype.exists = function (filename) {
 // middleware for serving the files
 LocalFileStore.prototype.serve = function () {
     // For some reason send divides the max age number by 1000
-    // Fallthrough: false ensures that if an image isn't found, it automatically 404s
-    return serveStatic(config.paths.imagesPath, {maxAge: utils.ONE_YEAR_MS, fallthrough: false});
+    return express.static(config.paths.imagesPath, {maxAge: utils.ONE_YEAR_MS});
 };
 
 module.exports = LocalFileStore;

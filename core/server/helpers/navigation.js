@@ -16,7 +16,7 @@ navigation = function (options) {
         currentUrl = options.data.root.relativeUrl,
         self = this,
         output,
-        data;
+        context;
 
     if (!_.isObject(navigationData) || _.isFunction(navigationData)) {
         return errors.logAndThrowError(i18n.t('warnings.helpers.navigation.invalidData'));
@@ -62,9 +62,9 @@ navigation = function (options) {
         return out;
     });
 
-    data = _.merge({}, {navigation: output});
+    context = _.merge({}, {navigation: output});
 
-    return template.execute('navigation', data, options);
+    return template.execute('navigation', context, options);
 };
 
 module.exports = navigation;

@@ -115,7 +115,7 @@ notifications = {
      * Remove a specific notification
      *
      * @param {{id (required), context}} options
-     * @returns {Promise}
+     * @returns {Promise(Notifications)}
      */
     destroy: function destroy(options) {
         var tasks;
@@ -153,6 +153,8 @@ notifications = {
                 return element.id === parseInt(options.id, 10);
             });
             notificationCounter = notificationCounter - 1;
+
+            return notification;
         }
 
         tasks = [
@@ -161,7 +163,9 @@ notifications = {
             destroyNotification
         ];
 
-        return pipeline(tasks, options);
+        return pipeline(tasks, options).then(function formatResponse(result) {
+            return {notifications: [result]};
+        });
     },
 
     /**

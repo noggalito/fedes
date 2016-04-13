@@ -164,18 +164,23 @@ tags = {
      *
      * @public
      * @param {{id, context}} options
-     * @return {Promise}
+     * @return {Promise<Tag>} Deleted Tag
      */
     destroy: function destroy(options) {
         var tasks;
 
         /**
-         * ### Delete Tag
+         * ### Model Query
          * Make the call to the Model layer
          * @param {Object} options
+         * @returns {Object} options
          */
-        function deleteTag(options) {
-            return dataProvider.Tag.destroy(options).return(null);
+        function doQuery(options) {
+            return tags.read(options).then(function (result) {
+                return dataProvider.Tag.destroy(options).then(function () {
+                    return result;
+                });
+            });
         }
 
         // Push all of our tasks into a `tasks` array in the correct order
@@ -183,7 +188,7 @@ tags = {
             utils.validate(docName, {opts: utils.idDefaultOptions}),
             utils.handlePermissions(docName, 'destroy'),
             utils.convertOptions(allowedIncludes),
-            deleteTag
+            doQuery
         ];
 
         // Pipeline calls each task passing the result of one to be the arguments for the next

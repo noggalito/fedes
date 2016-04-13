@@ -1,11 +1,11 @@
 var config = require('../../config');
 
-function getAssetUrl(path, isAdmin, minify) {
+function getAssetUrl(context, isAdmin, minify) {
     var output = '';
 
     output += config.paths.subdir + '/';
 
-    if (!path.match(/^favicon\.ico$/) && !path.match(/^shared/) && !path.match(/^asset/)) {
+    if (!context.match(/^favicon\.ico$/) && !context.match(/^shared/) && !context.match(/^asset/)) {
         if (isAdmin) {
             output += 'ghost/';
         } else {
@@ -13,17 +13,17 @@ function getAssetUrl(path, isAdmin, minify) {
         }
     }
 
-    // Get rid of any leading slash on the path
-    path = path.replace(/^\//, '');
+    // Get rid of any leading slash on the context
+    context = context.replace(/^\//, '');
 
     // replace ".foo" with ".min.foo" in production
     if (minify) {
-        path = path.replace(/\.([^\.]*)$/, '.min.$1');
+        context = context.replace(/\.([^\.]*)$/, '.min.$1');
     }
 
-    output += path;
+    output += context;
 
-    if (!path.match(/^favicon\.ico$/)) {
+    if (!context.match(/^favicon\.ico$/)) {
         output = output + '?v=' + config.assetHash;
     }
 

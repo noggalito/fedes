@@ -1,11 +1,11 @@
-var config           = require('../../config'),
-    getContextObject = require('./context_object.js');
+var config = require('../../config');
 
 function getAuthorImage(data, absolute) {
     var context = data.context ? data.context[0] : null,
-        contextObject = getContextObject(data, context);
+        blog = config.theme,
+        contextObject = data[context] || blog;
 
-    if ((context === 'post' || context === 'page') && contextObject.author && contextObject.author.image) {
+    if (context === 'post' && contextObject.author && contextObject.author.image) {
         return config.urlFor('image', {image: contextObject.author.image}, absolute);
     }
     return null;

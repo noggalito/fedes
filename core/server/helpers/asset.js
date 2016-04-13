@@ -6,7 +6,7 @@
 var getAssetUrl = require('../data/meta/asset_url'),
     hbs = require('express-hbs');
 
-function asset(path, options) {
+function asset(context, options) {
     var isAdmin,
         minify;
 
@@ -18,7 +18,7 @@ function asset(path, options) {
         minify = false;
     }
     return new hbs.handlebars.SafeString(
-        getAssetUrl(path, isAdmin, minify)
+        getAssetUrl(context, isAdmin, minify)
     );
 }
 

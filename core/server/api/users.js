@@ -361,7 +361,7 @@ users = {
     /**
      * ## Destroy
      * @param {{id, context}} options
-     * @returns {Promise}
+     * @returns {Promise<User>}
      */
     destroy: function destroy(options) {
         var tasks;
@@ -382,22 +382,33 @@ users = {
         }
 
         /**
-         * ### Delete User
+         * ### Model Query
          * Make the call to the Model layer
          * @param {Object} options
+         * @returns {Object} options
          */
-        function deleteUser(options) {
-            return dataProvider.Base.transaction(function (t) {
-                options.transacting = t;
+        function doQuery(options) {
+            return users.read(options).then(function (result) {
+                return dataProvider.Base.transaction(function (t) {
+                    options.transacting = t;
 
-                return Promise.all([
-                    dataProvider.Accesstoken.destroyByUser(options),
-                    dataProvider.Refreshtoken.destroyByUser(options),
-                    dataProvider.Post.destroyByAuthor(options)
-                ]).then(function () {
-                    return dataProvider.User.destroy(options);
-                }).return(null);
-            }).catch(function (error) {
+                    Promise.all([
+                        dataProvider.Accesstoken.destroyByUser(options),
+                        dataProvider.Refreshtoken.destroyByUser(options),
+                        dataProvider.Post.destroyByAuthor(options)
+                    ]).then(function () {
+                        return dataProvider.User.destroy(options);
+                    }).then(function () {
+                        t.commit();
+                    }).catch(function (error) {
+                        t.rollback(error);
+                    });
+                }).then(function () {
+                    return result;
+                }, function (error) {
+                    return Promise.reject(new errors.InternalServerError(error));
+                });
+            }, function (error) {
                 return errors.formatAndRejectAPIError(error);
             });
         }
@@ -407,7 +418,7 @@ users = {
             utils.validate(docName, {opts: utils.idDefaultOptions}),
             handlePermissions,
             utils.convertOptions(allowedIncludes),
-            deleteUser
+            doQuery
         ];
 
         // Pipeline calls each task passing the result of one to be the arguments for the next

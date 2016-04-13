@@ -1,7 +1,8 @@
 var config = require('../../config'),
     getUrl = require('./url'),
     getCanonicalUrl = require('./canonical_url'),
-    getPaginatedUrl = require('./paginated_url'),
+    getPreviousUrl = require('./previous_url'),
+    getNextUrl = require('./next_url'),
     getAuthorUrl = require('./author_url'),
     getRssUrl = require('./rss_url'),
     getTitle = require('./title'),
@@ -13,7 +14,7 @@ var config = require('../../config'),
     getModifiedDate = require('./modified_date'),
     getOgType = require('./og_type'),
     getStructuredData = require('./structured_data'),
-    getSchema = require('./schema'),
+    getPostSchema = require('./schema'),
     getExcerpt = require('./excerpt');
 
 function getMetaData(data, root) {
@@ -22,8 +23,8 @@ function getMetaData(data, root) {
     metaData = {
         url: getUrl(data, true),
         canonicalUrl: getCanonicalUrl(data),
-        previousUrl: getPaginatedUrl('prev', data, true),
-        nextUrl: getPaginatedUrl('next', data, true),
+        previousUrl: getPreviousUrl(data, true),
+        nextUrl: getNextUrl(data, true),
         authorUrl: getAuthorUrl(data, true),
         rssUrl: getRssUrl(data, true),
         metaTitle: getTitle(data, root),
@@ -37,17 +38,12 @@ function getMetaData(data, root) {
         blog: blog
     };
 
-    // TODO: cleanup these if statements
     if (data.post && data.post.html) {
         metaData.excerpt = getExcerpt(data.post.html, {words: 50});
     }
 
-    if (data.post && data.post.author && data.post.author.name) {
-        metaData.authorName = data.post.author.name;
-    }
-
     metaData.structuredData = getStructuredData(metaData);
-    metaData.schema = getSchema(metaData, data);
+    metaData.schema = getPostSchema(metaData, data);
 
     return metaData;
 }

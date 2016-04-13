@@ -66,7 +66,7 @@ function init(options) {
         return config.checkDeprecated();
     }).then(function () {
         // Initialise the models
-        models.init();
+        return models.init();
     }).then(function () {
         // Initialize migrations
         return migrations.init();

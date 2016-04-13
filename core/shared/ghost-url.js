@@ -33,14 +33,11 @@
                 queryOptions,
                 requestUrl = apiUrl;
 
-            queryOptions = args.pop();
-
-            if (queryOptions && typeof queryOptions !== 'object') {
-                args.push(queryOptions);
+            if (args.length && typeof args[args.length - 1] === 'object') {
+                queryOptions = args.pop();
+            } else {
                 queryOptions = {};
             }
-
-            queryOptions = queryOptions || {};
 
             queryOptions.client_id = clientId;
             queryOptions.client_secret = clientSecret;

@@ -68,14 +68,17 @@ Basetoken = ghostBookshelf.Model.extend({
         var token = options.token;
 
         options = this.filterOptions(options, 'destroyByUser');
-        options.require = true;
 
-        return this.forge()
-            .query('where', 'token', '=', token)
-            .fetch(options)
-            .then(function then(model) {
-                return model.destroy(options);
-            });
+        if (token) {
+            return ghostBookshelf.Collection.forge([], {model: this})
+                .query('where', 'token', '=', token)
+                .fetch(options)
+                .then(function then(collection) {
+                    collection.invokeThen('destroy', options);
+                });
+        }
+
+        return Promise.reject(new errors.NotFoundError(i18n.t('errors.models.base.token.tokenNotFound')));
     }
 });
 

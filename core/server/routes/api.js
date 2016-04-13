@@ -9,27 +9,21 @@ apiRoutes = function apiRoutes(middleware) {
         authenticatePublic = [
             middleware.api.authenticateClient,
             middleware.api.authenticateUser,
-            middleware.api.requiresAuthorizedUserPublicAPI,
-            middleware.api.cors
+            middleware.api.requiresAuthorizedUserPublicAPI
         ],
         // Require user for private endpoints
         authenticatePrivate = [
             middleware.api.authenticateClient,
             middleware.api.authenticateUser,
-            middleware.api.requiresAuthorizedUser,
-            middleware.api.cors
+            middleware.api.requiresAuthorizedUser
         ];
 
     // alias delete with del
     router.del = router.delete;
 
-    // ## CORS pre-flight check
-    router.options('*', middleware.api.cors);
-
     // ## Configuration
-    router.get('/configuration', authenticatePrivate, api.http(api.configuration.read));
+    router.get('/configuration', authenticatePrivate, api.http(api.configuration.browse));
     router.get('/configuration/:key', authenticatePrivate, api.http(api.configuration.read));
-    router.get('/configuration/timezones', authenticatePrivate, api.http(api.configuration.read));
 
     // ## Posts
     router.get('/posts', authenticatePublic, api.http(api.posts.browse));

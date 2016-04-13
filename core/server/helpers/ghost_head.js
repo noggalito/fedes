@@ -98,16 +98,14 @@ function ghost_head(options) {
                 escapeExpression(metaData.nextUrl) + '" />');
             }
 
-            if (context !== 'paged' && useStructuredData) {
+            if (context !== 'paged' && context !== 'page' && useStructuredData) {
                 head.push('');
                 head.push.apply(head, finaliseStructuredData(metaData));
                 head.push('');
 
-                if (metaData.schema) {
-                    head.push('<script type="application/ld+json">\n' +
-                        JSON.stringify(metaData.schema, null, '    ') +
-                        '\n    </script>\n');
-                }
+                head.push('<script type="application/ld+json">\n' +
+                JSON.stringify(metaData.schema, null, '    ') +
+                '\n    </script>\n');
             }
 
             if (client && client.id && client.secret) {

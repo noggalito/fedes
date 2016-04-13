@@ -33,7 +33,8 @@ checks = {
         var semver = require('semver');
 
         if (process.env.GHOST_NODE_VERSION_CHECK !== 'false' &&
-            !semver.satisfies(process.versions.node, packages.engines.node)) {
+            !semver.satisfies(process.versions.node, packages.engines.node) &&
+            !semver.satisfies(process.versions.node, packages.engines.iojs)) {
             console.error('\x1B[31mERROR: Unsupported version of Node');
             console.error('\x1B[31mGhost needs Node version ' + packages.engines.node +
                           ' you are using version ' + process.versions.node + '\033[0m\n');

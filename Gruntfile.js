@@ -577,7 +577,8 @@ var _              = require('lodash'),
                 migration = require('./core/server/data/migration');
 
             migration.reset().then(function () {
-                models.init();
+                return models.init();
+            }).then(function () {
                 return migration.init();
             }).then(function () {
                 done();

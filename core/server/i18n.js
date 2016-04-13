@@ -17,10 +17,10 @@ I18n = {
      * Helper method to find and compile the given data context with a proper string resource.
      *
      * @param {string} path Path with in the JSON language file to desired string (ie: "errors.init.jsNotBuilt")
-     * @param {object} [bindings]
+     * @param {json} context
      * @returns {string}
      */
-    t: function t(path, bindings) {
+    t: function t(path, context) {
         var string = I18n.findString(path),
             msg;
 
@@ -32,11 +32,11 @@ I18n = {
             string.forEach(function (s) {
                 var m = new MessageFormat(s, currentLocale);
 
-                msg.push(m.format(bindings));
+                msg.push(m.format(context));
             });
         } else {
             msg = new MessageFormat(string, currentLocale);
-            msg = msg.format(bindings);
+            msg = msg.format(context);
         }
 
         return msg;
