@@ -1,0 +1,16 @@
+<div class="navbar-content">
+    <nav class="navbar navbar-default">
+
+      <div class="container-fluid">
+        <div class ="triangle-topright"></div>
+        <ul class="nav navbar-nav">
+          {{#foreach navigation}}
+
+              <li class="nav-{{slug}}{{#if current}} nav-current{{/if}}"
+                  role="presentation"><a href="{{url absolute="true"}}">
+                  <i class="fa fa-arrow-circle-o-right"></i> {{label}}</a></li>
+          {{/foreach}}
+        </ul>
+      </div>
+    </nav>
+</div>
