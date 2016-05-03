@@ -17,42 +17,45 @@
 
 {{! The main content area on the homepage }}
 <main id="content" class="content" role="main">
+    {{! The tag below includes the post loop - partials/loop.hbs }}
+    {{> "loop"}}
     {{> "carousel"}}
     <div class="container gallery-principal">
         <h2 class="gallery-proyectos">Proyectos</h2>
         <div class="row rowGallery">
             <div class="col-md-4 imgContainer">
                 <a href="#" class="thumbnail imgGallery">
-                    <img src="assets/img/carousel2.jpg" alt="prendho">
+                    <img src="{{asset 'img/carousel2.jpg'}}" alt="prendho">
                 </a>
             </div>
             <div class="col-md-4 imgContainer">
                 <a href="#" class="thumbnail imgGallery">
-                    <img src="assets/img/cima.jpg" alt="cima">
+                    <img src="{{asset 'img/cima.jpg'}}" alt="cima">
                 </a>
             </div>
             <div class="col-md-4 imgContainer">
                 <a href="#" class="thumbnail imgGallery last-picture">
-                    <img src="assets/img/copdesarrollo.jpg" alt="copdesarrollo">
+                    <img src="{{asset 'img/copdesarrollo.jpg'}}" alt="copdesarrollo">
                 </a>
             </div>
         </div>
         <div class="row rowGallery">
             <div class="col-md-4 imgContainer">
                 <a href="#" class="thumbnail imgGallery">
-                    <img src="assets/img/sinfin.jpg" alt="sinfin" >
+                    <img src="{{asset 'img/sinfin.jpg'}}" alt="sinfin" >
                 </a>
             </div>
             <div class="col-md-4 imgContainer">
                 <a href="#" class="thumbnail imgGallery">
-                    <img src="assets/img/agropecuario.jpg" alt="agropecuario" >
+                    <img src="{{asset 'img/agropecuario.jpg'}}" alt="agropecuario" >
                 </a>
             </div>
             <div class="col-md-4 imgContainer">
                 <a href="#" class="thumbnail imgGallery last-picture">
-                    <img src="assets/img/negocios.jpg" alt="negocios">
+                    <img src="{{asset 'img/negocios.jpg'}}" alt="negocios">
                 </a>
             </div>
         </div>
     </div>
+    {{> "footer"}}
 </main>

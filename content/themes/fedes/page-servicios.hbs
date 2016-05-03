@@ -1,0 +1,48 @@
+<!-- Everything inside the #post tags pulls data from the static page -->
+{{#post}}
+<header class="main-header {{#if @blog.cover}}" style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}">
+    <link rel="stylesheet" href="{{asset 'css/application.css'}}">
+    <nav class="main-nav overlay clearfix">
+       {{>navigation}}
+    </nav>
+    <div class="vertical">
+        <div class="main-header-content inner">
+            <h1 class="page-title">{{@blog.title}}</h1>
+            <h2 class="page-description">{{@blog.description}}</h2>
+        </div>
+    </div>
+    <a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"><span class="hidden">Scroll Down</span></a>
+</header>
+
+{{! The main content area on the homepage }}
+<main id="content" class="content" role="main">
+    {{! The tag below includes the post loop - partials/loop.hbs }}
+    {{> "loop"}}
+    {{> "carousel"}}
+    <div class="container gallery-principal">
+        <h2 class="gallery-proyectos">Proyectos</h2>
+        <div class="row rowGallery">
+            <div class="col-md-4 imgContainer">
+                <a href="#" class="thumbnail imgGallery ">
+                    <img class="serviciosConsultoria" src="{{asset 'img/consultoria.jpg'}}" alt="consultoria">
+                </a>
+                <div id="user_adr" style="display:none">some text</div>
+            </div>
+            <div class="col-md-4 imgContainer">
+                <a href="#" class="thumbnail imgGallery serviciosAsesoramiento">
+                    <img src="{{asset 'img/asesoramieto.jpg'}}" alt="asesoramiento">
+                </a>
+            </div>
+            <div class="col-md-4 imgContainer">
+                <a href="#" class="thumbnail imgGallery last-picture serviciosTrabajo">
+                    <img src="{{asset 'img/trabajo.jpg'}}" alt="trabajo">
+                </a>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="{{asset 'js/pageServicios.js'}}">
+    </script>
+    {{> "footer"}}
+</main>
+
+{{/post}}
