@@ -2,6 +2,7 @@
 {{#post}}
 <header class="main-header {{#if @blog.cover}}" style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}">
     <link rel="stylesheet" href="{{asset 'css/application.css'}}">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <nav class="main-nav overlay clearfix">
        {{>navigation}}
     </nav>
@@ -23,26 +24,40 @@
         <h2 class="gallery-proyectos">Proyectos</h2>
         <div class="row rowGallery">
             <div class="col-md-4 imgContainer">
-                <a href="#" class="thumbnail imgGallery ">
-                    <img class="serviciosConsultoria" src="{{asset 'img/consultoria.jpg'}}" alt="consultoria">
+                <a href="#textConsultoria" class="thumbnail imgGallery galleryServicios serviciosConsultoria " data-toggle="collapse">
+                    <img src="{{asset 'img/consultoria.jpg'}}" alt="consultoria" >
                 </a>
-                <div id="user_adr" style="display:none">some text</div>
             </div>
             <div class="col-md-4 imgContainer">
-                <a href="#" class="thumbnail imgGallery serviciosAsesoramiento">
+                <a href="#textAsesoramiento" class="thumbnail imgGallery galleryServicios serviciosAsesoramiento" data-toggle="collapse">
                     <img src="{{asset 'img/asesoramieto.jpg'}}" alt="asesoramiento">
                 </a>
             </div>
             <div class="col-md-4 imgContainer">
-                <a href="#" class="thumbnail imgGallery last-picture serviciosTrabajo">
+                <a href="#textTrabajo" class="thumbnail imgGallery galleryServicios last-picture serviciosTrabajo" data-toggle="collapse">
                     <img src="{{asset 'img/trabajo.jpg'}}" alt="trabajo">
                 </a>
             </div>
         </div>
     </div>
-    <script type="text/javascript" src="{{asset 'js/pageServicios.js'}}">
-    </script>
+    <div id="textConsultoria" class="collapse">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </div>
+    <div id="textAsesoramiento" class="collapse">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </div>
+      <div id="textTrabajo" class="collapse">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </div>
     {{> "footer"}}
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </main>
 
 {{/post}}
