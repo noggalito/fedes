@@ -1,8 +1,7 @@
 <!-- Everything inside the #post tags pulls data from the static page -->
 {{#post}}
+{{!< default}}
 <header class="main-header {{#if @blog.cover}}" style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}">
-    <link rel="stylesheet" href="{{asset 'css/application.css'}}">
-    <link rel="stylesheet" href="{{asset 'css/font-awesome.min.css'}}">
     <nav class="main-nav overlay clearfix">
        {{>navigation}}
     </nav>
@@ -56,8 +55,6 @@
         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
     </div>
     {{> "footer"}}
-     <script type="text/javascript" src="{{asset 'js/vendor/jquery.min.js'}}"></script>
-     <script type="text/javascript" src="{{asset 'js/application.js'}}"></script>
 </main>
 
 {{/post}}
