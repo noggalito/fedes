@@ -7,8 +7,7 @@ module.exports = (function () {
   };
 
   var defaultSettings = {
-    logo: '/default/value.png',
-    cover: '/default/cover_value.png'
+    logo: '/default/logo-fedes.png'
   };
 
   SettingsSeed.prototype.performQueries = function () {
