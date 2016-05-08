@@ -17,7 +17,7 @@ module.exports = (function () {
   };
 
   Connection.prototype.getDBConfig = function () {
-    var environment = 'development', // TODO pull from env
+    var environment = process.env.NODE_ENV,
         config = require('./../../config');
     return config[environment].database;
   };
