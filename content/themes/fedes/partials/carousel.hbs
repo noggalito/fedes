@@ -1,0 +1,61 @@
+<nav class="navbar navbar-default carousel main-navbar">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <div class ="triangle-topleft carousel"></div>
+      <div class ="triangle-topright carousel"></div>
+      <ul class="nav navbar-nav carousel navbar-list">
+        <li><a class="navbar-menuItem" href="/servicios">Servicios</a></li>
+        <li><a class="navbar-menuItem" href="#">Equipo</a></li>
+        <li><a class="navbar-menuItem" href="#">Cooperantes</a></li>
+        <li><a class="navbar-menuItem" href="#">Blog</a></li>
+        <li><a class="navbar-menuItem" href="#">Aliados</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+<div class="container carousel">
+  <br>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <div class="menu-carousel"></div>
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="{{asset 'img/carousel1.jpg'}}" alt="Chania" width="460" height="345">
+      </div>
+
+      <div class="item">
+        <img src="{{asset 'img/carousel1.jpg'}}" alt="Chania" width="460" height="345">
+      </div>
+
+      <div class="item">
+        <img src="{{asset 'img/consultoria.jpg'}}" alt="Flower" width="460" height="345">
+      </div>
+    </div>
+
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  <div class="carousel-footer"><span class="textFooter">&#60;&#60;La
+    innovación es lo que distingue a los líderes de los
+    seguidores&#62;&#62;.- Steve Jobs</span>
+  </span></div>
+</div>
