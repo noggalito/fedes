@@ -1,6 +1,7 @@
 var theme = 'fedes';
 
 var gulp         = require('gulp'),
+    gutil        = require('gulp-util'),
     sass         = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
     concatCss    = require('gulp-concat-css'),
@@ -41,6 +42,11 @@ gulp.task('server', function () {
 });
 
 gulp.task('seed', function () {
+  gutil.log(
+    gutil.colors.yellow('WARNING'),
+    'seeding database for',
+    gutil.colors.blue('development') // TODO pull from env
+  );
   require('./config/seed');
 });
 

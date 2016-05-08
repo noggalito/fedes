@@ -1,7 +1,7 @@
 module.exports = (function () {
-  var Connection = function () {
-    this.url = this.getUrl();
-  };
+  var qOrm = require('q-orm');
+
+  var Connection = function () {};
 
   Connection.prototype.getUrl = function () {
     var db = this.getDBConfig(),
@@ -20,6 +20,10 @@ module.exports = (function () {
     var environment = 'development', // TODO pull from env
         config = require('./../../config');
     return config[environment].database;
+  };
+
+  Connection.prototype.connect = function (callback) {
+    return qOrm.qConnect(this.getUrl());
   };
 
   return Connection;
