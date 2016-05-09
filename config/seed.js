@@ -3,19 +3,18 @@
       DbConnection = require('./seed/connection'),
       SettingsSeed = require('./seed/settings-seed');
 
-
   // set development environment by default
-  if (!process.env.NODE_ENV) {
-    process.env.NODE_ENV = 'development';
-  }
+  var nodeEnv = process.env.NODE_ENV || 'development';
 
   gutil.log(
     gutil.colors.yellow('WARNING'),
     'seeding database for',
-    gutil.colors.blue(process.env.NODE_ENV)
+    gutil.colors.blue(nodeEnv)
   );
 
-  var database = new DbConnection();
+  var database = new DbConnection({
+    nodeEnv: nodeEnv
+  });
 
   return database.connect().then(function (db) {
     var queries = [ SettingsSeed ].map(function (klass) {

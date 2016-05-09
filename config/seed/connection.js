@@ -1,7 +1,9 @@
 module.exports = (function () {
   var qOrm = require('q-orm');
 
-  var Connection = function () {};
+  var Connection = function (options) {
+    this.nodeEnv = options.nodeEnv;
+  };
 
   Connection.prototype.getUrl = function () {
     var db = this.getDBConfig(),
@@ -17,9 +19,8 @@ module.exports = (function () {
   };
 
   Connection.prototype.getDBConfig = function () {
-    var environment = process.env.NODE_ENV,
-        config = require('./../../config');
-    return config[environment].database;
+    var config = require('./../../config');
+    return config[this.nodeEnv].database;
   };
 
   Connection.prototype.connect = function (callback) {
