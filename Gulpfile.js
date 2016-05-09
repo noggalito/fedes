@@ -40,4 +40,8 @@ gulp.task('server', function () {
   gulp.watch('content/themes/' + theme + '/lib/js/**/*.js', ['minify:js']);
 });
 
+gulp.task('seed', function () {
+  require('./config/seed');
+});
+
 gulp.task('default', ['server']);
