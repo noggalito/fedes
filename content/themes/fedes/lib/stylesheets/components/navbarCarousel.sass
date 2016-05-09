@@ -1,11 +1,10 @@
 .main-navbar
   border-width: 0px
-  background-color: #0055b8
+  background-color: $blue-light
   position: absolute
   border-radius: 0px
   height: 84px
   z-index: 2
-  margin-top: -26px
   margin-left: 37%
   width: 63%
   display: inline-block
@@ -18,10 +17,10 @@
       &:hover
         color: #00cfff
 
-  .triangle-topright.carousel
+  .triangle-topright
     width: 25
     height: 0
-    border-top: 84px solid #0055b8
+    border-top: 84px solid $blue-light
     border-left: 44px solid transparent
     display: inline-block
     overflow: hidden
@@ -29,7 +28,7 @@
     right: 100%
     z-index: 4
 
-  .triangle-topleft.carousel
+  .triangle-topleft
     width: 0
     height: 0
     border-style: solid
@@ -38,3 +37,25 @@
     display: inline-block
     position: absolute
     right: 100%
+
+  &-button
+    border: none
+
+    .icon-bar
+      background-color: $blue-light !important
+
+  @media screen and (max-width: $mobile-width)
+    margin-top: -2.8em
+    margin-left: 0em
+    background: transparent
+    width: 100%
+
+    &-header
+      float: left
+      padding-left: 1em;
+
+    .navbar-collapse
+      background-color: $blue-light
+      width: 100%
+      position: absolute
+      margin-top: 40px
