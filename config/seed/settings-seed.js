@@ -1,6 +1,6 @@
 module.exports = (function () {
-  var SettingsSeed = function (db) {
-    this.Settings = db.qDefine('settings', {
+  var SettingsSeed = function (options) {
+    this.Settings = options.db.qDefine('settings', {
       key: String,
       value: String
     });

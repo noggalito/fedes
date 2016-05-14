@@ -1,8 +1,9 @@
 module.exports = (function () {
   var async = require('async');
-  var gutil = require('gulp-util');
-  var PostsSeed = function (db) {
-    this.Posts = db.qDefine('posts', {
+
+  var PostsSeed = function (options) {
+    this.logger = options.logger;
+    this.Posts = options.db.qDefine('posts', {
       id: Number,
       author_id: Number,
       uuid: String,
@@ -21,7 +22,7 @@ module.exports = (function () {
       updated_at: Number,
       published_at: Number
     });
-    this.Users = db.qDefine('users', {
+    this.Users = options.db.qDefine('users', {
       uuid: Number,
       id: Number
     });
@@ -29,7 +30,7 @@ module.exports = (function () {
 
   var defaultPosts = [
     {
-      title: 'Texto pricipal',
+      title: 'Texto principal',
       slug: 'texto-principal',
       markdown: '<< La innovación es lo que distingue a los ' +
       'líderes de los \nseguidores >>.- Steve Jobs',
@@ -45,34 +46,55 @@ module.exports = (function () {
     }
   ];
 
+  PostsSeed.prototype.firstUser = function (cb) {
+    return this.Users.qOne().then(cb).fail(this.logger.onFatal);
+  };
+
+  PostsSeed.prototype.ifNonExistentPost = function (post,
+                                                    existentCb,
+                                                    successCb) {
+    // do not override an existing post
+    return this.Posts.qOne({
+      slug: post.slug
+    }).then(function (existingPost) {
+      if (existingPost) {
+        existentCb(post);
+      }
+      else {
+        successCb(post);
+      }
+    });
+  };
+
   PostsSeed.prototype.performQueries = function () {
     var self = this;
-    return self.Users.qOne()
-      .then(function (user) {
-        async.eachSeries(defaultPosts,
-          function createPost(post, callback) {
-            post.uuid = user.uuid;
-            post.author_id = user.id;
-            post.created_by = user.id;
-            post.updated_by = user.id;
-            post.published_by = user.id;
-            return self.Posts.qCreate(post)
-              .then(function (res) {
-                gutil.log(gutil.colors.green('SUCCESS'), res.title);
-                callback();
-              })
-              .fail(function (err) {
-                callback(err);
-              });
-          }, function done(err) {
-            if (err) {
-              gutil.log(gutil.colors.red('FAILED'), err.instance.title);
-            }
-          });
-      })
-      .fail(function (err) {
-        gutil.log(gutil.colors.red('ERROR'), err);
+
+    return self.firstUser(function (user) {
+      async.eachSeries(defaultPosts, function createPost(post, callback) {
+
+        var postExists = function (post) {
+          self.logger.info('post exists', post.title)
+          return callback();
+        };
+
+        return self.ifNonExistentPost(post, postExists, function (post) {
+          post.uuid = user.uuid;
+          post.author_id = user.id;
+          post.created_by = user.id;
+          post.updated_by = user.id;
+          post.published_by = user.id;
+          return self.Posts.qCreate(post)
+            .then(function (res) {
+              self.logger.success('seeded post', res.title);
+              callback();
+            }).fail(callback);
+        });
+      }, function done(err) {
+        if (err) {
+          self.logger.onFatal(err);
+        }
       });
+    });
   };
 
   return PostsSeed;
