@@ -2,6 +2,7 @@
   var gutil = require('gulp-util'),
       DbConnection = require('./seed/connection'),
       SettingsSeed = require('./seed/settings-seed');
+      PostsSeed = require('./seed/posts-seed');
 
   // set development environment by default
   var nodeEnv = process.env.NODE_ENV || 'development';
@@ -16,18 +17,29 @@
     nodeEnv: nodeEnv
   });
 
+  var seeds = [
+    SettingsSeed,
+    PostsSeed
+  ];
+
   return database.connect().then(function (db) {
-    var queries = [ SettingsSeed ].map(function (klass) {
-      var setting = new klass(db);
-      return setting.performQueries();
+    seeds.forEach(function (seed) {
+      performQueries(seed, db);
+    });
+  }, function (error) {
+    var pluginError = new gutil.PluginError('seeds', error);
+    return gutil.log(pluginError.toString());
+  });
+
+  function performQueries(seed, db) {
+    var queries = [seed].map(function (klass) {
+      var elem = new klass(db);
+      return elem.performQueries();
     });
 
     return queries.reduce(function (a, b) {
       // flatten array
       return a.concat(b);
     });
-  }, function (error) {
-    var pluginError = new gutil.PluginError('seeds', error);
-    return gutil.log(pluginError.toString());
-  });
+  }
 })();
