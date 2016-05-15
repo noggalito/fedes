@@ -1,6 +1,6 @@
 .footer-navbar
   border-width: 0px
-  background-color: #00b09a
+  background-color: $turquoise
   position: absolute
   border-radius: 0px
   height: 74px
@@ -8,8 +8,13 @@
   margin-top: -75px
   margin-left: 37%
   margin-bottom: 0
-  width: 63%
+  width: 59.7%
   display: inline-block
+  @media screen and (max-width: $mobile-width)
+    width: 100%
+    margin-left: -15px
+    margin-top: -50px
+    height: 45px
 
   .navbar-list
     padding-left: 0
@@ -22,7 +27,7 @@
   .triangle-topright.carousel
     width: 25
     height: 0
-    border-bottom: 74px solid #00b09a
+    border-bottom: 74px solid $turquoise
     border-left: 58px solid transparent
     display: inline-block
     overflow: hidden
