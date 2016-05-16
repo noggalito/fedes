@@ -36,8 +36,8 @@ module.exports = (function () {
       'líderes de los \nseguidores >>.- Steve Jobs',
       html: '<p>&lt;&lt; La innovación es lo que distingue a los ' +
       'líderes de los <br />seguidores >>.- Steve Jobs</p>',
-      featured: 0,
-      page: 0,
+      featured: false,
+      page: false,
       status: 'published',
       language: 'en_US',
       created_at: Date.now(),
