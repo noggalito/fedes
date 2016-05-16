@@ -28,7 +28,13 @@
 
   <section>
     {{#get "posts" slug="texto-principal" as |article|}}
-      {{> main-text article=article}}
+      {{#article}}
+        <div class="carousel-footer">
+          <span class="textFooter">
+            {{content}}
+          </span>
+        </div>
+      {{/article}}
     {{/get}}
   </section>
 </div>
