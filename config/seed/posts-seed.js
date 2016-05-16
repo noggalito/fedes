@@ -47,8 +47,7 @@ module.exports = (function () {
 
   PostsSeed.prototype.performQueries = function () {
     var self = this;
-    var defaultUserId = 1;
-    return self.Users.qGet(defaultUserId)
+    return self.Users.qOne()
       .then(function (user) {
         async.eachSeries(defaultPosts,
           function createPost(post, callback) {
