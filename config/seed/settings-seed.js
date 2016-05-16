@@ -8,7 +8,8 @@ module.exports = (function () {
 
   var defaultSettings = {
     logo: '/default/logo-fedes.png',
-    activeTheme: 'fedes'
+    activeTheme: 'fedes',
+    labs: '{"publicAPI":true}'
   };
 
   SettingsSeed.prototype.performQueries = function () {
