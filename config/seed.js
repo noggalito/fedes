@@ -16,8 +16,8 @@ module.exports = (function () {
   Seeds.prototype.runSeeds = function () {
     var self = this,
         database = new DbConnection({
-      nodeEnv: nodeEnv
-    });
+          nodeEnv: nodeEnv
+        });
 
     return database.connect().then(function (db) {
       self.klasses().map(function (klass) {
