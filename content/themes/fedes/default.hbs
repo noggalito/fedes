@@ -16,15 +16,16 @@
 </head>
 <body class="{{body_class}}">
 
-  {{navigation}}
+  {{>navigation}}
 
   <div class="site-wrapper">
     {{{body}}}
   </div>
-
   <script type="text/javascript" src="{{asset 'js/vendor/jquery.min.js'}}"></script>
-  <script type="text/javascript" src="{{asset 'js/application.js'}}"></script>
   <script type="text/javascript" src="{{asset 'js/vendor/bootstrap.min.js'}}"></script>
+  <script type="text/javascript" src="{{asset 'js/application.js'}}"></script>
+
+  {{> "footer"}}
   {{ghost_foot}}
 </body>
 </html>
