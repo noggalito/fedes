@@ -32,8 +32,8 @@ config = {
         mail: {
             transport: 'SMTP',
             options: {
-                service: 'office365',
                 host: 'smtp.office365.com',
+                secure: true,
                 port: '587',
                 auth: {
                     user: process.env.SMTP_LOGIN,
