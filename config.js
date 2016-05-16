@@ -32,10 +32,12 @@ config = {
         mail: {
             transport: 'SMTP',
             options: {
-                service: 'mailgun',
+                service: 'office365',
+                host: 'smtp.office365.com',
+                port: '587',
                 auth: {
-                    user: process.env.MAILGUN_SMTP_LOGIN,
-                    pass: process.env.MAILGUN_SMTP_PASSWORD
+                    user: process.env.SMTP_LOGIN,
+                    pass: process.env.SMTP_PASSWORD
                 }
             }
         },
