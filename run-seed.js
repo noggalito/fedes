@@ -1,5 +1,6 @@
 (function (){
   var Seed = require('./config/seed');
 
-  return new Seed({});
+  var seed = new Seed({});
+  return seed.runSeeds();
 })();

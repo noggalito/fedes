@@ -10,7 +10,6 @@ module.exports = (function () {
   var Seeds = function (options) {
     this.logger = options['logger'] || new DefaultLogger();
     this.logger.warn('seeding database for', nodeEnv);
-    return this.runSeeds();
   };
 
   Seeds.prototype.runSeeds = function () {
@@ -20,7 +19,7 @@ module.exports = (function () {
         });
 
     return database.connect().then(function (db) {
-      self.klasses().map(function (klass) {
+      var queries = self.klasses().map(function (klass) {
         var setting = new klass({
           db: db,
           logger: self.logger
@@ -30,6 +29,9 @@ module.exports = (function () {
 
       return queries.reduce(function (a, b) {
         // flatten array
+        if (a.constructor != Array) {
+          a = Array(a);
+        }
         return a.concat(b);
       });
     }, this.logger.onFatal);
