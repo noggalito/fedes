@@ -6,6 +6,14 @@ module.exports = (function () {
   };
 
   Connection.prototype.getUrl = function () {
+    if (this.nodeEnv == 'development') {
+      return this.getDevelopmentUrl();
+    } else {
+      return process.env.DATABASE_URL;
+    }
+  };
+
+  Connection.prototype.getDevelopmentUrl = function () {
     var db = this.getDBConfig(),
         adapter = db.client,
         connection = db.connection;
