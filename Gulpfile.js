@@ -44,9 +44,9 @@ gulp.task('seed', function () {
   var Seeds = require('./config/seed'),
       Logger = require('./config/seed/gulp-logger');
 
-  new Seeds({
+  return new Seeds({
     logger: new Logger()
-  });
+  }).runSeeds();
 });
 
 gulp.task('default', ['server']);
