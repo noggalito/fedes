@@ -23,7 +23,7 @@ module.exports = (function () {
       published_at: Number
     });
     this.Users = options.db.qDefine('users', {
-      uuid: Number,
+      uuid: String,
       id: Number
     });
   };
