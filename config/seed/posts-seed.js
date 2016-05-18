@@ -18,9 +18,9 @@ module.exports = (function () {
       updated_by: Number,
       published_by: Number,
       created_by: Number,
-      created_at: Number,
-      updated_at: Number,
-      published_at: Number
+      created_at: Date,
+      updated_at: Date,
+      published_at: Date
     });
     this.Users = options.db.qDefine('users', {
       uuid: String,
