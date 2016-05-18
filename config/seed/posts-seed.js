@@ -1,6 +1,6 @@
 module.exports = (function () {
   var async = require('async');
-
+  var uuid  = require('node-uuid');
   var PostsSeed = function (options) {
     this.logger = options.logger;
     this.Posts = options.db.qDefine('posts', {
@@ -78,7 +78,7 @@ module.exports = (function () {
         };
 
         return self.ifNonExistentPost(post, postExists, function (post) {
-          post.uuid = user.uuid;
+          post.uuid = uuid.v4();
           post.author_id = user.id;
           post.created_by = user.id;
           post.updated_by = user.id;
