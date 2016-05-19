@@ -12,13 +12,15 @@ module.exports = (function () {
     labs: '{"publicAPI":true}'
   };
 
-  SettingsSeed.prototype.performQueries = function () {
+  SettingsSeed.prototype.performQueries = function (nextSeed) {
     return Object.keys(defaultSettings).map(function (key) {
       var value = defaultSettings[key];
 
       return this.Settings.qOne({ key: key }).then(function (setting) {
         setting.value = value;
-        return setting.qSave();
+        return setting.qSave().then(function (res) {
+          nextSeed();
+        });
       });
     }, this);
   };
