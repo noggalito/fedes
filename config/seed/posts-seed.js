@@ -56,6 +56,38 @@ module.exports = (function () {
       published_at: Date.now()
     },
     {
+      title: 'Dirección:',
+      slug: 'contactos-direccion',
+      markdown: 'San Cayatano alto, calle París \n'+
+      'instalaciones UTPL. Loja_Ecuador',
+      html: '<p>San Cayatano alto, calle París <br />'+
+      'instalaciones UTPL. Loja_Ecuador</p>',
+      featured: false,
+      page: false,
+      status: 'published',
+      language: 'en_US',
+      created_at: Date.now(),
+      updated_at: Date.now(),
+      published_at: Date.now()
+    },
+    {
+      title: 'Fono:',
+      slug: 'contactos-fono',
+      markdown: '(593 7)2585700'+
+      '(593 7)2585706'+
+      'Email: info@fedes.ec',
+      html: '<p>(593 7)2585700</p>'+
+      '<p>(593 7)2585706</p>'+
+      '<p>Email: info@fedes.ec</p>',
+      featured: false,
+      page: false,
+      status: 'published',
+      language: 'en_US',
+      created_at: Date.now(),
+      updated_at: Date.now(),
+      published_at: Date.now()
+    },
+    {
       title: 'Cooperación para el desarrollo',
       slug: 'cooperacion-para-el-desarrollo',
       markdown: 'Lorem ipsum dolor sit amet, sea ea mutat ignota,' +
