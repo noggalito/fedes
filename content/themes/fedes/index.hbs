@@ -7,40 +7,35 @@
   {{> "loop"}}
   {{> "carousel"}}
   <div class="collapse container gallery-principal" id="galleryPrincipal">
-    <h2 class="gallery-proyectos">Proyectos</h2>
-    <div class="row rowGallery">
-      <div class="col-md-4 imgContainer">
-        <a href="#" class="thumbnail imgGallery">
-          <img src="{{asset 'img/carousel2.jpg'}}" alt="prendho">
-        </a>
-      </div>
-      <div class="col-md-4 imgContainer">
-        <a href="#" class="thumbnail imgGallery">
-          <img src="{{asset 'img/cima.jpg'}}" alt="cima">
-        </a>
-      </div>
-      <div class="col-md-4 imgContainer">
-        <a href="#" class="thumbnail imgGallery last-picture">
-          <img src="{{asset 'img/copdesarrollo.jpg'}}" alt="copdesarrollo">
-        </a>
-      </div>
+    <div>
+      <h2 class="gallery-proyectos">Proyectos</h2>
+      <p class="text-center">nam ea quod aperiri eruditi.</p>
     </div>
-    <div class="row rowGallery gallerySecondary">
-      <div class="col-md-4 imgContainer">
-        <a href="#" class="thumbnail imgGallery">
-          <img src="{{asset 'img/imgsinfin.jpg'}}" alt="sinfin" >
-        </a>
-    </div>
-      <div class="col-md-4 imgContainer">
-        <a href="#" class="thumbnail imgGallery">
-          <img src="{{asset 'img/agropecuario.jpg'}}" alt="agropecuario" >
-        </a>
-      </div>
-      <div class="col-md-4 imgContainer">
-        <a href="#" class="thumbnail imgGallery last-picture">
-          <img src="{{asset 'img/negocios.jpg'}}" alt="negocios">
-        </a>
-      </div>
+    <div class="row">
+      {{#get "posts" limit="3" include="tags" as |projects|}}
+        {{#foreach projects}}
+          {{#has tag="proyectos"}}
+            <section class="col-xs-12 col-sm-4">
+              <figure>
+                {{#if image}}
+                  <div class="img-gallery">
+                    <img src="{{image}}" class="img-responsive"/>
+                    <div>{{content}}</div>
+                  </div>
+                {{else}}
+                  <div class="img-gallery">
+                    <img src="{{asset 'img/no-image.jpg'}}" class="img-responsive">
+                    <div>{{content}}</div>
+                  </div>
+                {{/if}}
+                <div>
+                  <p>{{title}}</p>
+                </div>
+              </figure>
+            </section>
+          {{/has}}
+        {{/foreach}}
+      {{/get}}
     </div>
   </div>
 </main>

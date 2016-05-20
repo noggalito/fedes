@@ -1,7 +1,9 @@
 module.exports = (function () {
-  var DbConnection = require('./seed/connection'),
+  var async = require('async'),
+      DbConnection = require('./seed/connection'),
       PostsSeed = require('./seed/posts-seed'),
       SettingsSeed = require('./seed/settings-seed'),
+      TagsSeed = require('./seed/tags-seed'),
       DefaultLogger = require('./seed/default-logger');
 
   // set development environment by default
@@ -19,26 +21,34 @@ module.exports = (function () {
         });
 
     return database.connect().then(function (db) {
-      var queries = self.klasses().map(function (klass) {
-        var setting = new klass({
-          db: db,
-          logger: self.logger
-        });
-        return setting.performQueries();
-      });
+      var klasses = self.klasses();
+      async.eachSeries(klasses,
+        function runSeed(klass, nextSeed) {
+          var setting = new klass({
+            db: db,
+            logger: self.logger
+          });
+          return setting.performQueries(nextSeed);
 
-      return queries.reduce(function (a, b) {
-        // flatten array
-        if (a.constructor != Array) {
-          a = Array(a);
-        }
-        return a.concat(b);
-      });
+          /*
+            return queries.reduce(function (a, b) {
+            // flatten array
+            if (a.constructor != Array) {
+              a = Array(a);
+            }
+            return a.concat(b);
+          });*/
+
+        },
+        function done(err) {
+        });
+
     }, this.logger.onFatal);
   };
 
   Seeds.prototype.klasses = function () {
     return [
+      TagsSeed,
       PostsSeed,
       SettingsSeed
     ];
