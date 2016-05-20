@@ -20,15 +20,17 @@
                 {{#if image}}
                   <div class="img-gallery">
                     <img src="{{image}}" class="img-responsive"/>
+                    <div>{{content}}</div>
                   </div>
                 {{else}}
                   <div class="img-gallery">
                     <img src="{{asset 'img/no-image.jpg'}}" class="img-responsive">
+                    <div>{{content}}</div>
                   </div>
                 {{/if}}
-                <article>
-                  <p>{{content}}</p>
-                </article>
+                <div>
+                  <p>{{title}}</p>
+                </div>
               </figure>
             </section>
           {{/has}}
