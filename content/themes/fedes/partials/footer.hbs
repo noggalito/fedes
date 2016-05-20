@@ -24,36 +24,40 @@
             </form>
           </div>
           <div class="col-md-3">
+
             <ul class="nav nav-pills nav-stacked">
-              <li><h5 class="textFooter">Dirección:</h5></li>
-              <li class="textFooter">San Cayatano alto, calle París</li>
-              <li class="textFooter">instalaciones UTPL. Loja_Ecuador</li>
+              {{#get "posts" slug="contactos-direccion" as |article|}}
+                {{#article}}
+                <li><h5 class="textFooter">{{title}}</h5></li>
+                  <li class="textFooter"> {{content}} </li>
+                {{/article}}
+              {{/get}}
             </ul>
              <ul class="nav nav-pills nav-stacked">
-              <li><h5 class="textFooter">Fono:</h5></li>
-              <li class="textFooter">(593 7)2585700</li>
-              <li class="textFooter">(593 7)2585706</li>
-            </ul>
-            <ul class="nav nav-pills nav-stacked">
-              <li class="textFooter">Email: info@fedes.ec</li>
+               {{#get "posts" slug="contactos-fono" as |article|}}
+                 {{#article}}
+                 <li><h5 class="textFooter">{{title}}</h5></li>
+                   <li class="textFooter"> {{content}} </li>
+                 {{/article}}
+               {{/get}}
             </ul>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-3 col-xs-3">
            <h6 class="textFormFooter">Siguenos en:</h6>
            <div class="row">
-            <div class="col-md-4 imgContainerFooter">
+            <div class="col-md-4 col-xs-4 imgContainerFooter">
                 <a href="#" class="thumbnail imgGalleryFooter">
-                    <img src="{{asset 'img/facebookLogo.png'}}" alt="facebook">
+                    <img src="{{asset 'img/icono_face.png'}}" alt="facebook">
                 </a>
             </div>
-            <div class="col-md-4 imgContainerFooter">
+            <div class="col-md-4 col-xs-4 imgContainerFooter">
                 <a href="#" class="thumbnail imgGalleryFooter">
-                    <img src="{{asset 'img/rssLogo.png'}}" alt="rss">
+                    <img src="{{asset 'img/icono_rss.png'}}" alt="rss">
                 </a>
             </div>
-            <div class="col-md-4 imgContainerFooter">
+            <div class="col-md-4 col-xs-4 imgContainerFooter">
                 <a href="#" class="thumbnail imgGalleryFooter">
-                    <img src="{{asset 'img/twitterLogo.png'}}" alt="twitter">
+                    <img src="{{asset 'img/icono_twitter.png'}}" alt="twitter">
                 </a>
             </div>
         </div>
