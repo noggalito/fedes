@@ -30,9 +30,11 @@
     {{#get "posts" slug="texto-principal" as |article|}}
       {{#article}}
         <div class="carousel-footer">
-          <span class="text-footer">
-            {{content}}
-          </span>
+          {{#is "index"}}
+            <span class="text-footer">
+              {{content}}
+            </span>
+          {{/is}}
         </div>
       {{/article}}
     {{/get}}
