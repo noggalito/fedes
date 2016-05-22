@@ -3,7 +3,7 @@
   {{! The main content area on the homepage }}
   <main id="content" class="content" role="main">
       {{> "carousel-min"}}
-      <div class="collapse container gallery-principal" id="gallery-secondary">
+      <div class="container gallery-principal collapse in" id="gallery-servicios">
         <div>
           <h2 class="gallery-title">Servicios</h2>
         </div>
@@ -16,6 +16,9 @@
                   alt="consultoria"
                   data-toggle="collapse"
                   data-target="#text-consultoria"/>
+                <div>
+                  <p>Consultoría</p>
+                </div>
                 <div class="collapse" id="text-consultoria">
                   <p>Consultoria ipsum dolor sit amet, consectetur adipisicing elit,
                   sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -23,6 +26,8 @@
                 </div>
               </div>
             </figure>
+           </section>
+           <section class="col-xs-12 col-sm-4">
             <figure>
               <div>
                 <img src="{{asset 'img/asesoramieto.jpg'}}"
@@ -30,6 +35,9 @@
                   alt="asesoramiento"
                   data-toggle="collapse"
                   data-target="#text-asesoramiento"/>
+                <div>
+                  <p>Asesoramiento</p>
+                </div>
                 <div class="collapse" id="text-asesoramiento">
                   <p>Asesoramiento ipsum dolor sit amet, consectetur adipisicing elit,
                   sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -37,6 +45,8 @@
                 </div>
               </div>
             </figure>
+           </section>
+           <section class="col-xs-12 col-sm-4">
             <figure>
               <div>
                 <img src="{{asset 'img/trabajo.jpg'}}"
@@ -44,6 +54,9 @@
                 alt="trabajo"
                 data-toggle="collapse"
                 data-target="#text-trabajo"/>
+                <div>
+                  <p>Trabajo con municipios</p>
+                </div>
                 <div class="collapse" id="text-trabajo">
                   <p>Trabajo ipsum dolor sit amet, consectetur adipisicing elit,
                   sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
