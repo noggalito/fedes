@@ -147,6 +147,20 @@ module.exports = (function () {
       updated_at: Date.now(),
       published_at: Date.now(),
       tag: 'proyectos'
+    },
+    // Static pages
+    {
+      title: 'Servicios',
+      slug: 'servicios',
+      markdown: '',
+      html: '',
+      featured: false,
+      page: true,
+      status: 'published',
+      language: 'en_US',
+      created_at: Date.now(),
+      updated_at: Date.now(),
+      published_at: Date.now()
     }
   ];
 
