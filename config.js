@@ -32,9 +32,7 @@ config = {
         mail: {
             transport: 'SMTP',
             options: {
-                host: process.env.SMTP_HOSTNAME,
-                secure: true,
-                port: '587',
+                service: 'sendgrid',
                 auth: {
                     user: process.env.SMTP_LOGIN,
                     pass: process.env.SMTP_PASSWORD
