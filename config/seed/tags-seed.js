@@ -24,8 +24,8 @@ module.exports = (function () {
       name: 'proyectos',
       slug: 'proyectos',
       hidden: false,
-      created_at: Date.now(),
-      updated_at: Date.now()
+      created_at: new Date().toISOString(),
+      updated_at: new Date().toISOString()
     }
   ];
 

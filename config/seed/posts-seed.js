@@ -51,9 +51,9 @@ module.exports = (function () {
       page: false,
       status: 'published',
       language: 'en_US',
-      created_at: Date.now(),
-      updated_at: Date.now(),
-      published_at: Date.now()
+      created_at: new Date().toISOString(),
+      updated_at: new Date().toISOString(),
+      published_at: new Date().toISOString()
     },
     {
       title: 'Dirección:',
@@ -66,9 +66,9 @@ module.exports = (function () {
       page: false,
       status: 'published',
       language: 'en_US',
-      created_at: Date.now(),
-      updated_at: Date.now(),
-      published_at: Date.now()
+      created_at: new Date().toISOString(),
+      updated_at: new Date().toISOString(),
+      published_at: new Date().toISOString()
     },
     {
       title: 'Fono:',
@@ -83,9 +83,9 @@ module.exports = (function () {
       page: false,
       status: 'published',
       language: 'en_US',
-      created_at: Date.now(),
-      updated_at: Date.now(),
-      published_at: Date.now()
+      created_at: new Date().toISOString(),
+      updated_at: new Date().toISOString(),
+      published_at: new Date().toISOString()
     },
     {
       title: 'Cooperación para el desarrollo',
@@ -103,9 +103,9 @@ module.exports = (function () {
       status: 'published',
       language: 'en_US',
       image: '/default/copdesarrollo.jpg',
-      created_at: Date.now(),
-      updated_at: Date.now(),
-      published_at: Date.now(),
+      created_at: new Date().toISOString(),
+      updated_at: new Date().toISOString(),
+      published_at: new Date().toISOString(),
       tag: 'proyectos'
     },
     {
@@ -124,9 +124,9 @@ module.exports = (function () {
       status: 'published',
       language: 'en_US',
       image: '/default/cima.jpg',
-      created_at: Date.now(),
-      updated_at: Date.now(),
-      published_at: Date.now(),
+      created_at: new Date().toISOString(),
+      updated_at: new Date().toISOString(),
+      published_at: new Date().toISOString(),
       tag: 'proyectos'
     },
     {
@@ -143,9 +143,9 @@ module.exports = (function () {
       status: 'published',
       language: 'en_US',
       image: '/default/prendho.jpg',
-      created_at: Date.now(),
-      updated_at: Date.now(),
-      published_at: Date.now(),
+      created_at: new Date().toISOString(),
+      updated_at: new Date().toISOString(),
+      published_at: new Date().toISOString(),
       tag: 'proyectos'
     },
     // Static pages
