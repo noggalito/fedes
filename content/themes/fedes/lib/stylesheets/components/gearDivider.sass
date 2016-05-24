@@ -1,0 +1,36 @@
+$gearWidth: 90px
+
+.gearDivider
+  position: relative
+  display: block
+  width: 50%
+  & > div
+    height: 60px
+    border-radius: 0 0 100px 100px
+    background: $blue-dark
+    position: absolute
+    right: -$gearWidth/2
+    width: $gearWidth
+    text-align: center
+    margin-top: -25px
+    .ruedaBlanca
+      margin-top: 10px
+      height: 30px
+
+@media only screen and (max-width: $mobile-width)
+  .gearDivider
+    position: relative
+    display: block
+    width: 50%
+    & > div
+      height: 50px
+      border-radius: 0 0 100px 100px
+      background: $blue-dark
+      position: absolute
+      right: -$gearWidth/2
+      width: $gearWidth
+      text-align: center
+      margin-top: -20px
+      .ruedaBlanca
+        margin-top: 10px
+        height: 25px
