@@ -9,12 +9,17 @@
   .carousel-main
     margin-top: 1.9em
 
+    &-secondary
+      margin-top: 46px
+
     @media screen and (max-width: $mobile-width)
       margin-top: 0px
 
   .carousel-inner
     .item
       max-height: 800px
+    &-secondary
+      max-height: 360px
 
   .menu-carousel
     position: absolute
@@ -25,6 +30,11 @@
     bottom: 0
     opacity: 0.7
     position: absolute
+
+    &-secondary
+      margin: auto
+      top: 8em
+      height: 60%
 
     .carousel.text
       text-align: left
@@ -62,6 +72,10 @@
   padding-top: 50px
   padding-bottom: 50px
 
+  &-secondary
+    padding-top: 20px
+    padding-bottom: 20px
+
   .textFooter
     color: #FFFFFF
     font-size: 1.8vw
@@ -81,6 +95,13 @@
       width: 80%
       margin-left: 45px
       background-color: #002d54
+
+      &-secondary
+        height: 100%
+        width: 100%
+        margin: 0
+        top: 0
+
       .carousel.text
         text-align: left
         margin: 10px 20px
@@ -116,6 +137,10 @@
     width: 100%
     padding-top: 25px
     padding-bottom: 25px
+
+    &-secondary
+      padding-top: 10px
+      padding-bottom: 10px
 
     .textFooter
       color: #FFFFFF

@@ -1,6 +1,7 @@
 <div class="container carousel">
-  <div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner" role="listbox">
+  <div id="myCarousel" class="carousel-main slide {{^is "index"}} carousel-main-secondary {{/is}}" data-ride="carousel">
+    <div class=" carousel-inner {{^is "index"}} carousel-inner-secondary {{/is}}"
+      role="listbox">
       <div class="item active">
         <img src="{{asset 'img/carousel1.jpg'}}" alt="Chania" width="460" height="345">
       </div>
@@ -11,7 +12,7 @@
         <img src="{{asset 'img/consultoria.jpg'}}" alt="Flower" width="460" height="345">
       </div>
     </div>
-    <div class="menu-carousel">
+    <div class="menu-carousel {{^is "index"}} menu-carousel-secondary {{/is}}">
       <div class="carousel text text-nowrap">
         <h1>Lorem ipsum tdolor sit amet</h1>
         <p>
@@ -35,10 +36,12 @@
 <section>
   {{#get "posts" slug="texto-principal" as |article|}}
     {{#article}}
-      <div class="carousel-footer">
-        <span class="textFooter">
-          {{content}}
-        </span>
+      <div class="carousel-footer {{^is "index"}} carousel-footer-secondary {{/is}}">
+        {{#is "index"}}
+          <span class="textFooter">
+            {{content}}
+          </span>
+        {{/is}}
       </div>
     {{/article}}
   {{/get}}
