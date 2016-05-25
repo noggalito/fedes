@@ -6,6 +6,24 @@
         {{#get "posts" slug="imagen1carousel" as |article|}}
           {{#article}}
             <img src="{{image}}" class="img-responsive"/>
+            <div class="menu-carousel {{^is "index"}} menu-carousel-secondary {{/is}}">
+              <div class="carousel text text-nowrap">
+                <h1>{{title}}</h1>
+                <p>
+                  {{content}}
+                </p>
+              </div>
+              <div class="carousel-controls-wrapper">
+                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right"  aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+            </div>
           {{/article}}
         {{/get}}
       </div>
@@ -13,6 +31,24 @@
         {{#get "posts" slug="imagen2carousel" as |article|}}
           {{#article}}
             <img src="{{image}}" class="img-responsive"/>
+            <div class="menu-carousel {{^is "index"}} menu-carousel-secondary {{/is}}">
+              <div class="carousel text text-nowrap">
+                <h1>{{title}}</h1>
+                <p>
+                  {{content}}
+                </p>
+              </div>
+              <div class="carousel-controls-wrapper">
+                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right"  aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+            </div>
           {{/article}}
         {{/get}}
       </div>
@@ -20,26 +56,26 @@
         {{#get "posts" slug="imagen3carousel" as |article|}}
           {{#article}}
             <img src="{{image}}" class="img-responsive"/>
+            <div class="menu-carousel {{^is "index"}} menu-carousel-secondary {{/is}}">
+              <div class="carousel text text-nowrap">
+                <h1>{{title}}</h1>
+                <p>
+                  {{content}}
+                </p>
+              </div>
+              <div class="carousel-controls-wrapper">
+                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right"  aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+            </div>
           {{/article}}
         {{/get}}
-      </div>
-    </div>
-    <div class="menu-carousel {{^is "index"}} menu-carousel-secondary {{/is}}">
-      <div class="carousel text text-nowrap">
-        <h1>Lorem ipsum tdolor sit amet</h1>
-        <p>
-          nam ea quod aperiri eruditi. Quot verear intellegam his eu, esos ut harum salutatus torquatos.
-        </p>
-      </div>
-      <div class="carousel-controls-wrapper">
-        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-          <span class="glyphicon glyphicon-chevron-right"  aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
       </div>
     </div>
   </div>
@@ -60,7 +96,7 @@
 </section>
 
 <div class="gearDivider">
-  <div>
+  <div data-toggle="collapse" data-target=".gallery">
     <img class="ruedaBlanca" src="{{asset 'img/rueda_blanca.png'}}">
   </div>
 </div>

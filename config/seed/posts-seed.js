@@ -151,8 +151,8 @@ module.exports = (function () {
     {
       title: 'Imagen1Carousel',
       slug: 'imagen1carousel',
-      markdown:'',
-      html:'',
+      markdown:'esta es la descripcion de la imagen1',
+      html:'<p>esta es la descripcion de la imagen1</p>',
       featured: false,
       page: false,
       status: 'published',
@@ -161,12 +161,13 @@ module.exports = (function () {
       created_at: new Date().toISOString(),
       updated_at: new Date().toISOString(),
       published_at: new Date().toISOString(),
+      tag: 'carouselImagen'
     },
     {
       title: 'Imagen2Carousel',
       slug: 'imagen2carousel',
-      markdown:'',
-      html:'',
+      markdown:'esta es la descripcion de la imagen2',
+      html:'<p>esta es la descripcion de la imagen2</p>',
       featured: false,
       page: false,
       status: 'published',
@@ -175,12 +176,13 @@ module.exports = (function () {
       created_at: new Date().toISOString(),
       updated_at: new Date().toISOString(),
       published_at: new Date().toISOString(),
+      tag: 'carouselImagen'
     },
     {
       title: 'Imagen3Carousel',
       slug: 'imagen3carousel',
-      markdown:'',
-      html:'',
+      markdown:'esta es la descripcion de la imagen3',
+      html:'<p>esta es la descripcion de la imagen3</p>',
       featured: false,
       page: false,
       status: 'published',
@@ -189,6 +191,7 @@ module.exports = (function () {
       created_at: new Date().toISOString(),
       updated_at: new Date().toISOString(),
       published_at: new Date().toISOString(),
+      tag: 'carouselImagen'
     },
     // Static pages
     {
