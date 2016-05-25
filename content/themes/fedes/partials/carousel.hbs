@@ -3,13 +3,25 @@
     <div class=" carousel-inner {{^is "index"}} carousel-inner-secondary {{/is}}"
       role="listbox">
       <div class="item active">
-        <img src="{{asset 'img/carousel1.jpg'}}" alt="Chania" width="460" height="345">
+        {{#get "posts" slug="imagen1carousel" as |article|}}
+          {{#article}}
+            <img src="{{image}}" class="img-responsive"/>
+          {{/article}}
+        {{/get}}
       </div>
       <div class="item">
-        <img src="{{asset 'img/carousel1.jpg'}}" alt="Chania" width="460" height="345">
+        {{#get "posts" slug="imagen2carousel" as |article|}}
+          {{#article}}
+            <img src="{{image}}" class="img-responsive"/>
+          {{/article}}
+        {{/get}}
       </div>
       <div class="item">
-        <img src="{{asset 'img/consultoria.jpg'}}" alt="Flower" width="460" height="345">
+        {{#get "posts" slug="imagen3carousel" as |article|}}
+          {{#article}}
+            <img src="{{image}}" class="img-responsive"/>
+          {{/article}}
+        {{/get}}
       </div>
     </div>
     <div class="menu-carousel {{^is "index"}} menu-carousel-secondary {{/is}}">
