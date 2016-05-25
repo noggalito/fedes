@@ -161,7 +161,7 @@ module.exports = (function () {
       created_at: new Date().toISOString(),
       updated_at: new Date().toISOString(),
       published_at: new Date().toISOString(),
-      tag: 'carouselImagen'
+      tag: 'carouselimagen'
     },
     {
       title: 'Imagen2Carousel',
@@ -176,7 +176,7 @@ module.exports = (function () {
       created_at: new Date().toISOString(),
       updated_at: new Date().toISOString(),
       published_at: new Date().toISOString(),
-      tag: 'carouselImagen'
+      tag: 'carouselimagen'
     },
     {
       title: 'Imagen3Carousel',
@@ -191,7 +191,7 @@ module.exports = (function () {
       created_at: new Date().toISOString(),
       updated_at: new Date().toISOString(),
       published_at: new Date().toISOString(),
-      tag: 'carouselImagen'
+      tag: 'carouselimagen'
     },
     // Static pages
     {

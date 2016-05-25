@@ -26,6 +26,13 @@ module.exports = (function () {
       hidden: false,
       created_at: new Date().toISOString(),
       updated_at: new Date().toISOString()
+    },
+    {
+      name: 'carouselImagen',
+      slug: 'carouselimagen',
+      hidden: false,
+      created_at: new Date().toISOString(),
+      updated_at: new Date().toISOString()
     }
   ];
 
