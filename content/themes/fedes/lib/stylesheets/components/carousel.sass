@@ -20,11 +20,12 @@
       max-height: 800px
     &-secondary
       max-height: 400px
-
+  .menu-carousel.textCarousel
+    background-color: $blue-transparent
   .menu-carousel
     position: absolute
     z-index: 1
-    background-color: #002d54
+    background-color: $blue-transparent
     width: 100%
     height: 30%
     bottom: 0
@@ -89,6 +90,8 @@
 
 @media only screen and (max-width: $mobile-width)
   .container.carousel
+    .menu-carousel.textCarousel
+      background-color: $blue-transparent
     .menu-carousel
       position: absolute
       height: 275px

@@ -8,7 +8,7 @@
           {{#if @first}}
             <div class="item active">
               <img src="{{image}}" class="img-responsive"/>
-                <div class="menu-carousel {{^is "index"}} menu-carousel-secondary {{/is}}">
+                <div class="menu-carousel textCarousel">
                   <div class="carousel text text-nowrap">
                     <h1>{{title}}</h1>
                     <p>
@@ -20,7 +20,7 @@
             {{else}}
               <div class="item">
                 <img src="{{image}}" class="img-responsive"/>
-                  <div class="menu-carousel {{^is "index"}} menu-carousel-secondary {{/is}}">
+                  <div class="menu-carousel textCarousel">
                     <div class="carousel text text-nowrap">
                       <h1>{{title}}</h1>
                       <p>
@@ -35,12 +35,6 @@
       {{/get}}
     </div>
     <div class="menu-carousel {{^is "index"}} menu-carousel-secondary {{/is}}">
-      <!-- <div class="carousel text text-nowrap">
-        <h1>{{title}}</h1>
-        <p>
-          {{content}}
-        </p>
-      </div> -->
       <div class="carousel-controls-wrapper">
         <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
           <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -70,7 +64,7 @@
 </section>
 
 <div class="gearDivider">
-  <div data-toggle="collapse" data-target=".gallery">
+  <div>
     <img class="ruedaBlanca" src="{{asset 'img/rueda_blanca.png'}}">
   </div>
 </div>
