@@ -203,9 +203,75 @@ module.exports = (function () {
       page: true,
       status: 'published',
       language: 'en_US',
-      created_at: Date.now(),
-      updated_at: Date.now(),
-      published_at: Date.now()
+      created_at: new Date().toISOString(),
+      updated_at: new Date().toISOString(),
+      published_at: new Date().toISOString()
+    },
+    // Fedes Services
+    {
+      title: 'Consultoría',
+      slug: 'consultoria',
+      markdown: 'Consultoria ipsum dolor sit amet, consectetur adipisicing,\n' +
+        'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n' +
+        'Ut enim ad minim veniam, quis nostrud exercitation ullamco\n' +
+        'laboris nisi ut aliquip ex ea commodo consequat.',
+      html: '<p>Consultoria ipsum dolor sit amet, consectetur adipisicing, <br />' +
+        'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br />' +
+        'Ut enim ad minim veniam, quis nostrud exercitation ullamco <br />' +
+        'laboris nisi ut aliquip ex ea commodo consequat.</p>',
+      featured: false,
+      page: false,
+      status: 'published',
+      language: 'en_US',
+      image: '/default/consultoria.jpg',
+      created_at: new Date().toISOString(),
+      updated_at: new Date().toISOString(),
+      published_at: new Date().toISOString(),
+      tag: 'servicios'
+    },
+    {
+      title: 'Asesoramiento',
+      slug: 'asesoramiento',
+      markdown: 'Asesoramiento ipsum dolor sit amet, consectetur,\n' +
+        'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n' +
+        'Ut enim ad minim veniam, quis nostrud exercitation ullamco\n' +
+        'laboris nisi ut aliquip ex ea commodo consequat.',
+      html: '<p>Asesoramiento ipsum dolor sit amet, consectetur, <br />' +
+        'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br />' +
+        'Ut enim ad minim veniam, quis nostrud exercitation ullamco <br />' +
+        'laboris nisi ut aliquip ex ea commodo consequat.</p>',
+      featured: false,
+      page: false,
+      status: 'published',
+      language: 'en_US',
+      image: '/default/asesoramieto.jpg',
+      created_at: new Date().toISOString(),
+      updated_at: new Date().toISOString(),
+      published_at: new Date().toISOString(),
+      tag: 'servicios'
+    },
+    {
+      title: 'Trabajo con municipios',
+      slug: 'trabajo-con-municipios',
+      markdown: 'Trabajo ipsum dolor sit amet, consectetur,\n' +
+        'sed do eiusmod tempor incididunt ut labore et \n' +
+        'dolore magna aliqua. Ut enim ad minim veniam,\n' +
+        'quis nostrud exercitation ullamco laboris nisi ut\n' +
+        'aliquip ex ea commodo consequat.',
+      html: '<p>Trabajo ipsum dolor sit amet, consectetur, <br />' +
+        'sed do eiusmod tempor incididunt ut labore et <br />' +
+        'dolore magna aliqua. Ut enim ad minim veniam, <br />' +
+        'quis nostrud exercitation ullamco laboris nisi ut <br />' +
+        'aliquip ex ea commodo consequat.</p>',
+      featured: false,
+      page: false,
+      status: 'published',
+      language: 'en_US',
+      image: '/default/trabajo.jpg',
+      created_at: new Date().toISOString(),
+      updated_at: new Date().toISOString(),
+      published_at: new Date().toISOString(),
+      tag: 'servicios'
     }
   ];
 

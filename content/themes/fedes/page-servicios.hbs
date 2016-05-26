@@ -8,62 +8,26 @@
           <h2 class="gallery-title">Servicios</h2>
         </div>
         <div class="row">
-          <section class="col-xs-12 col-sm-4">
-            <figure>
-              <div>
-                <img src="{{asset 'img/consultoria.jpg'}}"
-                  class="img-responsive"
-                  alt="consultoria"
-                  data-toggle="collapse"
-                  data-target="#text-consultoria"/>
-                <div>
-                  <p>Consultoría</p>
+          <section>
+            {{#get "posts" filter="tag:servicios" as |services|}}
+              {{#foreach services}}
+                <div class="col-xs-12 col-sm-4">
+                  <figure>
+                    <img src="{{image}}"
+                      class="img-responsive"
+                      alt="{{title}}"
+                      data-toggle="collapse"
+                      data-target="#service-{{@number}}"/>
+                    <div>
+                      <p>{{title}}</p>
+                    </div>
+                    <div class="collapse" id="service-{{@number}}">
+                      {{content}}
+                    </div>
+                  </figure>
                 </div>
-                <div class="collapse" id="text-consultoria">
-                  <p>Consultoria ipsum dolor sit amet, consectetur adipisicing elit,
-                  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                </div>
-              </div>
-            </figure>
-           </section>
-           <section class="col-xs-12 col-sm-4">
-            <figure>
-              <div>
-                <img src="{{asset 'img/asesoramieto.jpg'}}"
-                  class="img-responsive"
-                  alt="asesoramiento"
-                  data-toggle="collapse"
-                  data-target="#text-asesoramiento"/>
-                <div>
-                  <p>Asesoramiento</p>
-                </div>
-                <div class="collapse" id="text-asesoramiento">
-                  <p>Asesoramiento ipsum dolor sit amet, consectetur adipisicing elit,
-                  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                </div>
-              </div>
-            </figure>
-           </section>
-           <section class="col-xs-12 col-sm-4">
-            <figure>
-              <div>
-                <img src="{{asset 'img/trabajo.jpg'}}"
-                class="img-responsive"
-                alt="trabajo"
-                data-toggle="collapse"
-                data-target="#text-trabajo"/>
-                <div>
-                  <p>Trabajo con municipios</p>
-                </div>
-                <div class="collapse" id="text-trabajo">
-                  <p>Trabajo ipsum dolor sit amet, consectetur adipisicing elit,
-                  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                </div>
-              </div>
-            </figure>
+              {{/foreach}}
+            {{/get}}
           </section>
         </div>
       </div>
