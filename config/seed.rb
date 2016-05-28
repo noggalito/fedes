@@ -19,6 +19,7 @@ class Seed
 
   def run
     logger.warn "not so fast!"
+    @db.connect!
   end
 
   private
