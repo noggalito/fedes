@@ -41,21 +41,6 @@ module.exports = (function () {
 
   var defaultPosts = [
     {
-      title: 'Texto principal',
-      slug: 'texto-principal',
-      markdown: '<< La innovación es lo que distingue a los ' +
-      'líderes de los \nseguidores >>.- Steve Jobs',
-      html: '<p>&lt;&lt; La innovación es lo que distingue a los ' +
-      'líderes de los <br />seguidores >>.- Steve Jobs</p>',
-      featured: false,
-      page: false,
-      status: 'published',
-      language: 'en_US',
-      created_at: new Date().toISOString(),
-      updated_at: new Date().toISOString(),
-      published_at: new Date().toISOString()
-    },
-    {
       title: 'Dirección:',
       slug: 'contactos-direccion',
       markdown: 'San Cayatano alto, calle París \n'+

@@ -1,6 +1,7 @@
 require "./config/seed/logger"
 require "./config/seed/models"
 require "./config/seed/tags_seed"
+require "./config/seed/posts_seed"
 require "./config/seed/settings_seed"
 require "./config/seed/db_connection"
 
@@ -41,6 +42,7 @@ class Seed
   def klasses
     [
       TagsSeed,
+      PostsSeed,
       SettingsSeed
     ]
   end
