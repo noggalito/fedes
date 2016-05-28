@@ -1,20 +1,19 @@
 ---
-posts:
-  - page: false
-    featured: false
-    language: en_US
-    status: published
-    slug: texto-principal
-    title: Texto principal
-    published_at: 2016-05-28 08:39:15 -0500
-    markdown: << La innovación es lo que distingue a los líderes de los \nseguidores >>.- Steve Jobs
-    html: <p>&lt;&lt; La innovación es lo que distingue a los líderes de los <br />seguidores >>.- Steve Jobs</p>
+- page: false
+  featured: false
+  language: en_US
+  status: published
+  slug: texto-principal
+  title: Texto principal
+  published_at: 2016-05-28 08:39:15 -0500
+  markdown: << La innovación es lo que distingue a los líderes de los \nseguidores >>.- Steve Jobs
+  html: <p>&lt;&lt; La innovación es lo que distingue a los líderes de los <br />seguidores >>.- Steve Jobs</p>
 
-  - page: false
-    featured: false
-    language: en_US
-    status: published
-    title: "Dirección:"
-    slug: contactos-direccion
-    markdown: San Cayatano alto, calle París\ninstalaciones UTPL. Loja_Ecuador
-    html: <p>San Cayatano alto, calle París<br />instalaciones UTPL. Loja_Ecuador</p>
+- page: false
+  featured: false
+  language: en_US
+  status: published
+  title: "Dirección:"
+  slug: contactos-direccion
+  markdown: San Cayatano alto, calle París\ninstalaciones UTPL. Loja_Ecuador
+  html: <p>San Cayatano alto, calle París<br />instalaciones UTPL. Loja_Ecuador</p>

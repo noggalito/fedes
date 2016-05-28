@@ -3,16 +3,8 @@ require "./config/seed/generic_seed"
 
 class Seed
   class TagsSeed < GenericSeed
-    DEFAULT_TAGS = [
-      {
-        hidden: false,
-        name: "proyectos",
-        slug: "proyectos",
-        uuid: SecureRandom.uuid
-      }
-    ]
     def self.seeds
-      DEFAULT_TAGS
+      load_fixtures "tags"
     end
 
     def seed!

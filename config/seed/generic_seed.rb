@@ -6,6 +6,12 @@ class Seed
           new(record).seed!
         end
       end
+
+      def load_fixtures(identifier)
+        YAML.load_file(
+          "./config/seed/fixtures/#{identifier}.yml"
+        )
+      end
     end
 
     attr_reader :record, :attributes

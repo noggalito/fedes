@@ -4,9 +4,7 @@ require "./config/seed/generic_seed"
 class Seed
   class PostsSeed < GenericSeed
     def self.seeds
-      YAML.load_file(
-        "./config/seed/fixtures/posts.yml"
-      ).fetch("posts")
+      load_fixtures "posts"
     end
 
     def seed!
