@@ -214,11 +214,19 @@ module.exports = (function () {
       markdown: 'Consultoria ipsum dolor sit amet, consectetur adipisicing,\n' +
         'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n' +
         'Ut enim ad minim veniam, quis nostrud exercitation ullamco\n' +
-        'laboris nisi ut aliquip ex ea commodo consequat.',
+        'laboris nisi ut aliquip ex ea commodo consequat.\n\n' +
+        '* Lorem ipsum dolor sit amet.\n' +
+        '* Consectetuer adipiscing elit.\n' +
+        '* Aenean commodo igula eget dolor.',
       html: '<p>Consultoria ipsum dolor sit amet, consectetur adipisicing, <br />' +
         'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br />' +
         'Ut enim ad minim veniam, quis nostrud exercitation ullamco <br />' +
-        'laboris nisi ut aliquip ex ea commodo consequat.</p>',
+        'laboris nisi ut aliquip ex ea commodo consequat.</p>' +
+        '<ul>' +
+        '<li>Lorem ipsum dolor sit amet.</li>' +
+        '<li>Consectetuer adipiscing elit.</li>' +
+        '<li>Aenean commodo igula eget dolor.</li>' +
+        '</ul>',
       featured: false,
       page: false,
       status: 'published',
@@ -235,11 +243,19 @@ module.exports = (function () {
       markdown: 'Asesoramiento ipsum dolor sit amet, consectetur,\n' +
         'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n' +
         'Ut enim ad minim veniam, quis nostrud exercitation ullamco\n' +
-        'laboris nisi ut aliquip ex ea commodo consequat.',
+        'laboris nisi ut aliquip ex ea commodo consequat.\n\n' +
+        '* Lorem ipsum dolor sit amet.\n' +
+        '* Consectetuer adipiscing elit.\n' +
+        '* Aenean commodo igula eget dolor.',
       html: '<p>Asesoramiento ipsum dolor sit amet, consectetur, <br />' +
         'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br />' +
         'Ut enim ad minim veniam, quis nostrud exercitation ullamco <br />' +
-        'laboris nisi ut aliquip ex ea commodo consequat.</p>',
+        'laboris nisi ut aliquip ex ea commodo consequat.</p>' +
+        '<ul>' +
+        '<li>Lorem ipsum dolor sit amet.</li>' +
+        '<li>Consectetuer adipiscing elit.</li>' +
+        '<li>Aenean commodo igula eget dolor.</li>' +
+        '</ul>',
       featured: false,
       page: false,
       status: 'published',
@@ -257,12 +273,20 @@ module.exports = (function () {
         'sed do eiusmod tempor incididunt ut labore et \n' +
         'dolore magna aliqua. Ut enim ad minim veniam,\n' +
         'quis nostrud exercitation ullamco laboris nisi ut\n' +
-        'aliquip ex ea commodo consequat.',
+        'aliquip ex ea commodo consequat.\n\n' +
+        '* Lorem ipsum dolor sit amet.\n' +
+        '* Consectetuer adipiscing elit.\n' +
+        '* Aenean commodo igula eget dolor.',
       html: '<p>Trabajo ipsum dolor sit amet, consectetur, <br />' +
         'sed do eiusmod tempor incididunt ut labore et <br />' +
         'dolore magna aliqua. Ut enim ad minim veniam, <br />' +
         'quis nostrud exercitation ullamco laboris nisi ut <br />' +
-        'aliquip ex ea commodo consequat.</p>',
+        'aliquip ex ea commodo consequat.</p>' +
+        '<ul>' +
+        '<li>Lorem ipsum dolor sit amet.</li>' +
+        '<li>Consectetuer adipiscing elit.</li>' +
+        '<li>Aenean commodo igula eget dolor.</li>' +
+        '</ul>',
       featured: false,
       page: false,
       status: 'published',

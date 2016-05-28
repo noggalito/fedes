@@ -7,12 +7,12 @@
         <div>
           <h2 class="gallery-title">Servicios</h2>
         </div>
-        <div class="row">
+        <div class="row row-services">
           <section>
             {{#get "posts" filter="tag:servicios" as |services|}}
               {{#foreach services}}
                 <div class="col-xs-12 col-sm-4">
-                  <figure>
+                  <figure class="img-gallery-services">
                     <img src="{{image}}"
                       class="img-responsive"
                       alt="{{title}}"
