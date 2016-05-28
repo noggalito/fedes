@@ -148,6 +148,51 @@ module.exports = (function () {
       published_at: new Date().toISOString(),
       tag: 'proyectos'
     },
+    {
+      title: 'Imagen1Carousel',
+      slug: 'imagen1carousel',
+      markdown:'esta es la descripcion de la imagen1',
+      html:'<p>esta es la descripcion de la imagen1</p>',
+      featured: false,
+      page: false,
+      status: 'published',
+      language: 'en_US',
+      image: '/assets/img/carousel1.jpg',
+      created_at: new Date().toISOString(),
+      updated_at: new Date().toISOString(),
+      published_at: new Date().toISOString(),
+      tag: 'carouselimagen'
+    },
+    {
+      title: 'Imagen2Carousel',
+      slug: 'imagen2carousel',
+      markdown:'esta es la descripcion de la imagen2',
+      html:'<p>esta es la descripcion de la imagen2</p>',
+      featured: false,
+      page: false,
+      status: 'published',
+      language: 'en_US',
+      image: '/assets/img/servicios.jpg',
+      created_at: new Date().toISOString(),
+      updated_at: new Date().toISOString(),
+      published_at: new Date().toISOString(),
+      tag: 'carouselimagen'
+    },
+    {
+      title: 'Imagen3Carousel',
+      slug: 'imagen3carousel',
+      markdown:'esta es la descripcion de la imagen3',
+      html:'<p>esta es la descripcion de la imagen3</p>',
+      featured: false,
+      page: false,
+      status: 'published',
+      language: 'en_US',
+      image: '/assets/img/consultoria.jpg',
+      created_at: new Date().toISOString(),
+      updated_at: new Date().toISOString(),
+      published_at: new Date().toISOString(),
+      tag: 'carouselimagen'
+    },
     // Static pages
     {
       title: 'Servicios',
