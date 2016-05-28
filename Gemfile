@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'activerecord'
+gem 'activerecord', '~> 4.2'
 gem 'colorize'
 
 group :development do

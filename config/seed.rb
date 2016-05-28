@@ -1,5 +1,7 @@
-require "./config/seed/db_connection"
 require "./config/seed/logger"
+require "./config/seed/models"
+require "./config/seed/settings_seed"
+require "./config/seed/db_connection"
 
 class Seed
   class << self
@@ -12,19 +14,31 @@ class Seed
     end
   end
 
+  attr_reader :environment
+
   def initialize(environment)
-    @db = DbConnection.new(environment)
-    logger.warn "seeding database for", environment
+    @environment = environment
   end
 
   def run
-    logger.warn "not so fast!"
-    @db.connect!
+    db.connect!
+    Logger.warn "seeding database for", environment
+    klasses.each do |klass|
+      klass.new(db: db).perform_queries
+      Logger.success klass
+    end
+    Logger.success "finished seeding!"
   end
 
   private
 
-  def logger
-    @logger ||= Logger.new
+  def db
+    @db ||= DbConnection.new(environment)
+  end
+
+  def klasses
+    [
+      SettingsSeed
+    ]
   end
 end

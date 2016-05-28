@@ -7,21 +7,11 @@ module.exports = (function () {
   };
 
   var navigationElements = [
-    {
-      label: 'Home',
-      url: '/'
-    },
-    {
-      label: 'Servicios',
-      url: '/servicios/'
-    }
+    
   ];
 
   var defaultSettings = {
-    logo: '/default/logo-fedes.png',
-    activeTheme: 'fedes',
-    labs: '{"publicAPI":true}',
-    navigation: JSON.stringify(navigationElements)
+
   };
 
   SettingsSeed.prototype.performQueries = function (nextSeed) {
