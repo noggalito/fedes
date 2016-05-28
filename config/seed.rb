@@ -1,5 +1,6 @@
 require "./config/seed/logger"
 require "./config/seed/models"
+require "./config/seed/tags_seed"
 require "./config/seed/settings_seed"
 require "./config/seed/db_connection"
 
@@ -24,9 +25,10 @@ class Seed
     db.connect!
     Logger.warn "seeding database for", environment
     klasses.each do |klass|
-      klass.new(db: db).perform_queries
+      klass.perform_queries
       Logger.success klass
     end
+    db.disconnect!
     Logger.success "finished seeding!"
   end
 
@@ -38,6 +40,7 @@ class Seed
 
   def klasses
     [
+      TagsSeed,
       SettingsSeed
     ]
   end

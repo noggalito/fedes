@@ -8,22 +8,37 @@ class Seed
     end
 
     def connect!
-      require(db_adapter)
+      require(@db_gem)
       ActiveRecord::Base.establish_connection(
-        adapter: @db_adapter,
-        database: @database_url
+        @connection_options
       )
+    end
+
+    def disconnect!
+      ActiveRecord::Base.connection.disconnect!
     end
 
     private
 
     def configure!
-      if @environment == "development"
-        @db_adapter = "sqlite3"
-        @database_url = Dir.pwd + "/content/data/ghost-dev.db"
+      case @environment
+      when "development"
+        @db_gem = "sqlite3"
+        @connection_options = {
+          adapter: @db_gem,
+          database: Dir.pwd + "/content/data/ghost-dev.db"
+        }
       else
-        @db_adapter = "pg"
-        @database_url = ENV["DATABASE_URL"]
+        @db_gem = "pg"
+        db = URI.parse(ENV.fetch("DATABASE_URL"))
+        @connection_options = {
+          host: db.host,
+          encoding: "utf8",
+          username: db.user,
+          password: db.password,
+          database: db.path[1..-1],
+          adapter: db.scheme == "postgres" ? "postgresql" : db.scheme
+        }
       end
     end
   end

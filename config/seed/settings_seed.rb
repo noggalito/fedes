@@ -1,34 +1,31 @@
+require "./config/seed/generic_seed"
+
 class Seed
-  class SettingsSeed
+  class SettingsSeed < GenericSeed
     DEFAULT_NAVIGATION = [
-      {
-        label: 'Home',
-        url: '/'
-      },
-      {
-        label: 'Servicios',
-        url: '/servicios/'
-      }
+      { url: '/',           label: 'Inicio' },
+      { url: '/servicios/', label: 'Servicios' }
+    ]
+    DEFAULT_SETTINGS = [
+      { key: "activeTheme", value: "fedes" },
+      { key: "labs",        value: '{"publicAPI":true}' },
+      { key: "logo",        value: '/default/logo-fedes.png' },
+      { key: "navigation",  value: DEFAULT_NAVIGATION.to_json }
     ]
 
-    DEFAULT_SETTINGS = {
-      activeTheme: 'fedes',
-      labs: '{"publicAPI":true}',
-      logo: '/default/logo-fedes.png',
-      navigation: DEFAULT_NAVIGATION.to_json
-    }
-
-    def initialize(options)
-      @db = options.fetch(:db)
+    def self.seeds
+      DEFAULT_SETTINGS
     end
 
-    def perform_queries
-      DEFAULT_SETTINGS.each do |key, value|
-        Setting.find_by!(key: key).tap do |setting|
-          setting.update!(value: value)
-          Logger.info self.class, "#{key}:", value
-        end
-      end
+    def seed!
+      setting.update!(value: record.value)
+      Logger.info self.class, "#{record.key}:", record.value
+    end
+
+    private
+
+    def setting
+      Setting.find_by!(key: record.key)
     end
   end
 end
