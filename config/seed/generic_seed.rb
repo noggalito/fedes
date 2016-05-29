@@ -1,4 +1,5 @@
 require "erb"
+require "yaml"
 require "./config/seed/generic_seed/yaml_bindings"
 
 class Seed
@@ -35,7 +36,7 @@ class Seed
 
     def seed!
       if record_exists?
-        record_exists!
+        Logger.info "#{self.class} exists:", record_slug
       else
         create_record!
       end
@@ -51,13 +52,13 @@ class Seed
       self.class.klass.where(slug: record.slug).exists?
     end
 
-    def record_exists!
-      Logger.info "#{self.class} exists:", record.slug
+    def record_slug
+      record.slug
     end
 
     def create_record!
       self.class.klass.create(attributes_for_create)
-      Logger.success self.class, record.slug
+      Logger.success self.class, record_slug
     end
   end
 end

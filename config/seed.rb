@@ -4,6 +4,7 @@ require "./config/seed/tags_seed"
 require "./config/seed/posts_seed"
 require "./config/seed/settings_seed"
 require "./config/seed/db_connection"
+require "./config/seed/post_tags_seed"
 
 class Seed
   class << self
@@ -43,7 +44,8 @@ class Seed
     [
       TagsSeed,
       PostsSeed,
-      SettingsSeed
+      SettingsSeed,
+      PostTagsSeed
     ]
   end
 end
