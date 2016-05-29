@@ -33,6 +33,13 @@ module.exports = (function () {
       hidden: false,
       created_at: new Date().toISOString(),
       updated_at: new Date().toISOString()
+    },
+    {
+      name: 'servicios',
+      slug: 'servicios',
+      hidden: false,
+      created_at: new Date().toISOString(),
+      updated_at: new Date().toISOString()
     }
   ];
 
