@@ -66,16 +66,6 @@ module.exports = (function () {
     {
       title: 'Imagen1Carousel',
       slug: 'imagen1carousel',
-      markdown:'esta es la descripcion de la imagen1',
-      html:'<p>esta es la descripcion de la imagen1</p>',
-      featured: false,
-      page: false,
-      status: 'published',
-      language: 'en_US',
-      image: '/assets/img/carousel1.jpg',
-      created_at: new Date().toISOString(),
-      updated_at: new Date().toISOString(),
-      published_at: new Date().toISOString(),
       tag: 'carouselimagen'
     },
     {

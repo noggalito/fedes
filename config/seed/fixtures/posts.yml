@@ -92,3 +92,89 @@
   image: /default/prendho.jpg
   markdown: <%= lipsum %>
   html: "<p><%= lipsum %></p>"
+
+# tag:servicios
+- uuid: <%= uuid %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  published_at: <%= Time.now %>
+  page: false
+  slug: consultoria
+  title: Consultoría
+  featured: false
+  language: en_US
+  status: published
+  image: /default/consultoria.jpg
+  markdown: <%= lipsum %>
+  html: "<p><%= lipsum %></p>"
+
+- uuid: <%= uuid %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  published_at: <%= Time.now %>
+  page: false
+  slug: asesoramiento
+  title: Asesoramiento
+  featured: false
+  language: en_US
+  status: published
+  image: /default/asesoramiento.jpg
+  markdown: <%= lipsum %>
+  html: "<p><%= lipsum %></p>"
+
+- uuid: <%= uuid %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  published_at: <%= Time.now %>
+  page: false
+  slug: trabajo-con-municipios
+  title: Trabajo con municipios
+  featured: false
+  language: en_US
+  status: published
+  image: /default/trabajo.jpg
+  markdown: <%= lipsum %>
+  html: "<p><%= lipsum %></p>"
+
+# tag:carouselimagen
+- uuid: <%= uuid %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  published_at: <%= Time.now %>
+  page: false
+  slug: carrusel-1
+  title: Carrusel 1
+  featured: false
+  language: en_US
+  status: published
+  image: /default/carousel1.jpg
+  markdown: Imagen 1
+  html: "<p>Imagen 1</p>"
+
+- uuid: <%= uuid %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  published_at: <%= Time.now %>
+  page: false
+  slug: carrusel-2
+  title: Carrusel 2
+  featured: false
+  language: en_US
+  status: published
+  image: /default/carousel2.jpg
+  markdown: Imagen 2
+  html: "<p>Imagen 2</p>"
+
+- uuid: <%= uuid %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  published_at: <%= Time.now %>
+  page: false
+  slug: carrusel-3
+  title: Carrusel 3
+  featured: false
+  language: en_US
+  status: published
+  image: /default/consultoria.jpg
+  markdown: Imagen 3
+  html: "<p>Imagen 3</p>"

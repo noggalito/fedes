@@ -1,5 +1,15 @@
 ---
 - hidden: false
-  name: proyectos
+  name: Proyectos
   slug: proyectos
+  uuid: <%= uuid %>
+
+- hidden: false
+  name: Imágenes de carrusel
+  slug: carouselimagen
+  uuid: <%= uuid %>
+
+- hidden: false
+  name: Servicios
+  slug: servicios
   uuid: <%= uuid %>
