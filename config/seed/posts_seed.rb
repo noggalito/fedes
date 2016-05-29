@@ -3,12 +3,19 @@ require "./config/seed/generic_seed"
 
 class Seed
   class PostsSeed < GenericSeed
-    def self.seeds
-      load_fixtures "posts"
+    def self.klass
+      Post
     end
 
-    def seed!
-      Logger.warn self.class, "TODO: seed", record.slug
+    private
+
+    def attributes_for_create
+      attributes.merge(
+        author_id: first_user.id,
+        created_by: first_user.id,
+        updated_by: first_user.id,
+        published_by: first_user.id
+      )
     end
   end
 end

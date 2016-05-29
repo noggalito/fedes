@@ -7,8 +7,14 @@ end
 class Tag < ActiveRecord::Base
 end
 
+class Post < ActiveRecord::Base
+end
+
 class User < ActiveRecord::Base
 end
 
 class Setting < ActiveRecord::Base
+end
+
+class PostTag < ActiveRecord::Base
 end

@@ -1,3 +1,6 @@
+require "erb"
+require "securerandom"
+
 class Seed
   class GenericSeed
     class << self
@@ -8,9 +11,21 @@ class Seed
       end
 
       def load_fixtures(identifier)
-        YAML.load_file(
-          "./config/seed/fixtures/#{identifier}.yml"
+        YAML.load(
+          ERB.new(
+            File.read(
+              "./config/seed/fixtures/#{identifier}.yml"
+            )
+          ).result(binding)
         )
+      end
+
+      def seeds
+        load_fixtures klass.to_s.downcase.pluralize
+      end
+
+      def uuid
+        SecureRandom.uuid
       end
     end
 
@@ -20,6 +35,33 @@ class Seed
       @attributes = attributes
       # allow calling hash attributes as methods
       @record = OpenStruct.new(attributes)
+    end
+
+    def seed!
+      if record_exists?
+        record_exists!
+      else
+        create_record!
+      end
+    end
+
+    private
+
+    def first_user
+      @first_user ||= User.first
+    end
+
+    def record_exists?
+      self.class.klass.where(slug: record.slug).exists?
+    end
+
+    def record_exists!
+      Logger.info "#{self.class} exists:", record.slug
+    end
+
+    def create_record!
+      self.class.klass.create(attributes_for_create)
+      Logger.success self.class, record.slug
     end
   end
 end

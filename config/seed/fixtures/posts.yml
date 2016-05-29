@@ -5,7 +5,8 @@
   status: published
   slug: texto-principal
   title: Texto principal
-  published_at: 2016-05-28 08:39:15 -0500
+  published_at: <%= Time.now %>
+  uuid: <%= uuid %>
   markdown: << La innovación es lo que distingue a los líderes de los \nseguidores >>.- Steve Jobs
   html: <p>&lt;&lt; La innovación es lo que distingue a los líderes de los <br />seguidores >>.- Steve Jobs</p>
 
@@ -15,5 +16,18 @@
   status: published
   title: "Dirección:"
   slug: contactos-direccion
+  published_at: <%= Time.now %>
+  uuid: <%= uuid %>
   markdown: San Cayatano alto, calle París\ninstalaciones UTPL. Loja_Ecuador
   html: <p>San Cayatano alto, calle París<br />instalaciones UTPL. Loja_Ecuador</p>
+
+- page: false
+  title: "Fono:"
+  featured: false
+  language: en_US
+  status: published
+  slug: contactos-fono
+  published_at: <%= Time.now %>
+  uuid: <%= uuid %>
+  markdown: "(593 7)2585700\n(593 7)2585706\nEmail: info@fedes.ec"
+  html: "<p>(593 7)2585700</p><p>(593 7)2585706</p><p>Email: info@fedes.ec</p>"
