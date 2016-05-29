@@ -1,33 +1,94 @@
 ---
-- page: false
+- uuid: <%= uuid %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  published_at: <%= Time.now %>
+  page: false
   featured: false
   language: en_US
   status: published
   slug: texto-principal
   title: Texto principal
-  published_at: <%= Time.now %>
-  uuid: <%= uuid %>
   markdown: << La innovación es lo que distingue a los líderes de los \nseguidores >>.- Steve Jobs
   html: <p>&lt;&lt; La innovación es lo que distingue a los líderes de los <br />seguidores >>.- Steve Jobs</p>
 
-- page: false
+- uuid: <%= uuid %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  published_at: <%= Time.now %>
+  page: false
   featured: false
   language: en_US
   status: published
   title: "Dirección:"
   slug: contactos-direccion
-  published_at: <%= Time.now %>
-  uuid: <%= uuid %>
   markdown: San Cayatano alto, calle París\ninstalaciones UTPL. Loja_Ecuador
   html: <p>San Cayatano alto, calle París<br />instalaciones UTPL. Loja_Ecuador</p>
 
-- page: false
+- uuid: <%= uuid %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  published_at: <%= Time.now %>
+  page: false
   title: "Fono:"
   featured: false
   language: en_US
   status: published
   slug: contactos-fono
-  published_at: <%= Time.now %>
-  uuid: <%= uuid %>
   markdown: "(593 7)2585700\n(593 7)2585706\nEmail: info@fedes.ec"
   html: "<p>(593 7)2585700</p><p>(593 7)2585706</p><p>Email: info@fedes.ec</p>"
+
+# static pages
+- uuid: <%= uuid %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  published_at: <%= Time.now %>
+  page: true
+  slug: servicios
+  title: Servicios
+  featured: false
+  language: en_US
+  status: published
+
+# tag:proyectos
+- uuid: <%= uuid %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  published_at: <%= Time.now %>
+  page: false
+  slug: cooperacion-para-el-desarrollo
+  title: Cooperación para el desarrollo
+  featured: false
+  language: en_US
+  status: published
+  image: /default/copdesarrollo.jpg
+  markdown: <%= lipsum %>
+  html: "<p><%= lipsum %></p>"
+
+- uuid: <%= uuid %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  published_at: <%= Time.now %>
+  page: false
+  slug: cima
+  title: cima
+  featured: false
+  language: en_US
+  status: published
+  image: /default/cima.jpg
+  markdown: <%= lipsum %>
+  html: "<p><%= lipsum %></p>"
+
+- uuid: <%= uuid %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  published_at: <%= Time.now %>
+  page: false
+  slug: prendho
+  title: prendho
+  featured: false
+  language: en_US
+  status: published
+  image: /default/prendho.jpg
+  markdown: <%= lipsum %>
+  html: "<p><%= lipsum %></p>"

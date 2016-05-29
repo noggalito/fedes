@@ -19,7 +19,7 @@ class Seed
 
     def seed!
       setting.update!(value: record.value)
-      Logger.info self.class, "#{record.key}:", record.value
+      Logger.success self.class, "#{record.key}:", record.value
     end
 
     private

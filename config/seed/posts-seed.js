@@ -42,70 +42,25 @@ module.exports = (function () {
   var defaultPosts = [
 
     {
-      
+
       created_at: new Date().toISOString(),
       updated_at: new Date().toISOString(),
       published_at: new Date().toISOString()
     },
     {
-      title: 'Cooperación para el desarrollo',
+      title: '',
       slug: 'cooperacion-para-el-desarrollo',
-      markdown: 'Lorem ipsum dolor sit amet, sea ea mutat ignota,' +
-        ' id commune lobortis qui. Fastidii mnesarchum mel id, mel ' +
-        'no vide reprehendunt. Mel deserunt indoctum id. Id tollit ' +
-        'suscipit per, in veritus menandri conceptam cum.',
-      html: '<p>Lorem ipsum dolor sit amet, sea ea mutat ignota,' +
-        ' id commune lobortis qui. Fastidii mnesarchum mel id, mel ' +
-        'no vide reprehendunt. Mel deserunt indoctum id. Id tollit ' +
-        'suscipit per, in veritus menandri conceptam cum.</p>',
-      featured: false,
-      page: false,
-      status: 'published',
-      language: 'en_US',
-      image: '/default/copdesarrollo.jpg',
-      created_at: new Date().toISOString(),
-      updated_at: new Date().toISOString(),
-      published_at: new Date().toISOString(),
+
       tag: 'proyectos'
     },
     {
       title: 'cima',
       slug: 'cima',
-      markdown: 'Id congue efficiendi per. At impedit minimum vis,' +
-        ' te eum esse timeam. Melius cetero ut vel, an iusto inermis ' +
-        'laboramus est. Diceret dissentiet deterruisset per an, ' +
-        'et rebum iuvaret equidem per, vix at erant tollit quaeque.',
-      html: '<p>Id congue efficiendi per. At impedit minimum vis,' +
-        ' te eum esse timeam. Melius cetero ut vel, an iusto inermis ' +
-        'laboramus est. Diceret dissentiet deterruisset per an, ' +
-        'et rebum iuvaret equidem per, vix at erant tollit quaeque.</p>',
-      featured: false,
-      page: false,
-      status: 'published',
-      language: 'en_US',
-      image: '/default/cima.jpg',
-      created_at: new Date().toISOString(),
-      updated_at: new Date().toISOString(),
-      published_at: new Date().toISOString(),
       tag: 'proyectos'
     },
     {
       title: 'prendho',
       slug: 'prendho',
-      markdown: 'Ut aliquam admodum feugait cum, ea noster eleifend ' +
-        'necessitatibus vel. Eos quot autem ne. Prima dictas vix an. ' +
-        'In rebum veritus denique quo.',
-      html: '<p>Ut aliquam admodum feugait cum, ea noster eleifend ' +
-        'necessitatibus vel. Eos quot autem ne. Prima dictas vix an. ' +
-        'In rebum veritus denique quo.</p>',
-      featured: false,
-      page: false,
-      status: 'published',
-      language: 'en_US',
-      image: '/default/prendho.jpg',
-      created_at: new Date().toISOString(),
-      updated_at: new Date().toISOString(),
-      published_at: new Date().toISOString(),
       tag: 'proyectos'
     },
     {

@@ -1,5 +1,5 @@
 require "erb"
-require "securerandom"
+require "./config/seed/generic_seed/yaml_bindings"
 
 class Seed
   class GenericSeed
@@ -16,16 +16,12 @@ class Seed
             File.read(
               "./config/seed/fixtures/#{identifier}.yml"
             )
-          ).result(binding)
+          ).result(YamlBindings.helper)
         )
       end
 
       def seeds
         load_fixtures klass.to_s.downcase.pluralize
-      end
-
-      def uuid
-        SecureRandom.uuid
       end
     end
 
