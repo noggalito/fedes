@@ -17,7 +17,7 @@ class Seed
             File.read(
               "./config/seed/fixtures/#{identifier}.yml"
             )
-          ).result(YamlBindings.helper)
+          ).result(YamlBindings.new.helper)
         )
       end
 

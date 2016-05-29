@@ -7,7 +7,14 @@ built using [ghost](https://ghost.org)
 ```
 $ npm install
 $ npm install -g gulp
-$ gulp seed
+```
+
+### seeding DB
+
+requirements: ruby 2+
+
+```
+$ ./seed.rb
 ```
 
 ## development

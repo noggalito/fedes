@@ -3,12 +3,6 @@ require "securerandom"
 class Seed
   class GenericSeed
     class YamlBindings
-      class << self
-        def helper
-          new.helper
-        end
-      end
-
       def helper
         binding
       end

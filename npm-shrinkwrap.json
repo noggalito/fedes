@@ -1349,11 +1349,6 @@
       "from": "q@*",
       "resolved": "https://registry.npmjs.org/q/-/q-1.4.1.tgz"
     },
-    "q-orm": {
-      "version": "0.0.3",
-      "from": "q-orm@0.0.3",
-      "resolved": "https://registry.npmjs.org/q-orm/-/q-orm-0.0.3.tgz"
-    },
     "qs": {
       "version": "5.2.0",
       "from": "qs@5.2.0",
