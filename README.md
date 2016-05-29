@@ -14,6 +14,7 @@ $ npm install -g gulp
 requirements: ruby 2+
 
 ```
+$ bundle install
 $ ./seed.rb
 ```
 
