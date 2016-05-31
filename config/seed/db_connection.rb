@@ -8,7 +8,6 @@ class Seed
     end
 
     def connect!
-      require(@db_gem)
       ActiveRecord::Base.establish_connection(
         @connection_options
       )
@@ -24,12 +23,15 @@ class Seed
       case @environment
       when "development"
         @db_gem = "sqlite3"
+        require(@db_gem)
+        monkey_patch_sqlite3!
         @connection_options = {
           adapter: @db_gem,
           database: Dir.pwd + "/content/data/ghost-dev.db"
         }
       else
         @db_gem = "pg"
+        require(@db_gem)
         db = URI.parse(ENV.fetch("DATABASE_URL"))
         @connection_options = {
           host: db.host,
@@ -40,6 +42,10 @@ class Seed
           adapter: db.scheme == "postgres" ? "postgresql" : db.scheme
         }
       end
+    end
+
+    def monkey_patch_sqlite3!
+      require "./config/seed/monkey_patch_sqlite3"
     end
   end
 end
