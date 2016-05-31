@@ -1,0 +1,180 @@
+---
+- uuid: <%= uuid %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  published_at: <%= Time.now %>
+  page: false
+  featured: false
+  language: en_US
+  status: published
+  slug: texto-principal
+  title: Texto principal
+  markdown: << La innovación es lo que distingue a los líderes de los \nseguidores >>.- Steve Jobs
+  html: <p>&lt;&lt; La innovación es lo que distingue a los líderes de los <br />seguidores >>.- Steve Jobs</p>
+
+- uuid: <%= uuid %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  published_at: <%= Time.now %>
+  page: false
+  featured: false
+  language: en_US
+  status: published
+  title: "Dirección:"
+  slug: contactos-direccion
+  markdown: San Cayatano alto, calle París\ninstalaciones UTPL. Loja_Ecuador
+  html: <p>San Cayatano alto, calle París<br />instalaciones UTPL. Loja_Ecuador</p>
+
+- uuid: <%= uuid %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  published_at: <%= Time.now %>
+  page: false
+  title: "Fono:"
+  featured: false
+  language: en_US
+  status: published
+  slug: contactos-fono
+  markdown: "(593 7)2585700\n(593 7)2585706\nEmail: info@fedes.ec"
+  html: "<p>(593 7)2585700</p><p>(593 7)2585706</p><p>Email: info@fedes.ec</p>"
+
+# static pages
+- uuid: <%= uuid %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  published_at: <%= Time.now %>
+  page: true
+  slug: servicios
+  title: Servicios
+  featured: false
+  language: en_US
+  status: published
+
+# tag:proyectos
+- uuid: <%= uuid %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  published_at: <%= Time.now %>
+  page: false
+  slug: cooperacion-para-el-desarrollo
+  title: Cooperación para el desarrollo
+  featured: false
+  language: en_US
+  status: published
+  image: /default/copdesarrollo.jpg
+  markdown: <%= lipsum %>
+  html: "<p><%= lipsum %></p>"
+
+- uuid: <%= uuid %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  published_at: <%= Time.now %>
+  page: false
+  slug: cima
+  title: cima
+  featured: false
+  language: en_US
+  status: published
+  image: /default/cima.jpg
+  markdown: <%= lipsum %>
+  html: "<p><%= lipsum %></p>"
+
+- uuid: <%= uuid %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  published_at: <%= Time.now %>
+  page: false
+  slug: prendho
+  title: prendho
+  featured: false
+  language: en_US
+  status: published
+  image: /default/prendho.jpg
+  markdown: <%= lipsum %>
+  html: "<p><%= lipsum %></p>"
+
+# tag:servicios
+- uuid: <%= uuid %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  published_at: <%= Time.now %>
+  page: false
+  slug: consultoria
+  title: Consultoría
+  featured: false
+  language: en_US
+  status: published
+  image: /default/consultoria.jpg
+  markdown: <%= lipsum %>
+  html: "<p><%= lipsum %></p>"
+
+- uuid: <%= uuid %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  published_at: <%= Time.now %>
+  page: false
+  slug: asesoramiento
+  title: Asesoramiento
+  featured: false
+  language: en_US
+  status: published
+  image: /default/asesoramiento.jpg
+  markdown: <%= lipsum %>
+  html: "<p><%= lipsum %></p>"
+
+- uuid: <%= uuid %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  published_at: <%= Time.now %>
+  page: false
+  slug: trabajo-con-municipios
+  title: Trabajo con municipios
+  featured: false
+  language: en_US
+  status: published
+  image: /default/trabajo.jpg
+  markdown: <%= lipsum %>
+  html: "<p><%= lipsum %></p>"
+
+# tag:carouselimagen
+- uuid: <%= uuid %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  published_at: <%= Time.now %>
+  page: false
+  slug: carrusel-1
+  title: Carrusel 1
+  featured: false
+  language: en_US
+  status: published
+  image: /default/carousel1.jpg
+  markdown: Imagen 1
+  html: "<p>Imagen 1</p>"
+
+- uuid: <%= uuid %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  published_at: <%= Time.now %>
+  page: false
+  slug: carrusel-2
+  title: Carrusel 2
+  featured: false
+  language: en_US
+  status: published
+  image: /default/carousel2.jpg
+  markdown: Imagen 2
+  html: "<p>Imagen 2</p>"
+
+- uuid: <%= uuid %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  published_at: <%= Time.now %>
+  page: false
+  slug: carrusel-3
+  title: Carrusel 3
+  featured: false
+  language: en_US
+  status: published
+  image: /default/consultoria.jpg
+  markdown: Imagen 3
+  html: "<p>Imagen 3</p>"

@@ -40,13 +40,4 @@ gulp.task('server', function () {
   gulp.watch('content/themes/' + theme + '/lib/js/**/*.js', ['minify:js']);
 });
 
-gulp.task('seed', function () {
-  var Seeds = require('./config/seed'),
-      Logger = require('./config/seed/gulp-logger');
-
-  return new Seeds({
-    logger: new Logger()
-  }).runSeeds();
-});
-
 gulp.task('default', ['server']);
