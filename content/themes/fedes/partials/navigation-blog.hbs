@@ -1,0 +1,14 @@
+<div class="nav-blog">
+  <ul class="nav nav-tabs">
+    <li class="active">
+      <a href="/blog/">All</a>
+    </li>
+    {{#get "posts" order="created_at asc" filter="tag:blog-category" as |categories|}}
+      {{#foreach categories}}
+        <li>
+          <a href="/tag/{{slug}}/">{{title}}</a>
+        </li>
+      {{/foreach}}
+    {{/get}}
+  </ul>
+</div>

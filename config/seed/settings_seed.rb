@@ -4,7 +4,8 @@ class Seed
   class SettingsSeed < GenericSeed
     DEFAULT_NAVIGATION = [
       { url: '/',           label: 'Inicio' },
-      { url: '/servicios/', label: 'Servicios' }
+      { url: '/servicios/', label: 'Servicios' },
+      { url: '/blog/',      label: 'Blog' }
     ]
     DEFAULT_SETTINGS = [
       { key: "activeTheme", value: "fedes" },

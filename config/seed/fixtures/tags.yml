@@ -13,3 +13,40 @@
   name: Servicios
   slug: servicios
   uuid: <%= uuid %>
+
+- hidden: false
+  name: Blog
+  slug: blog
+  uuid: <%= uuid %>
+
+- hidden: false
+  name: Blog-category
+  slug: blog-category
+  uuid: <%= uuid %>
+
+#blog-categories
+- hidden: false
+  name: Minería
+  slug: mineria
+  uuid: <%= uuid %>
+
+- hidden: false
+  name: Desarrollo Territorial
+  slug: desarrollo-territorial
+  uuid: <%= uuid %>
+
+- hidden: false
+  name: Emprendimiento
+  slug: emprendimiento
+  uuid: <%= uuid %>
+
+- hidden: false
+  name: Negocios
+  slug: negocios
+  uuid: <%= uuid %>
+
+- hidden: false
+  name: Cultura
+  slug: cultura
+  uuid: <%= uuid %>
+

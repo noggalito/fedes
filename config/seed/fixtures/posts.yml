@@ -50,6 +50,17 @@
   language: en_US
   status: published
 
+- uuid: <%= uuid %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  published_at: <%= Time.now %>
+  page: true
+  slug: blog
+  title: Blog
+  featured: false
+  language: en_US
+  status: published
+
 # tag:proyectos
 - uuid: <%= uuid %>
   created_at: <%= Time.now %>
@@ -135,6 +146,147 @@
   image: /default/trabajo.jpg
   markdown: <%= lipsum %>
   html: "<p><%= lipsum %></p>"
+
+# tag:blog
+- uuid: <%= uuid %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  published_at: <%= Time.now %>
+  page: false
+  slug: blog-post-1
+  title: <%= lipsum_small %>
+  featured: false
+  language: en_US
+  status: published
+  image: /default/consultoria.jpg
+  markdown: <%= lipsum %>
+  html: "<p><%= lipsum %></p>"
+
+- uuid: <%= uuid %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  published_at: <%= Time.now %>
+  page: false
+  slug: blog-post-2
+  title: <%= lipsum_small %>
+  featured: false
+  language: en_US
+  status: published
+  image: /default/asesoramiento.jpg
+  markdown: <%= lipsum %>
+  html: "<p><%= lipsum %></p>"
+
+- uuid: <%= uuid %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  published_at: <%= Time.now %>
+  page: false
+  slug: blog-post-3
+  title: <%= lipsum_small %>
+  featured: false
+  language: en_US
+  status: published
+  image: /default/trabajo.jpg
+  markdown: <%= lipsum %>
+  html: "<p><%= lipsum %></p>"
+
+- uuid: <%= uuid %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  published_at: <%= Time.now %>
+  page: false
+  slug: blog-post-4
+  title: <%= lipsum_small %>
+  featured: false
+  language: en_US
+  status: published
+  image: /default/consultoria.jpg
+  markdown: <%= lipsum %>
+  html: "<p><%= lipsum %></p>"
+
+- uuid: <%= uuid %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  published_at: <%= Time.now %>
+  page: false
+  slug: blog-post-5
+  title: <%= lipsum_small %>
+  featured: false
+  language: en_US
+  status: published
+  image: /default/asesoramiento.jpg
+  markdown: <%= lipsum %>
+  html: "<p><%= lipsum %></p>"
+
+- uuid: <%= uuid %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  published_at: <%= Time.now %>
+  page: false
+  slug: blog-post-6
+  title: <%= lipsum_small %>
+  featured: false
+  language: en_US
+  status: published
+  image: /default/trabajo.jpg
+  markdown: <%= lipsum %>
+  html: "<p><%= lipsum %></p>"
+
+# tag:blog-category
+- uuid: <%= uuid %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  published_at: <%= Time.now %>
+  page: false
+  slug: mineria
+  title: Minería
+  featured: false
+  language: en_US
+  status: published
+
+- uuid: <%= uuid %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  published_at: <%= Time.now %>
+  page: false
+  slug: desarrollo-territorial
+  title: Desarrollo Territorial
+  featured: false
+  language: en_US
+  status: published
+
+- uuid: <%= uuid %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  published_at: <%= Time.now %>
+  page: false
+  slug: emprendimiento
+  title: Emprendimiento
+  featured: false
+  language: en_US
+  status: published
+
+- uuid: <%= uuid %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  published_at: <%= Time.now %>
+  page: false
+  slug: negocios
+  title: Negocios
+  featured: false
+  language: en_US
+  status: published
+
+- uuid: <%= uuid %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  published_at: <%= Time.now %>
+  page: false
+  slug: cultura
+  title: Cultura
+  featured: false
+  language: en_US
+  status: published
 
 # tag:carouselimagen
 - uuid: <%= uuid %>
