@@ -1,3 +1,4 @@
+!function(a){var e=window.location.href,i=a(".nav-blog .nav li a").filter(function(){return this.href===e?!0:void a(this).parent().removeClass("active")});i.parent().addClass("active")}(jQuery);
 $(document).ready(function(){$(".carousel-inner .item").filter(":first").addClass("active")});
 !function(l){var n="#gallery-fedes";l(n+" .collapse").on("show.bs.collapse",function(e){var o=l(n).find(".in, .collapsing");o.each(function(n,e){l(e).collapse("hide")})})}(jQuery);
 !function(){"use strict";console.log("hello world")}();
