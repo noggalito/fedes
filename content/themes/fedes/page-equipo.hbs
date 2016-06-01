@@ -1,0 +1,67 @@
+{{!< default}}
+{{#post}}
+  {{! The main content area on the homepage }}
+  <main id="content" class="content" role="main">
+      {{> "carousel"}}
+      <div class="container gallery gallery-principal" id="gallery-fedes">
+        <div>
+          <h2 class="gallery-title">Conoce al equipo</h2>
+        </div>
+        <div class="row row-services">
+          <section>
+            {{#get "posts" filter="tag:imagenequipo" as |images|}}
+              {{#foreach images}}
+                <div class="col-xs-12 col-sm-4">
+                  <figure class="img-gallery-services">
+                    <img src="{{image}}"
+                      class="img-responsive"
+                      alt="{{title}}"
+                      data-toggle="collapse"
+                      data-target="#service-{{@number}}"/>
+                    <div>
+                      <p>{{title}}</p>
+                    </div>
+                    <div class="collapse" id="service-{{@number}}">
+                      {{content}}
+                    </div>
+                  </figure>
+                </div>
+              {{/foreach}}
+            {{/get}}
+          </section>
+        </div>
+        <div>
+          <h2 class="gallery-title">Trabaja con nosotros</h2>
+        </div>
+        <div class="row row-services">
+          <section>
+            <div class="row">
+            {{#get "posts" filter="tag:equipocontactos" order="title desc" as |images|}}
+              {{#foreach images}}
+                <div class="col-xs-12 col-sm-4">
+                  <figure class="img-gallery-services">
+                    <img id="pruebaclick" src="{{image}}"
+                      class="img-responsive"
+                      alt="{{title}}"
+                      data-toggle="collapse"
+                      data-target="#equipo-{{@number}}"/>
+                    <div>
+                      <p>{{title}}</p>
+                    </div>
+                  </figure>
+                </div>
+              {{/foreach}}
+            </div>
+            <div class="row">
+                {{#foreach images}}
+                  <div class="collapse" id="equipo-{{@number}}">
+                    {{content}}
+                  </div>
+                {{/foreach}}
+            </div>
+          {{/get}}
+          </section>
+        </div>
+      </div>
+  </main>
+{{/post}}
