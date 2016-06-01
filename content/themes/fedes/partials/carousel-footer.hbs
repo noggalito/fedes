@@ -1,0 +1,19 @@
+<section>
+  {{#get "posts" slug="texto-principal" as |article|}}
+    {{#article}}
+      <div class="carousel-footer {{^is "index"}} carousel-footer-secondary {{/is}}">
+        {{#is "index"}}
+          <span class="textFooter">
+            {{content}}
+          </span>
+        {{/is}}
+      </div>
+    {{/article}}
+  {{/get}}
+</section>
+
+<div class="gearDivider">
+  <div>
+    <img class="ruedaBlanca" src="{{asset 'img/rueda_blanca.png'}}">
+  </div>
+</div>

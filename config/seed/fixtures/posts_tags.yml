@@ -25,3 +25,58 @@
 
 - tag_slug: servicios
   post_slug: trabajo-con-municipios
+
+# tag:blog-category
+- tag_slug: blog-category
+  post_slug: mineria
+
+- tag_slug: blog-category
+  post_slug: desarrollo-territorial
+
+- tag_slug: blog-category
+  post_slug: emprendimiento
+
+- tag_slug: blog-category
+  post_slug: negocios
+
+- tag_slug: blog-category
+  post_slug: cultura
+
+# tag:blog
+- tag_slug: blog
+  post_slug: blog-post-1
+
+- tag_slug: blog
+  post_slug: blog-post-2
+
+- tag_slug: blog
+  post_slug: blog-post-3
+
+- tag_slug: blog
+  post_slug: blog-post-4
+
+- tag_slug: blog
+  post_slug: blog-post-5
+
+- tag_slug: blog
+  post_slug: blog-post-6
+
+# tag:{{categories}}
+- tag_slug: mineria
+  post_slug: blog-post-1
+
+- tag_slug: mineria
+  post_slug: blog-post-2
+
+- tag_slug: desarrollo-territorial
+  post_slug: blog-post-3
+
+- tag_slug: emprendimiento
+  post_slug: blog-post-4
+
+- tag_slug: negocios
+  post_slug: blog-post-5
+
+- tag_slug: cultura
+  post_slug: blog-post-6
+

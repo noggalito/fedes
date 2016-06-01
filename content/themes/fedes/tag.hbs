@@ -1,0 +1,30 @@
+{{!< default}}
+{{#tag}}
+  <div class="blog-header">
+    {{> "carousel-footer"}}
+  </div>
+  <div>
+    {{> "navigation-blog"}}
+  </div>
+{{/tag}}
+<main id="content" class="content" role="main">
+  <div class="row">
+    <section>
+      {{#foreach posts}}
+        <div class="col-xs-12 col-sm-4">
+          <figure>
+            <img src="{{image}}"
+              class="img-responsive"
+              alt="{{title}}"/>
+            <div>
+              <p>{{title}}</p>
+            </div>
+            <div>
+              {{content}}
+            </div>
+          </figure>
+        </div>
+      {{/foreach}}
+    </section>
+  </div>
+</main>
