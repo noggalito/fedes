@@ -11,28 +11,26 @@
       <p class="text-center">nam ea quod aperiri eruditi.</p>
     </div>
     <div class="row">
-      {{#get "posts" limit="3" include="tags" as |projects|}}
+      {{#get "posts" limit="3" filter="tag:proyectos"  as |projects|}}
         {{#foreach projects}}
-          {{#has tag="proyectos"}}
-            <section class="col-xs-12 col-sm-4">
-              <figure>
-                {{#if image}}
-                  <div class="img-gallery">
-                    <img src="{{image}}" class="img-responsive"/>
-                    <div>{{content}}</div>
-                  </div>
-                {{else}}
-                  <div class="img-gallery">
-                    <img src="{{asset 'img/no-image.jpg'}}" class="img-responsive">
-                    <div>{{content}}</div>
-                  </div>
-                {{/if}}
-                <div>
-                  <p>{{title}}</p>
+          <section class="col-xs-12 col-sm-4">
+            <figure>
+              {{#if image}}
+                <div class="img-gallery">
+                  <img src="{{image}}" class="img-responsive"/>
+                  <div>{{content}}</div>
                 </div>
-              </figure>
-            </section>
-          {{/has}}
+              {{else}}
+                <div class="img-gallery">
+                  <img src="{{asset 'img/no-image.jpg'}}" class="img-responsive">
+                  <div>{{content}}</div>
+                </div>
+              {{/if}}
+              <div>
+                <p>{{title}}</p>
+              </div>
+            </figure>
+          </section>
         {{/foreach}}
       {{/get}}
     </div>
