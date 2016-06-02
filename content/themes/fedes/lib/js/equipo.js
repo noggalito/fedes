@@ -1,4 +1,2 @@
 $( document ).ready(function() {
-  $(".contentEquipo .item .formEquipo").filter(function( index ) {
-    return index === 1;
-  }).css("display","none"); });
+  $(".contentEquipo .item .formEquipo").filter(":nth-child(2)").css("display","none"); });
