@@ -10,8 +10,13 @@
   uuid: <%= uuid %>
 
 - hidden: false
-  name: imagenequipo
+  name: Imagen Equipo
   slug: imagenequipo
+  uuid: <%= uuid %>
+
+- hidden: false
+  name: Equipo Contactos
+  slug: equipocontactos
   uuid: <%= uuid %>
 
 - hidden: false

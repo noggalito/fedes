@@ -1,3 +1,4 @@
-$(document).on("ready", function() {
-  $(".contentEquipo .item .formEquipo").filter(":nth-child(2)").hide(); 
-});
+$( document ).ready(function() {
+  $(".contentEquipo .item .formEquipo").filter(function( index ) {
+    return index === 1;
+  }).hide(); });
