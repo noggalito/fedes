@@ -61,6 +61,16 @@
   language: en_US
   status: published
 
+- uuid: <%= uuid %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  published_at: <%= Time.now %>
+  page: true
+  slug: equipo
+  title: Equipo
+  featured: false
+  language: en_US
+  status: published
 # tag:proyectos
 - uuid: <%= uuid %>
   created_at: <%= Time.now %>
@@ -330,3 +340,89 @@
   image: /default/consultoria.jpg
   markdown: Imagen 3
   html: "<p>Imagen 3</p>"
+
+# tag:imagenequipo
+- uuid: <%= uuid %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  published_at: <%= Time.now %>
+  page: false
+  slug: equipo1
+  title: equipo1
+  featured: false
+  language: en_US
+  status: published
+  image: /default/consultoria.jpg
+  markdown: Imagen 1
+  html: "<p>Imagen 1</p>"
+
+- uuid: <%= uuid %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  published_at: <%= Time.now %>
+  page: false
+  slug: equipo2
+  title: equipo2
+  featured: false
+  language: en_US
+  status: published
+  image: /default/asesoramiento.jpg
+  markdown: Imagen 2
+  html: "<p>Imagen 2</p>"
+
+- uuid: <%= uuid %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  published_at: <%= Time.now %>
+  page: false
+  slug: equipo3
+  title: equipo3
+  featured: false
+  language: en_US
+  status: published
+  image: /default/trabajo.jpg
+  markdown: Imagen 3
+  html: "<p>Imagen 3</p>"
+
+- uuid: <%= uuid %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  published_at: <%= Time.now %>
+  page: false
+  slug: equipo4
+  title: equipo4
+  featured: false
+  language: en_US
+  status: published
+  image: /default/equipo4.jpg
+  markdown: Imagen 4
+  html: "<p>Imagen 4</p>"
+
+# tag:equipocontactos
+- uuid: <%= uuid %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  published_at: <%= Time.now %>
+  page: false
+  featured: false
+  language: en_US
+  status: published
+  slug: registrate
+  title: Registrate
+  image: /default/consultoria.jpg
+  markdown: Registrate Lorem ipsum dolor sit amet, consectetur adipisicing elit
+  html: <p>Registrate Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+
+- uuid: <%= uuid %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  published_at: <%= Time.now %>
+  page: false
+  featured: false
+  language: en_US
+  status: published
+  slug: colabora
+  title: Colabora
+  image: /default/asesoramiento.jpg
+  markdown: Lorem ipsum dolor sit amet, consectetur adipisicing elit
+  html: <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>

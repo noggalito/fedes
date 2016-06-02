@@ -10,6 +10,11 @@
   uuid: <%= uuid %>
 
 - hidden: false
+  name: imagenequipo
+  slug: imagenequipo
+  uuid: <%= uuid %>
+
+- hidden: false
   name: Servicios
   slug: servicios
   uuid: <%= uuid %>
@@ -49,4 +54,3 @@
   name: Cultura
   slug: cultura
   uuid: <%= uuid %>
-
