@@ -42,46 +42,7 @@
                         <div class="col-md-6">
                           {{content}}
                         </div>
-                        <div class="col-md-4 formEquipo">
-                          <h5>Datos Personales</h5>
-                          <form data-toggle="validator" role="form">
-                            <div class="form-group">
-                              <input type="text" class="form-control" id="nameInput"
-                              placeholder="nombres*" required>
-                            </div>
-                            <div class="form-group">
-                              <input type="text" class="form-control" id="lastNameInput"
-                              placeholder="apellidos*" required>
-                            </div>
-                            <div class="form-group">
-                              <input type="email" class="form-control" id="emailInput" placeholder="e-mail*" required>
-                            </div>
-                            <div class="form-group">
-                              <input type="tel" class="form-control" id="telInput" placeholder="teléfono*" required>
-                            </div>
-                            <div class="form-group">
-                            <h6>género</h6>
-                             <input type="checkbox" name="genere" value="male"> masculino<br>
-                             <input type="checkbox" name="genere" value="female"> femenino<br>
-                            </div>
-                            <h5>Datos de Usuario:</h5>
-                            <div class="form-group">
-                              <input type="text" class="form-control" id="username"
-                              placeholder="nombres de usurio" required>
-                            </div>
-                            <div class="form-group">
-                              <input type="text" class="form-control" id="password"
-                              placeholder="contraseña" required>
-                            </div>
-                            <div class="form-group">
-                              <input type="text" class="form-control" id="recpassword"
-                              placeholder="confirmar contraseña" required>
-                            </div>
-                            <h6>* datos requeridos de manera obligatoria</h6>
-                            <div class="help-block with-errors"></div>
-                            <button type="submit" class="btn btn-primary">registrarse</button>
-                          </form>
-                        </div>
+                        {{> "formEquipo"}}
                       </div>
                     </div>
                   </div>
