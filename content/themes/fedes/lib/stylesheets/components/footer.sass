@@ -4,7 +4,9 @@ footer
   padding-bottom: 25px
   .textFooter
     color: #FFFFFF
-    font-weight: 200
+    font-weight: bold
+    p
+      font-weight: 200
 
   .titleFooter
     text-align: center
@@ -19,12 +21,14 @@ footer
     width: 320px
 
   .colFooter
-    .form-group
-      .form-control
-        border-radius: 0px
-        width: 320px
+    .form-group .form-control
+      border-radius: 0px
+      width: 320px
     .btn-primary
       border-radius: 0px
+    @media (min-width: $mobile-width)
+      .directionText
+        margin-left: 1em
 
   .imgGalleryFooter
     border: 0px solid
@@ -41,14 +45,53 @@ footer
     margin-top: 50px
 
 .footer-navbar
-  .navbar-list
-    .navbar-menuItem
+  .navbar-list .navbar-menuItem
+    margin-left: 50px
+
+@media only screen and (max-width: $mobile-width)
+  footer
+    background: $blue-dark
+    padding-top: 1px
+    padding-bottom: 25px
+    .textFooter
+      color: #FFFFFF
+      font-weight: 200
+    h5
+      font-weight: bold
+
+    .titleFooter
+      text-align: center
+      padding-top: 45px
+      padding-bottom: 35px
+
+    .textFormFooter
+      color: #00b09a
+      padding-bottom: 20px
+      font-size: 15px
+      font-weight: 200
+      width: 320px
+
+    .colFooter
+      .form-group .form-control
+        border-radius: 0px
+        width: 320px
+      .btn-primary
+        border-radius: 0px
+
+    .imgGalleryFooter
+      border: 0px solid
+      border-radius: 0px
+      background-color: $blue-dark
+      padding: 0
+      width: 25px
+      height: 25px
+
+    .leyendfooter
+      align : left
+      color: $blue-one
+      padding-left: 15px
+      margin-top: 50px
+
+  .footer-navbar
+    .navbar-list .navbar-menuItem
       margin-left: 50px
-
-// TODO
-// @media (max-width: $mobile-width)
-
-// @media (max-width: @screen-xs-max) { ... }
-// @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) { ... }
-// @media (min-width: @screen-md-min) and (max-width: @screen-md-max) { ... }
-// @media (min-width: @screen-lg-min) { ... }
