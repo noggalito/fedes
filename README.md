@@ -14,7 +14,7 @@ $ npm install -g gulp
 requirements: ruby 2+
 
 ```
-$ bundle install
+$ bundle install --without staging production
 $ ./seed.rb
 ```
 
