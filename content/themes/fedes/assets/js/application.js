@@ -1,5 +1,6 @@
 !function(a){var e=window.location.href,i=a(".nav-blog .nav li a").filter(function(){return this.href===e?!0:void a(this).parent().removeClass("active")});i.parent().addClass("active")}(jQuery);
 $(document).ready(function(){$(".carousel-inner .item").filter(":first").addClass("active")});
+$(document).ready(function(){$(".carouselAliados .item").filter(":first").addClass("active")});
 $(document).ready(function(){$(".cauroselEquipo .item").filter(":first").addClass("active"),$("#myCarouselEquipo").carousel({interval:4e3}),$(".cauroselEquipo .item").each(function(){var i=$(this).next();i.length||(i=$(this).siblings(":first")),i.children(":first-child").clone().appendTo($(this)),i.next().length>0?i.next().children(":first-child").clone().appendTo($(this)).addClass("rightest"):$(this).siblings(":first").children(":first-child").clone().appendTo($(this))})});
 $(document).ready(function(){$(".contentEquipo .item .formEquipo").filter(function(n){return 1===n}).hide()});
 !function(l){var n="#gallery-fedes";l(n+" .collapse").on("show.bs.collapse",function(e){var o=l(n).find(".in, .collapsing");o.each(function(n,e){l(e).collapse("hide")})})}(jQuery);
