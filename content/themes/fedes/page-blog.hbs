@@ -6,23 +6,28 @@
   <div>
     {{> "navigation-blog"}}
   </div>
-  <main id="content" class="content" role="main">
+  <main id="content" class="content blog-content" role="main">
     <div class="row">
       <section>
         {{#get "posts" limit="all" filter="tag:blog" as |posts|}}
           {{#foreach posts}}
             <div class="col-xs-12 col-sm-4">
-              <figure>
-                <img src="{{image}}"
-                  class="img-responsive"
-                  alt="{{title}}"/>
-                <div>
-                  <p>{{title}}</p>
-                </div>
-                <div>
-                  {{content}}
-                </div>
-              </figure>
+              <a href="{{url}}" class="blog-post-link">
+                <figure>
+                  <div>
+                    {{moment-date published_at format="D [de] MMMM, YYYY" locale="es"}}
+                  </div>
+                  <img src="{{image}}"
+                    class="img-responsive"
+                    alt="{{title}}"/>
+                  <div>
+                    <p>{{title}}</p>
+                  </div>
+                  <div>
+                    {{excerpt}}
+                  </div>
+                </figure>
+              </a>
             </div>
           {{/foreach}}
         {{/get}}

@@ -1,0 +1,28 @@
+{{!< default}}
+{{#post}}
+  <div class="blog-header">
+    {{> "carousel-footer"}}
+  </div>
+  <main id="content" class="content blog-content" role="main">
+    <div class="row">
+      <section>
+        <div class="col-xs-12">
+          <figure>
+            <div>
+              <h1>{{title}}</h1>
+            </div>
+            <img src="{{image}}"
+              class="img-responsive"
+              alt="{{title}}"/>
+            <div>
+              Por: {{author}}, {{moment-date published_at format="D [de] MMMM, YYYY" locale="es"}}
+            </div>
+            <div>
+              {{content}}
+            </div>
+          </figure>
+        </div>
+      </section>
+    </div>
+  </main>
+{{/post}}
