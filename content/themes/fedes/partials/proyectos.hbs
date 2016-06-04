@@ -1,0 +1,31 @@
+<div class="container gallery gallery-principal">
+  <div class="mainTitle">
+    <h2 class="gallery-title">Proyectos</h2>
+    <p class="text-center">nam ea quod aperiri eruditi.</p>
+  </div>
+  <div class="row projectList">
+    {{#get "posts" limit="3" filter="tag:proyectos"  as |projects|}}
+      {{#foreach projects}}
+        <section class="col-xs-5 col-md-4">
+          <figure class="projectElement">
+            <div class="img-gallery">
+              {{#if image}}
+                <img src="{{image}}" class="img-responsive"/>
+              {{else}}
+                <img src="{{asset 'img/no-image.jpg'}}" class="img-responsive">
+              {{/if}}
+              <div class="projectContent">
+                <p>
+                  {{content}}
+                </p>
+              </div>
+            </div>
+            <div class="projectName">
+              <p>{{title}}</p>
+            </div>
+          </figure>
+        </section>
+      {{/foreach}}
+    {{/get}}
+  </div>
+</div>
