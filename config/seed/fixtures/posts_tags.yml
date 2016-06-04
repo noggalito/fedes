@@ -26,6 +26,26 @@
 - tag_slug: servicios
   post_slug: trabajo-con-municipios
 
+# tag:imagen-equipo
+- tag_slug: imagenequipo
+  post_slug: equipo1
+
+- tag_slug: imagenequipo
+  post_slug: equipo2
+
+- tag_slug: imagenequipo
+  post_slug: equipo3
+
+- tag_slug: imagenequipo
+  post_slug: equipo4
+
+# tag:equipocontactos
+- tag_slug: equipocontactos
+  post_slug: registrate
+
+- tag_slug: equipocontactos
+  post_slug: colabora
+
 # tag:blog-category
 - tag_slug: blog-category
   post_slug: mineria
@@ -79,4 +99,3 @@
 
 - tag_slug: cultura
   post_slug: blog-post-6
-

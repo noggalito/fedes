@@ -1,0 +1,56 @@
+{{!< default}}
+{{#post}}
+  {{! The main content area on the homepage }}
+  <main id="content" class="content" role="main">
+      {{> "carousel"}}
+      <div class="container gallery gallery-principal" id="gallery-fedes">
+        <div>
+          <h2 class="gallery-title">Conoce al equipo</h2>
+        </div>
+        <div class="row row-services">
+          <section>
+            {{> "carouselEquipo"}}
+          </section>
+        </div>
+        <div>
+          <h2 class="gallery-title">Trabaja con nosotros</h2>
+        </div>
+        <div class="row row-services">
+          <section>
+            <div class="row">
+            {{#get "posts" filter="tag:equipocontactos" order="title desc" as |images|}}
+              {{#foreach images}}
+                <div class="col-xs-12 col-sm-4">
+                  <figure class="img-gallery-services">
+                    <img src="{{image}}"
+                      class="img-responsive"
+                      alt="{{title}}"
+                      data-toggle="collapse"
+                      data-target="#equipo-{{@number}}"/>
+                    <div>
+                      <p>{{title}}</p>
+                    </div>
+                  </figure>
+                </div>
+              {{/foreach}}
+            </div>
+            <div class="row contentEquipo">
+                {{#foreach images}}
+                  <div class="item">
+                    <div class="collapse" id="equipo-{{@number}}">
+                      <div class="col-lg-12 colFooter">
+                        <div class="col-md-6">
+                          {{content}}
+                        </div>
+                        {{> "formEquipo"}}
+                      </div>
+                    </div>
+                  </div>
+                {{/foreach}}
+            </div>
+          {{/get}}
+          </section>
+        </div>
+      </div>
+  </main>
+{{/post}}

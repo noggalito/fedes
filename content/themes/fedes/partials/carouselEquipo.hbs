@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="col-md-12">
+        <div class="carousel slide" id="myCarouselEquipo">
+          <div class="carousel-inner cauroselEquipo">
+            {{#get "posts" filter="tag:imagenequipo" as |images|}}
+              {{#foreach images}}
+              <div class="item">
+                <div class="col-xs-12 col-sm-4">
+                  <figure class="img-gallery-services">
+                    {{#if image}}
+                      <div class="img-gallery">
+                        <img src="{{image}}" class="img-responsive"/>
+                        <div>{{content}}</div>
+                      </div>
+                    {{else}}
+                      <div class="img-gallery">
+                        <img src="{{asset 'img/no-image.jpg'}}" class="img-responsive">
+                        <div>{{content}}</div>
+                      </div>
+                    {{/if}}
+                    <div>
+                      <p>{{title}}</p>
+                    </div>
+                  </figure>
+                </div>
+              </div>
+              {{/foreach}}
+            {{/get}}
+          </div>
+          <a class="left carousel-control" href="#myCarouselEquipo" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+          <a class="right carousel-control" href="#myCarouselEquipo" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+        </div>
+    </div>
+</div>
