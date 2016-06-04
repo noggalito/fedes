@@ -3,9 +3,10 @@ require "./config/seed/generic_seed"
 class Seed
   class SettingsSeed < GenericSeed
     DEFAULT_NAVIGATION = [
-      { url: '/',           label: 'Inicio' },
       { url: '/servicios/', label: 'Servicios' },
-      { url: '/blog/',      label: 'Blog' }
+      { url: '/equipo/',    label: 'Equipo' },
+      { url: '/blog/',      label: 'Blog' },
+      { url: '/aliados/',   label: 'Aliados'}
     ]
     DEFAULT_SETTINGS = [
       { key: "activeTheme", value: "fedes" },
