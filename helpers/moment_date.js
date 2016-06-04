@@ -1,5 +1,5 @@
 // # Moment-Date Helper
-// Usage: `{{moment-date format="DD MM, YYYY"}}`, `{{moment-date updated_at format="DD MM, YYYY"}}`
+// Usage: `{{moment-date format="DD MM, YYYY" locale="es"}}`, `{{moment-date updated_at format="DD MM, YYYY" locale="es"}}`
 
 var hbs = require('express-hbs');
 var moment = require('moment');
