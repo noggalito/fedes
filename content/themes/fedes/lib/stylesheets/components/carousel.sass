@@ -19,7 +19,7 @@
     .item
       max-height: 800px
     &-secondary
-      max-height: 400px
+      max-height: 160px
   .menu-carousel
     position: absolute
     z-index: 1
@@ -109,6 +109,9 @@
           font-size: 30px
           color: #ffffff
           opacity: 1
+        &.text-nowrap-secondary
+          h1
+            color: $blue-one
         p
           font-size: 15px
           opacity: 1
@@ -121,6 +124,10 @@
         text-align: center
         margin-top: -30px
         bottom: 0
+
+        &-secondary
+          top: 0
+          margin-top: 110px
 
         .carousel-control
           position: relative
