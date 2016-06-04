@@ -5,34 +5,5 @@
 <main id="content" class="content" role="main">
   {{! The tag below includes the post loop - partials/loop.hbs }}
   {{> "carousel"}}
-  <div class="container  gallery gallery-principal" id="galleryPrincipal">
-    <div>
-      <h2 class="gallery-title">Proyectos</h2>
-      <p class="text-center">nam ea quod aperiri eruditi.</p>
-    </div>
-    <div class="row">
-      {{#get "posts" limit="3" filter="tag:proyectos"  as |projects|}}
-        {{#foreach projects}}
-          <section class="col-xs-12 col-sm-4">
-            <figure>
-              {{#if image}}
-                <div class="img-gallery">
-                  <img src="{{image}}" class="img-responsive"/>
-                  <div>{{content}}</div>
-                </div>
-              {{else}}
-                <div class="img-gallery">
-                  <img src="{{asset 'img/no-image.jpg'}}" class="img-responsive">
-                  <div>{{content}}</div>
-                </div>
-              {{/if}}
-              <div>
-                <p>{{title}}</p>
-              </div>
-            </figure>
-          </section>
-        {{/foreach}}
-      {{/get}}
-    </div>
-  </div>
+  {{> "proyectos"}}
 </main>
