@@ -24,10 +24,6 @@ date = function (context, options) {
     var f = options.hash.format || 'MMM Do, YYYY',
         timeago = options.hash.timeago,
         date;
-    // change languaje
-    if (options.hash.locale) {
-      moment.locale(options.hash.locale);
-    }
     if (timeago) {
         date = moment(context).fromNow();
     } else {
