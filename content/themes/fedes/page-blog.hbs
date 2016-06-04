@@ -13,6 +13,9 @@
           {{#foreach posts}}
             <div class="col-xs-12 col-sm-4">
               <figure>
+                <div>
+                  {{date published_at format="D [de] MMMM, YYYY" locale="es"}}
+                </div>
                 <img src="{{image}}"
                   class="img-responsive"
                   alt="{{title}}"/>
