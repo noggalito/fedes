@@ -3,28 +3,32 @@
   <div class="blog-header">
     {{> "carousel-footer"}}
   </div>
-  <div>
+  <div class="container">
     {{> "navigation-blog"}}
   </div>
 {{/tag}}
-<main id="content" class="content" role="main">
-  <div class="row">
-    <section>
-      {{#foreach posts}}
-        <div class="col-xs-12 col-sm-4">
-          <figure>
-            <img src="{{image}}"
-              class="img-responsive"
-              alt="{{title}}"/>
-            <div>
-              <p>{{title}}</p>
-            </div>
-            <div>
-              {{content}}
-            </div>
-          </figure>
-        </div>
-      {{/foreach}}
-    </section>
+<main id="content" class="content blog-content" role="main">
+  <div class="container">
+    <div class="row">
+      <section>
+        {{#foreach posts}}
+          <div class="col-xs-12 col-sm-4">
+            <a href="{{url}}" class="blog-post-link">
+              <figure>
+                <img src="{{image}}"
+                  class="img-responsive"
+                  alt="{{title}}"/>
+                <div>
+                  <p>{{title}}</p>
+                </div>
+                <div>
+                  {{content}}
+                </div>
+              </figure>
+            </a>
+          </div>
+        {{/foreach}}
+      </section>
+    </div>
   </div>
 </main>
