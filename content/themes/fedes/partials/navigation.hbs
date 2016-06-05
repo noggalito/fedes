@@ -20,12 +20,14 @@
       <div class="collapse navbar-collapse" id="main-navbar-collapse">
         <div class="triangle-topleft"></div>
         <div class="triangle-topright"></div>
-        <ul class="nav navbar-nav navbar-list">
-          <li><a class="navbar-menuItem" href="/servicios">Servicios</a></li>
-          <li><a class="navbar-menuItem" href="/equipo">Equipo</a></li>
-          <li><a class="navbar-menuItem" href="#">Cooperantes</a></li>
-          <li><a class="navbar-menuItem" href="/blog">Blog</a></li>
-          <li><a class="navbar-menuItem" href="#">Aliados</a></li>
+        <ul class="nav navbar-nav navbar-list navbar-carousel">
+          {{#foreach navigation}}
+            <li>
+              <a class="navbar-menuItem {{#if current}} nav-current {{/if}}" href="{{url absolute="true"}}">
+                {{label}}
+              </a>
+            </li>
+          {{/foreach}}
         </ul>
       </div>
     </div>

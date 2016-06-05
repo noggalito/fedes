@@ -71,6 +71,18 @@
   featured: false
   language: en_US
   status: published
+
+- uuid: <%= uuid %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  published_at: <%= Time.now %>
+  page: true
+  slug: aliados
+  title: Aliados
+  featured: false
+  language: en_US
+  status: published
+
 # tag:proyectos
 - uuid: <%= uuid %>
   created_at: <%= Time.now %>
@@ -426,3 +438,144 @@
   image: /default/asesoramiento.jpg
   markdown: Lorem ipsum dolor sit amet, consectetur adipisicing elit
   html: <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+
+# tag:aliadosfedes
+- uuid: <%= uuid %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  published_at: <%= Time.now %>
+  page: false
+  slug: imagen-ecolac
+  title: Aliados Ecolac
+  featured: false
+  language: en_US
+  status: published
+  image: /default/ecolac.png
+  markdown: Esta es la descripcion de ecolac
+  html: "<p>Esta es la descripcion de ecolac</p>"
+
+- uuid: <%= uuid %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  published_at: <%= Time.now %>
+  page: false
+  slug: crisfe
+  title: Crisfe
+  featured: false
+  language: en_US
+  status: published
+  image: /default/crisfe.png
+  markdown: Esta es la descripcion de crisfe
+  html: "<p>Esta es la descripcion de crisfe</p>"
+
+- uuid: <%= uuid %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  published_at: <%= Time.now %>
+  page: false
+  slug: gad
+  title: GAD
+  featured: false
+  language: en_US
+  status: published
+  image: /default/gad.png
+  markdown: Esta es la descripcion de GAD
+  html: "<p>Esta es la descripcion de GAD</p>"
+
+- uuid: <%= uuid %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  published_at: <%= Time.now %>
+  page: false
+  slug: holcim
+  title: HOLCIM
+  featured: false
+  language: en_US
+  status: published
+  image: /default/holcim.png
+  markdown: Esta es la descripcion de holcim
+  html: "<p>Esta es la descripcion de holcim</p>"
+
+- uuid: <%= uuid %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  published_at: <%= Time.now %>
+  page: false
+  slug: lundin
+  title: Lundin
+  featured: false
+  language: en_US
+  status: published
+  image: /default/Lundin-Foundation-logo.png
+  markdown: Esta es la descripcion de lundin
+  html: "<p>Esta es la descripcion de lundin</p>"
+
+- uuid: <%= uuid %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  published_at: <%= Time.now %>
+  page: false
+  slug: nobis
+  title: nobis
+  featured: false
+  language: en_US
+  status: published
+  image: /default/nobis.png
+  markdown: Esta es la descripcion de nobis
+  html: "<p>Esta es la descripcion de nobis</p>"
+
+- uuid: <%= uuid %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  published_at: <%= Time.now %>
+  page: false
+  slug: prefectura-de-loja
+  title: Prefectura de Loja
+  featured: false
+  language: en_US
+  status: published
+  image: /default/prefecturaloja.png
+  markdown: Esta es la descripcion de Prefectura de Loja
+  html: "<p>Esta es la descripcion de Prefectura de Loja</p>"
+
+- uuid: <%= uuid %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  published_at: <%= Time.now %>
+  page: false
+  slug: redeamerica
+  title: REDEAMERICA
+  featured: false
+  language: en_US
+  status: published
+  image: /default/red.png
+  markdown: Esta es la descripcion de redeamerica
+  html: "<p>Esta es la descripcion de redeamerica</p>"
+
+- uuid: <%= uuid %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  published_at: <%= Time.now %>
+  page: false
+  slug: utpl
+  title: UTPL
+  featured: false
+  language: en_US
+  status: published
+  image: /default/utpl.png
+  markdown: Esta es la descripcion de UTPL
+  html: "<p>Esta es la descripcion de UTPL</p>"
+
+- uuid: <%= uuid %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  published_at: <%= Time.now %>
+  page: false
+  slug: aei
+  title: aei
+  featured: false
+  language: en_US
+  status: published
+  image: /default/aei.png
+  markdown: Esta es la descripcion de AEI
+  html: "<p>Esta es la descripcion de AEI</p>"
