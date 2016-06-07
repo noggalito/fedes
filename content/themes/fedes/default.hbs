@@ -12,12 +12,11 @@
 
   <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
   <link rel="stylesheet" href="{{asset 'css/application.css'}}">
+  {{> "menuSuperior"}}
   {{ghost_head}}
 </head>
 <body class="{{body_class}}">
-
-  {{navigation}}
-
+  {{> "navigationCarousel"}}
   <div class="site-wrapper">
     {{{body}}}
   </div>
