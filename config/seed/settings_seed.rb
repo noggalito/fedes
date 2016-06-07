@@ -5,7 +5,7 @@ class Seed
     DEFAULT_NAVIGATION = [
       { url: '/servicios/', label: 'Servicios' },
       { url: '/equipo/',    label: 'Equipo' },
-      { url: '/blog/',      label: 'Blog' },
+      { url: '/tag/blog/',  label: 'Blog' },
       { url: '/aliados/',   label: 'Aliados'}
     ]
     DEFAULT_SETTINGS = [
