@@ -23,8 +23,11 @@
   <script type="text/javascript" src="{{asset 'js/vendor/jquery.min.js'}}"></script>
   <script type="text/javascript" src="{{asset 'js/vendor/bootstrap.min.js'}}"></script>
   <script type="text/javascript" src="{{asset 'js/application.js'}}"></script>
-
-  {{> "footer"}}
+      {{#if_eq page "contactos"}}
+        <div>hola</div>
+      {{else}}
+        {{>"footer"}}
+      {{/if_eq}}
   {{ghost_foot}}
 </body>
 </html>
