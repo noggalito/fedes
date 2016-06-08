@@ -1,7 +1,6 @@
 module.exports = function() {
   var helpers = [
-    'moment_date',
-    'if_eq'
+    'moment_date'
   ];
 
   helpers.forEach(function (helper) {
