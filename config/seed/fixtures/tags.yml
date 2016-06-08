@@ -39,6 +39,11 @@
   slug: blog-category
   uuid: <%= uuid %>
 
+- hidden: false
+  name: logo-fedes-footer
+  slug: logo-fedes-footer
+  uuid: <%= uuid %>
+
 #blog-categories
 - hidden: false
   name: Minería

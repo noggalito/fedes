@@ -1,0 +1,58 @@
+{{!< default}}
+{{#post}}
+  {{! The main content area on the homepage }}
+  <main id="content" class="content" role="main">
+    <div class="mapFedes">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m24!1m12!1m3!1d2132.91
+      51548895625!2d-79.20025998258377!3d-3.9874170302282934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.
+      1!4m9!3e6!4m3!3m2!1d-3.986999!2d-79.1986022!4m3!3m2!1d-3.9870151!2d-79.1986719!5e0!3m2!1sen!2sec!4v1465356059504"
+      frameborder="0"  allowfullscreen></iframe>
+    </div>
+    <div class="container gallery gallery-principal contactosSection" >
+      <div>
+        <h2 class="gallery-title">Comunícate con nosotros</h2>
+      </div>
+      <div class="row colContactos">
+        <div class="col-md-8">
+          {{#get "posts" slug="contenido-de-contactos" as |article|}}
+          {{#article}}
+          {{content}}
+          {{/article}}
+          {{/get}}
+        </div>
+        <div class="col-md-4">
+          <div class="directionText">
+            <ul class="nav nav-pills nav-stacked">
+              {{#get "posts" slug="contactos-direccion" as |article|}}
+              {{> "footer-section" article=article}}
+              {{/get}}
+            </ul>
+            <ul class="nav nav-pills nav-stacked">
+              {{#get "posts" slug="contactos-fono" as |article|}}
+              {{> "footer-section" article=article}}
+              {{/get}}
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row colContactos">
+        <div class="col-md-5">
+          <h6 class="textFormContactos">Use este formulario para enviarnos un mensaje:</h6>
+          <form data-toggle="validator" role="form">
+            <div class="form-group">
+              <input type="text" class="form-control" id="nameInput" placeholder="nombre" required>
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" id="emailInput" placeholder="e-mail" required>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" id="mensajeTextarea" rows="3" placeholder="mensaje" required ></textarea>
+            </div>
+            <div class="help-block with-errors"></div>
+            <button type="submit" class="btn btn-primary">enviar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+ </main>
+{{/post}}
