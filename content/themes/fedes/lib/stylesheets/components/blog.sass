@@ -7,7 +7,26 @@
     margin-top: 10px
     .carousel-footer-secondary
       height: 50px
+
 .blog-content
+  .blog-post-content
+    height: 34em
   .blog-post-link
     text-decoration: none
     color: #000
+  .blog-pagination
+    .page-box-common
+      margin: 0 5px 0 5px
+      border-radius: 0px
+      background-color: $light-grey
+      border: none
+    .pagination
+      margin: 0
+      &
+      .page-box
+        @extend .page-box-common
+        color: $dark-gray
+        &-active
+          @extend .page-box-common
+          color: $blue-dark
+
