@@ -568,3 +568,19 @@
   image: /default/aei.png
   markdown: Esta es la descripcion de AEI
   html: "<p>Esta es la descripcion de AEI</p>"
+
+# tag:logo-fedes-footer
+
+- uuid: <%= uuid %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  published_at: <%= Time.now %>
+  page: false
+  slug: logofedesfooter
+  title: logoFedesFooter
+  featured: false
+  language: en_US
+  status: published
+  image: /default/logo_fedes_blanco.png
+  markdown: este es el logo del footer
+  html: "<p>este es el logo del footer</p>"
