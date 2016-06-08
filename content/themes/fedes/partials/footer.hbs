@@ -24,13 +24,13 @@
           <button type="submit" class="btn btn-primary">enviar</button>
         </form>
       </div>
-      <div class="col-md-5 showLogo">
+      <div class="col-md-5 hidden showLogo">
         <section>
-          {{#get "posts" filter="tag:logo-fedes-footer" as |logo|}}
-            {{#foreach logo}}
-                  <img src="{{image}}"
-                    class="img-responsive"/>
-            {{/foreach}}
+          {{#get "posts" slug="logofedesfooter" as |article|}}
+            {{#article}}
+              <img src="{{image}}"
+              class="img-responsive"/>
+            {{/article}}
           {{/get}}
         </section>
       </div>
