@@ -72,6 +72,17 @@
   language: en_US
   status: published
 
+- uuid: <%= uuid %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  published_at: <%= Time.now %>
+  page: true
+  slug: contactos
+  title: Contactos
+  featured: false
+  language: en_US
+  status: published
+
 # tag:proyectos
 - uuid: <%= uuid %>
   created_at: <%= Time.now %>
