@@ -18,15 +18,34 @@
     .page-box-common
       margin: 0 5px 0 5px
       border-radius: 0px
-      background-color: $light-grey
+      background-color: $dark-gray
       border: none
     .pagination
       margin: 0
       &
       .page-box
         @extend .page-box-common
-        color: $dark-gray
+        color: $white
+        &:hover
+          color: $blue-dark
         &-active
           @extend .page-box-common
           color: $blue-dark
-
+      .control-button-common
+        width: 32px
+        margin: 0 5px 0 5px
+        padding: 4px
+      .prev-button
+        @extend .control-button-common
+        img
+          content: url("../img/icono_slide_izq.png")
+        &:hover
+          img
+            content: url("../img/icono_slide_azul_izq.png")
+      .next-button
+        @extend .control-button-common
+        img
+          content: url("../img/icono_slide_der.png")
+        &:hover
+          img
+            content: url("../img/icono_slide_azul_der.png")
