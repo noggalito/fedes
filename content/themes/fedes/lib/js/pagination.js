@@ -17,20 +17,31 @@
   }
 
   if (previous) {
-    nav.innerHTML = "<li><a href='" + previousPage + "' class='page-box-active'>&larr;</a></li>";
+    nav.innerHTML = "<li>" +
+      "<a href='" + previousPage + "' class='page-box-active prev-button'>" +
+      "<img class='img-responsive'/>" +
+      "</a>" +
+      "</li>";
   }
 
   for (i = 1; i <= pageTotal; i++) {
     if (i === pageCurrent) {
-      nav.innerHTML = nav.innerHTML + "<li class='active '><a href='#' class='page-box-active'>" + i + "</a></li>";
+      nav.innerHTML = nav.innerHTML +
+        "<li class='active '><a href='#' class='page-box-active'>" + i + "</a></li>";
     } else {
-      nav.innerHTML = nav.innerHTML + "<li><a href=/" + newUrl + "/page/" + i + " class='page-box' >" + i + "</a></li>";
+      nav.innerHTML = nav.innerHTML +
+        "<li>" +
+        "<a href=/" + newUrl + "/page/" + i + " class='page-box' >" + i + "</a>" +
+        "</li>";
     }
   }
 
   if (next) {
-    nav.innerHTML = nav.innerHTML + "<li><a href='" + nextPage + "' class='page-box-active'>&rarr;</a></li>";
+    nav.innerHTML = nav.innerHTML + "<li>" +
+      "<a href='" + nextPage + "' class='page-box-active next-button'>" +
+      "<img class='img-responsive'/>" +
+      "</a>" +
+      "</li>";
   }
-
 
 })(jQuery);
