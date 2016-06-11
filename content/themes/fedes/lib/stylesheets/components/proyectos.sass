@@ -7,12 +7,17 @@
 
   .projectList
     .projectElement
-      width: 300px
+      width: 100%
+      @media (max-width: $mobile-width)
+        padding: 0.5em 0
+        border-left: 1px solid $blue-dark
       .img-gallery
-        position: relative
-
+        overflow: hidden
+        .img-responsive
+          background-size: cover
+          background-position: 50%
+          width: 99% // fix overlapping with bottom container
         .projectContent
-          position: absolute
           top: 0
           width: 0
           width: 100%
@@ -31,19 +36,27 @@
           margin-left: 30px
           margin-top: 30px
 
+      .project-name-wrapper
+        background-color: white
+        webkit-clip-path: polygon(0 75%, 100% 30%, 100% 100%, 0% 100%)
+        clip-path: polygon(0 75%, 100% 30%, 100% 100%, 0% 100%)
+
       .projectName
         text-transform: capitalize
-        position: absolute
-        width: 300px
-        margin-top: -87px
+        width: 95%
+        margin-top: -70px
         text-align: right
         color: $blue-dark
         background-color: #ebeaed
-        padding-bottom: 0.1px
-        padding-top: 50px
         font-size: 20px
-        webkit-clip-path: polygon(0 61%, 100% 0, 100% 100%, 0% 100%)
-        clip-path: polygon(0 61%, 100% 0, 100% 100%, 0% 100%)
+        padding: 50px 2% 1% 30%
+        webkit-clip-path: polygon(0 75%, 100% 30%, 100% 100%, 0% 100%)
+        clip-path: polygon(0 75%, 100% 30%, 100% 100%, 0% 100%)
         p
           margin-bottom: 10px
           width: 98%
+        @media (max-width: $mobile-width)
+          font-size: 13px
+          text-align: right
+          p
+            margin: 1% 2%

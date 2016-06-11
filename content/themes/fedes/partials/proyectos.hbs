@@ -10,24 +10,29 @@
   <div class="row projectList">
     {{#get "posts" limit="3" filter="tag:proyectos"  as |projects|}}
       {{#foreach projects}}
-        <section class="col-xs-offset-2 col-xs-5 col-md-4">
-          <figure class="projectElement">
+        <section class="col-xs-offset-2 col-xs-8 col-md-4">
+          <div class="projectElement">
             <div class="img-gallery">
-              {{#if image}}
-                <img src="{{image}}" class="img-responsive"/>
-              {{else}}
-                <img src="{{asset 'img/no-image.jpg'}}" class="img-responsive">
-              {{/if}}
-              <div class="projectContent">
+              <img
+                class="img-responsive"
+                {{#if image}}
+                  style="background-image: url('{{image}}')"
+                {{else}}
+                  style="background-image: url('{{asset 'img/no-image.jpg'}}')"
+                {{/if}}
+                / >
+              <div class="projectContent gallery-text-content">
                 <p>
                   {{content}}
                 </p>
               </div>
             </div>
-            <div class="projectName">
-              <p>{{title}}</p>
+            <div class="project-name-wrapper">
+              <div class="projectName">
+                <p>{{title}}</p>
+              </div>
             </div>
-          </figure>
+          </div>
         </section>
       {{/foreach}}
     {{/get}}
