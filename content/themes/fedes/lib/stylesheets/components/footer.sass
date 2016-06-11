@@ -1,34 +1,46 @@
+$mobileVerticalMargin: 1em
+
 footer
   background: $blue-dark
   padding-top: 1px
   padding-bottom: 25px
   .textFooter
     color: #FFFFFF
-    font-weight: bold
-    p
-      font-weight: 200
 
-  .titleFooter
+  .textFooter-title
+    margin: 0.5em 0 0 0
+    font-size: 1.1em
+
+  .textFooter-content
+    font-weight: 200
+    p
+      margin-bottom: 0
+
+  .footer-main-title
     text-align: center
     padding-top: 45px
-    padding-bottom: 35px
 
-  .textFormFooter
-    color: #00b09a
-    padding-bottom: 20px
-    font-size: 15px
-    font-weight: 200
-    width: 320px
+  .redesSociales, .footer-form
+    margin-bottom: $mobileVerticalMargin
+    .textFooter-title
+      color: $turquoise
+      margin: 0 0 0.5em 0
+
+  // .textFormFooter
+  //   color: #00b09a
+  //   font-size: 15px
 
   .colFooter
     .form-group .form-control
       border-radius: 0px
-      width: 320px
     .btn-primary
       border-radius: 0px
     @media (min-width: $mobile-width)
       .directionText
         margin-left: 1em
+    @media (max-width: $mobile-width)
+      .directionText > ul
+        margin: 0 0 $mobileVerticalMargin 0
 
   .imgGalleryFooter
     border: 0px solid
@@ -48,33 +60,19 @@ footer
   .navbar-list .navbar-menuItem
     margin-left: 50px
 
-@media only screen and (max-width: $mobile-width)
+@media (max-width: $mobile-width)
   footer
     background: $blue-dark
     padding-top: 1px
     padding-bottom: 25px
-    .textFooter
-      color: #FFFFFF
-      font-weight: 200
-    h5
-      font-weight: bold
 
-    .titleFooter
-      text-align: center
-      padding-top: 45px
-      padding-bottom: 35px
-
-    .textFormFooter
-      color: #00b09a
-      padding-bottom: 20px
-      font-size: 15px
-      font-weight: 200
-      width: 320px
+    // .textFormFooter
+    //   color: #00b09a
+    //   font-size: 15px
 
     .colFooter
       .form-group .form-control
         border-radius: 0px
-        width: 320px
       .btn-primary
         border-radius: 0px
 
