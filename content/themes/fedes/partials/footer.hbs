@@ -5,65 +5,67 @@
 </div>
 
 <footer>
-  <h3 class="footer-main-title textFooter">Contactos</h3>
-  <div class="container footerPrincipal">
-    <div class="row colFooter">
-      <div class="col-md-5 hidden showLogo">
-        <section>
-          {{#get "posts" slug="logofedesfooter" as |article|}}
-            {{#article}}
-              <img src="{{image}}"
-              class="img-responsive"/>
-            {{/article}}
-          {{/get}}
-        </section>
-      </div>
-      <div class="col-md-4 hideForm">
-        <div class="directionText">
-          <ul class="nav nav-pills nav-stacked">
-            {{#get "posts" slug="contactos-direccion" as |article|}}
-              {{> "footer-section" article=article}}
+  <div class="footer-inner">
+    <h3 class="footer-main-title textFooter">Contactos</h3>
+    <div class="container footerPrincipal">
+      <div class="row colFooter">
+        <div class="col-md-5 hidden showLogo">
+          <section>
+            {{#get "posts" slug="logofedesfooter" as |article|}}
+              {{#article}}
+                <img src="{{image}}"
+                class="img-responsive"/>
+              {{/article}}
             {{/get}}
-          </ul>
-          <ul class="nav nav-pills nav-stacked">
-            {{#get "posts" slug="contactos-fono" as |article|}}
-              {{> "footer-section" article=article}}
-            {{/get}}
-          </ul>
+          </section>
         </div>
-      </div>
-      <div class="col-md-3">
-        <div class="redesSociales">
-          <h6 class="textFooter-title">Síguenos en:</h6>
-          <div class="row">
-            <div class="col-md-4 col-xs-2 imgContainerFooter">
-              <a href="#" class="thumbnail imgGalleryFooter">
-                <img src="{{asset 'img/icono_face.png'}}" alt="facebook">
-              </a>
-            </div>
-            <div class="col-md-4 col-xs-2 imgContainerFooter">
-              <a href="#" class="thumbnail imgGalleryFooter">
-                <img src="{{asset 'img/icono_rss.png'}}" alt="rss">
-              </a>
-            </div>
-            <div class="col-md-4 col-xs-2 imgContainerFooter">
-              <a href="#" class="thumbnail imgGalleryFooter">
-                <img src="{{asset 'img/icono_twitter.png'}}" alt="twitter">
-              </a>
+        <div class="col-md-4 hideForm">
+          <div class="directionText">
+            <ul class="nav nav-pills nav-stacked">
+              {{#get "posts" slug="contactos-direccion" as |article|}}
+                {{> "footer-section" article=article}}
+              {{/get}}
+            </ul>
+            <ul class="nav nav-pills nav-stacked">
+              {{#get "posts" slug="contactos-fono" as |article|}}
+                {{> "footer-section" article=article}}
+              {{/get}}
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="redesSociales">
+            <h6 class="textFooter-title">Síguenos en:</h6>
+            <div class="row">
+              <div class="col-md-4 col-xs-2 imgContainerFooter">
+                <a href="#" class="thumbnail imgGalleryFooter">
+                  <img src="{{asset 'img/icono_face.png'}}" alt="facebook">
+                </a>
+              </div>
+              <div class="col-md-4 col-xs-2 imgContainerFooter">
+                <a href="#" class="thumbnail imgGalleryFooter">
+                  <img src="{{asset 'img/icono_rss.png'}}" alt="rss">
+                </a>
+              </div>
+              <div class="col-md-4 col-xs-2 imgContainerFooter">
+                <a href="#" class="thumbnail imgGalleryFooter">
+                  <img src="{{asset 'img/icono_twitter.png'}}" alt="twitter">
+                </a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-5 footer-form hideForm">
-        {{> "footer-form"}}
+        <div class="col-md-5 footer-form hideForm">
+          {{> "footer-form"}}
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="container leyendfooter">
-    <a class="" href="http://noggalito.com" target="_blank">
-      powered by noggalito
-    </a>
+    <div class="container leyendfooter">
+      <a class="" href="http://noggalito.com" target="_blank">
+        powered by noggalito
+      </a>
+    </div>
   </div>
 </footer>
 
