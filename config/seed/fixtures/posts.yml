@@ -35,8 +35,8 @@
   language: en_US
   status: published
   slug: contactos-fono
-  markdown: "(593 7)2585700\n(593 7)2585706\nEmail: info@fedes.ec"
-  html: "<p>(593 7)2585700</p><p>(593 7)2585706</p><p>Email: info@fedes.ec</p>"
+  markdown: "(593-7) 258-5700\n\n(593-7) 258-5706\n\nEmail: info@fedes.ec"
+  html: "<p>(593-7) 258-5700</p><p>(593-7) 258-5706</p><p><strong>Email:</strong> info@fedes.ec</p>"
 
 # static pages
 - uuid: <%= uuid %>
