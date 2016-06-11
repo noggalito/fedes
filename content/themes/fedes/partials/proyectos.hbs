@@ -11,7 +11,7 @@
     {{#get "posts" limit="3" filter="tag:proyectos"  as |projects|}}
       {{#foreach projects}}
         <section class="col-xs-offset-2 col-xs-8 col-md-4">
-          <div class="projectElement">
+          <a class="projectElement" href="{{url}}">
             <div class="img-gallery">
               <img
                 class="img-responsive"
@@ -30,7 +30,7 @@
                 <p>{{title}}</p>
               </div>
             </div>
-          </div>
+          </a>
         </section>
       {{/foreach}}
     {{/get}}
