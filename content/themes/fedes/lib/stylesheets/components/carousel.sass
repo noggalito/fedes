@@ -6,17 +6,8 @@
   width: 100%
   position: relative
 
-  .carousel.slide
-    // padding-top: 46px
-
   .carousel-main
     margin-top: 1.9em
-
-    &-secondary
-      margin-top: 1px
-
-    @media (max-width: $mobile-width)
-      margin-top: 0px
 
   .carouselNavbar
     padding-top: 46px
@@ -33,8 +24,6 @@
         background-size: cover
         background-position: 50%
 
-    &-secondary
-      max-height: 160px
   .menu-carousel
     position: absolute
     z-index: 1
@@ -44,12 +33,6 @@
     bottom: -1px
     opacity: 0.7
     position: absolute
-
-    &-secondary
-      margin: auto
-      top: 7em
-      height: 60%
-      background-color: $blue-transparent
 
     .carousel.text
       text-align: left
@@ -89,10 +72,6 @@
   padding-top: 50px
   padding-bottom: 50px
 
-  &-secondary
-    padding-top: 20px
-    padding-bottom: 20px
-
   .textFooter
     color: #FFFFFF
     font-size: 1.8vw
@@ -116,12 +95,6 @@
       right: 0
       background-color: #002d54
 
-      &-secondary
-        height: 100%
-        width: 100%
-        margin: 0
-        top: 0
-
       .carousel.text
         text-align: left
         padding: 2% 5%
@@ -135,9 +108,7 @@
           font-size: 30px
           color: #ffffff
           opacity: 1
-        &.text-nowrap-secondary
-          h1
-            color: $blue-one
+
         p
           font-size: 15px
           opacity: 1
@@ -152,10 +123,6 @@
         margin-top: -30px
         bottom: 0
 
-        &-secondary
-          top: 0
-          margin-top: 110px
-
         .carousel-control
           position: relative
           display: inline-block
@@ -165,16 +132,13 @@
           border: 2px solid #fff
           border-radius: 50px
           margin: 0px 20px
+          vertical-align: top
 
   .carousel-footer
     background-color: $blue-dark
     width: 100%
     padding-top: 25px
     padding-bottom: 25px
-
-    &-secondary
-      padding-top: 10px
-      padding-bottom: 10px
 
     .textFooter
       color: #FFFFFF

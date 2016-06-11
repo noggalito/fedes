@@ -1,10 +1,9 @@
 <div class="container gallery gallery-principal">
   <div class="mainTitle">
-    {{#get "tags" filter="slug:proyectos" as |proyectosPost|}}
-      {{#proyectosPost}}
-        <h2 class="gallery-title">{{name}}</h2>
-        <p class="text-center">{{description}}</p>
-      {{/proyectosPost}}
+    {{#get "tags" filter="slug:proyectos" as |proyectosTag|}}
+      {{#proyectosTag}}
+        {{> "gallery-title" currentTag=proyectosTag}}
+      {{/proyectosTag}}
     {{/get}}
   </div>
   <div class="row projectList">
