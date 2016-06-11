@@ -9,8 +9,8 @@
   status: published
   slug: texto-principal
   title: Texto principal
-  markdown: << La innovación es lo que distingue a los líderes de los \nseguidores >>.- Steve Jobs
-  html: <p>&lt;&lt; La innovación es lo que distingue a los líderes de los <br />seguidores >>.- Steve Jobs</p>
+  markdown: << La innovación es lo que distingue a los líderes de los seguidores >>.- Steve Jobs
+  html: <p>&lt;&lt; La innovación es lo que distingue a los líderes de los seguidores >>.- Steve Jobs</p>
 
 - uuid: <%= uuid %>
   created_at: <%= Time.now %>
