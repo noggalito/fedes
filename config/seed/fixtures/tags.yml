@@ -2,6 +2,7 @@
 - hidden: false
   name: Proyectos
   slug: proyectos
+  description: nam ea quod aperiri eruditi.
   uuid: <%= uuid %>
 
 - hidden: false

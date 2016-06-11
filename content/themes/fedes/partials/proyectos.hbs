@@ -1,12 +1,16 @@
 <div class="container gallery gallery-principal">
   <div class="mainTitle">
-    <h2 class="gallery-title">Proyectos</h2>
-    <p class="text-center">nam ea quod aperiri eruditi.</p>
+    {{#get "tags" filter="slug:proyectos" as |proyectosPost|}}
+      {{#proyectosPost}}
+        <h2 class="gallery-title">{{name}}</h2>
+        <p class="text-center">{{description}}</p>
+      {{/proyectosPost}}
+    {{/get}}
   </div>
   <div class="row projectList">
     {{#get "posts" limit="3" filter="tag:proyectos"  as |projects|}}
       {{#foreach projects}}
-        <section class="col-xs-5 col-md-4">
+        <section class="col-xs-offset-2 col-xs-5 col-md-4">
           <figure class="projectElement">
             <div class="img-gallery">
               {{#if image}}
