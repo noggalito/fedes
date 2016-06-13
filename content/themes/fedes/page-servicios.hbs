@@ -2,34 +2,34 @@
 {{#post}}
   {{! The main content area on the homepage }}
   <main id="content" class="content" role="main">
-      {{> "carousel"}}
-      <div class="container gallery gallery-principal" id="gallery-fedes">
-        <div>
-          <h2 class="gallery-title">Servicios</h2>
-        </div>
-        <div class="row row-services">
-          <section>
-            {{#get "posts" filter="tag:servicios" as |services|}}
-              {{#foreach services}}
-                <div class="col-xs-12 col-sm-4">
-                  <figure class="img-gallery-services">
-                    <img src="{{image}}"
-                      class="img-responsive"
-                      alt="{{title}}"
-                      data-toggle="collapse"
-                      data-target="#service-{{@number}}"/>
-                    <div>
-                      <p>{{title}}</p>
-                    </div>
-                    <div class="collapse" id="service-{{@number}}">
-                      {{content}}
-                    </div>
-                  </figure>
+    {{> "carousel"}}
+    <div class="container gallery gallery-principal" id="gallery-fedes">
+      {{#get "tags" filter="slug:servicios" as |serviciosTag|}}
+        {{#serviciosTag}}
+          {{> "gallery-title" currentTag=serviciosTag}}
+        {{/serviciosTag}}
+      {{/get}}
+      <div class="row row-services">
+        <section>
+          {{#get "posts" filter="tag:servicios" as |services|}}
+            {{#foreach services}}
+            <div class="col-xs-12 col-sm-4">
+              <figure class="img-gallery-services">
+                <img src="{{image}}"
+                     class="img-responsive"
+                     alt="{{title}}"
+                     data-toggle="collapse"
+                     data-target="#service-{{@number}}"/>
+                <div>
+                  <p>{{title}}</p>
                 </div>
-              {{/foreach}}
-            {{/get}}
-          </section>
-        </div>
+                <div class="collapse" id="service-{{@number}}">{{content}}</div>
+              </figure>
+            </div>
+            {{/foreach}}
+          {{/get}}
+        </section>
       </div>
+    </div>
   </main>
 {{/post}}

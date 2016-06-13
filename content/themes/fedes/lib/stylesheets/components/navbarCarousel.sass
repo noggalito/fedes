@@ -5,7 +5,7 @@
   border-radius: 0px
   height: 84px
   z-index: 2
-  margin-left: 37%
+  // margin-left: 37%
   width: 63%
   display: inline-block
 
@@ -47,10 +47,14 @@
       background-color: $blue-light !important
 
   @media screen and (max-width: $mobile-width)
-    margin-top: -2.8em
-    margin-left: 0em
     background: transparent
     width: 100%
+    position: absolute
+    top: 0
+    margin-bottom: 0
+
+    .container-fluid
+      margin-top: 17px
 
     &-header
       float: left
