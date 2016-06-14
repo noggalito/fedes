@@ -23,10 +23,16 @@
                       <p>{{title}}</p>
                     </div>
                   </div>
-                  <div class="collapse" id="service-{{@number}}">{{content}}</div>
                 </div>
               </a>
             </section>
+
+            <div class="col-xs-12 collapse service-content" id="service-{{@number}}">
+              <div class="top-arrow"></div>
+              <div class="col-xs-10 service-content--content">
+                {{content}}
+              </div>
+            </div>
           {{/foreach}}
         {{/get}}
       </div>
