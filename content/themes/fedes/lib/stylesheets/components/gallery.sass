@@ -1,26 +1,59 @@
 .container.gallery-principal
   margin-top: 60px
+
   .gallery-title
     text-align: center
     color: #003c71
 
+  .gallery-element
+    display: block
+    width: 100%
+    &:hover
+      text-decoration: none
+    @media (max-width: $mobile-width)
+      padding: 0.5em 0
+      border-left: 1px solid $blue-dark
+
+  .gallery-caption-wrapper
+    background-color: white
+    webkit-clip-path: polygon(0 75%, 100% 30%, 100% 100%, 0% 100%)
+    clip-path: polygon(0 75%, 100% 30%, 100% 100%, 0% 100%)
+
+  .gallery-caption
+    text-transform: capitalize
+    width: 95%
+    margin-top: -70px
+    text-align: right
+    color: $blue-dark
+    background-color: #ebeaed
+    font-size: 20px
+    padding: 50px 2% 1% 30%
+    webkit-clip-path: polygon(0 75%, 100% 30%, 100% 100%, 0% 100%)
+    clip-path: polygon(0 75%, 100% 30%, 100% 100%, 0% 100%)
+    p
+      margin-bottom: 10px
+      width: 98%
+    @media (max-width: $mobile-width)
+      font-size: 13px
+      text-align: right
+      p
+        margin: 1% 2%
+
   .img-gallery
     position: relative
-    // border: 0px solid
-    // border-radius: 0px
-    // border-right: 0.5px solid
-    // border-left: 1px solid
-    // margin-bottom: 0px
     img
       width: 100%
-      height: 220px
+      height: 40vh
+    .img-responsive
+      background-size: cover
+      background-position: 50%
+      width: 99% // fix overlapping with bottom container
     .gallery-text-content
-      // width: 90%
       top: 0
       position: absolute
       visibility: hidden
       padding: 2em
-      width: 100%
+      width: 99%
       height: 100%
       p
         margin: 0 0 0.5em 0
@@ -32,15 +65,15 @@
     border-right: 1px solid
 
   .imgContainer
-      padding-right: 0
-      padding-left: 0
-      width: 300px
+    padding-right: 0
+    padding-left: 0
+    width: 300px
 
   .rowGallery
-      //margin-left: 85px;
+    //margin-left: 85px;
 
   .gallerySecondary
-      padding-bottom: 33px
+    padding-bottom: 33px
 
 .textImgServicios
   background: #f2f2f2

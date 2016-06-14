@@ -10,25 +10,25 @@
         {{/serviciosTag}}
       {{/get}}
       <div class="row row-services">
-        <section>
-          {{#get "posts" filter="tag:servicios" as |services|}}
-            {{#foreach services}}
-            <div class="col-xs-12 col-sm-4">
-              <figure class="img-gallery-services">
-                <img src="{{image}}"
-                     class="img-responsive"
-                     alt="{{title}}"
-                     data-toggle="collapse"
-                     data-target="#service-{{@number}}"/>
-                <div>
-                  <p>{{title}}</p>
+        {{#get "posts" filter="tag:servicios" as |services|}}
+          {{#foreach services}}
+            <section class="col-xs-offset-2 col-xs-8">
+              <div class="gallery-element" data-toggle="collapse"
+              data-target="#service-{{@number}}">
+                <div class="img-gallery">
+                  <img class="img-responsive"
+                       style="background-image: url('{{image}}')" />
+                  <div class="gallery-caption-wrapper">
+                    <div class="gallery-caption">
+                      <p>{{title}}</p>
+                    </div>
+                  </div>
+                  <div class="collapse" id="service-{{@number}}">{{content}}</div>
                 </div>
-                <div class="collapse" id="service-{{@number}}">{{content}}</div>
-              </figure>
-            </div>
-            {{/foreach}}
-          {{/get}}
-        </section>
+              </a>
+            </section>
+          {{/foreach}}
+        {{/get}}
       </div>
     </div>
   </main>

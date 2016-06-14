@@ -6,20 +6,9 @@
     font-weight: 200
 
   .projectList
-    .projectElement
-      width: 100%
-      display: block
-      &:hover
-        text-decoration: none
-      @media (max-width: $mobile-width)
-        padding: 0.5em 0
-        border-left: 1px solid $blue-dark
+    .gallery-element
       .img-gallery
         overflow: hidden
-        .img-responsive
-          background-size: cover
-          background-position: 50%
-          width: 99% // fix overlapping with bottom container
         .gallery-text-content
           background-color: $blue-opacity
         .projectContent
@@ -31,28 +20,3 @@
           text-align: justify
           @media (max-width: $mobile-width)
             font-size: 13px
-
-      .project-name-wrapper
-        background-color: white
-        webkit-clip-path: polygon(0 75%, 100% 30%, 100% 100%, 0% 100%)
-        clip-path: polygon(0 75%, 100% 30%, 100% 100%, 0% 100%)
-
-      .projectName
-        text-transform: capitalize
-        width: 95%
-        margin-top: -70px
-        text-align: right
-        color: $blue-dark
-        background-color: #ebeaed
-        font-size: 20px
-        padding: 50px 2% 1% 30%
-        webkit-clip-path: polygon(0 75%, 100% 30%, 100% 100%, 0% 100%)
-        clip-path: polygon(0 75%, 100% 30%, 100% 100%, 0% 100%)
-        p
-          margin-bottom: 10px
-          width: 98%
-        @media (max-width: $mobile-width)
-          font-size: 13px
-          text-align: right
-          p
-            margin: 1% 2%
