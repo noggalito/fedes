@@ -1,4 +1,4 @@
-!function(a){var e=window.location.href,i=a(".nav-blog .nav li a").filter(function(){return this.href===e?!0:void a(this).parent().removeClass("active")});i.parent().addClass("active")}(jQuery);
+!function(a){var e=window.location.href,i=a(".blog-nav .nav li a").filter(function(){return this.href===e?!0:void a(this).parent().removeClass("active")});i.parent().addClass("active")}(jQuery);
 $(document).ready(function(){$(".carousel-inner .item").filter(":first").addClass("active"),$(".navbar-carousel li a").addClass("navbar-menuItem"),$(".listHeader li a").addClass("navbar-menuItem")});
 $(document).ready(function(){$(".carouselAliados .item").filter(":first").addClass("active")});
 $(document).ready(function(){$(".cauroselEquipo .item").filter(":first").addClass("active"),$("#myCarouselEquipo").carousel({interval:4e3}),$(".cauroselEquipo .item").each(function(){var i=$(this).next();i.length||(i=$(this).siblings(":first")),i.children(":first-child").clone().appendTo($(this)),i.next().length>0?i.next().children(":first-child").clone().appendTo($(this)).addClass("rightest"):$(this).siblings(":first").children(":first-child").clone().appendTo($(this))})});

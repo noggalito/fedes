@@ -18,7 +18,7 @@
     .page-box-common
       margin: 0 5px 0 5px
       border-radius: 0px
-      background-color: $dark-gray
+      background-color: $dark-grey
       border: none
     .pagination
       margin: 0
@@ -49,3 +49,63 @@
         &:hover
           img
             content: url("../img/icono_slide_azul_der.png")
+.blog-nav
+  .nav-tabs
+    border: none
+    text-align: center
+    margin: 10px 0 30px 0
+
+    .blog-main-tab
+      display: none
+
+    @media only screen and (max-width: $mobile-width)
+      .blog-tab
+        display: none
+      .blog-main-tab
+        display: table-cell
+
+    .carousel-footer-secondary
+      height: 50px
+    .circle-common
+      border-radius: 50%
+      width: 0.6em
+      height: 0.6em
+      display: inline-block
+      margin: 0px 5px 1px 0px
+    .active
+      a
+        color: $blue-one
+        border-color: $white
+        &:hover
+          color: $blue-one
+          border-color: $white
+          .circle
+            @extend .circle-common
+            background-color: $blue-one
+        .circle
+          @extend .circle-common
+          background-color: $blue-one
+    a
+      color: $grey
+      display: inline
+      margin: 0px
+      padding: 0px
+      &:hover
+        color: $blue-dark
+        background: none
+        border-color: $white
+        margin: 0px
+        padding: 0px
+        cursor: pointer
+        .circle
+          background-color: $blue-dark
+
+      .circle
+        @extend .circle-common
+        background-color: $grey
+
+
+  .nav-justified
+    li
+      a
+        border-bottom: none
