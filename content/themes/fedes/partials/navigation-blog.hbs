@@ -1,14 +1,18 @@
-<div class="nav-blog">
-  <ul class="nav {{#is "post"}} nav-pills nav-stacked {{else}} nav-tabs {{/is}}">
+<div class="blog-nav">
+  <ul class="nav {{#is "post"}} nav-pills nav-stacked {{else}} nav-tabs {{/is}} nav-justified">
     {{#get "posts" order="created_at asc" filter="tag:blog-category" as |categories|}}
       {{#foreach categories}}
         {{#if @first}}
-          <li class="active">
-            <a href="/tag/blog/">All</a>
+          <li>
+            <a href="/tag/blog/" class="text-uppercase">
+              <div class="circle"></div>All
+            </a>
           </li>
         {{/if}}
         <li>
-          <a href="/tag/{{slug}}/">{{title}}</a>
+          <a href="/tag/{{slug}}/" class="text-uppercase">
+            <div class="circle"></div>{{title}}
+          </a>
         </li>
       {{/foreach}}
     {{/get}}
