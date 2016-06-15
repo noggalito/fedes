@@ -1,15 +1,20 @@
 <div class="blog-nav">
   <ul class="nav {{#is "post"}} nav-pills nav-stacked {{else}} nav-tabs {{/is}} nav-justified">
     {{#get "posts" order="created_at asc" filter="tag:blog-category" as |categories|}}
+      <li class="blog-main-tab">
+        <a href="/tag/blog/">
+          <div class="circle"></div>Blog
+        </a>
+      </li>
       {{#foreach categories}}
         {{#if @first}}
-          <li>
+          <li class="blog-tab">
             <a href="/tag/blog/" class="text-uppercase">
               <div class="circle"></div>All
             </a>
           </li>
         {{/if}}
-        <li>
+        <li class="blog-tab">
           <a href="/tag/{{slug}}/" class="text-uppercase">
             <div class="circle"></div>{{title}}
           </a>

@@ -55,6 +55,17 @@
     text-align: center
     margin: 10px 0 30px 0
 
+    .blog-main-tab
+      display: none
+
+    @media only screen and (max-width: $mobile-width)
+      .blog-tab
+        display: none
+      .blog-main-tab
+        display: table-cell
+
+    .carousel-footer-secondary
+      height: 50px
     .circle-common
       border-radius: 50%
       width: 0.6em
@@ -75,7 +86,7 @@
           @extend .circle-common
           background-color: $blue-one
     a
-      color: $black
+      color: $grey
       display: inline
       margin: 0px
       padding: 0px
@@ -91,7 +102,7 @@
 
       .circle
         @extend .circle-common
-        background-color: $black
+        background-color: $grey
 
 
   .nav-justified
