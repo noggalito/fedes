@@ -1,0 +1,38 @@
+.gallery-equipo
+  .gallery-element
+    .img-gallery
+      overflow: hidden
+      .gallery-text-content
+        background-color: $blue-opacity
+      .projectContent
+        color: $white
+        height: 90%
+        overflow: hidden
+        font-size: 15px
+        font-weight: 200
+        text-align: justify
+        @media (max-width: $mobile-width)
+          font-size: 13px
+.controlsEquipo
+  a
+    display: inline-table
+    color: $blue-light
+    .glyphicon.glyphicon-chevron-left
+      border: 1px solid $blue-light
+      border-radius: 50px
+      margin-top: 36px
+      margin-left: -82px
+    .glyphicon.glyphicon-chevron-right
+      border: 1px solid $blue-light
+      border-radius: 50px
+      margin-top: 36px
+      margin-right: -82px
+@media only screen and (max-width: $mobile-width)
+  .controlsEquipo
+    a
+      .glyphicon.glyphicon-chevron-left
+        margin-top: 100px
+        margin-left: -33px
+      .glyphicon.glyphicon-chevron-right
+        margin-top: 100px
+        margin-right: -33px
