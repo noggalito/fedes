@@ -1,6 +1,15 @@
+.container.gallery-principal
+  .row-equipo
+    .img-gallery img
+      height: 20vh
+      width: 100%
+.cauroselEquipo
+  padding-left: 107px
+  padding-right: 107px
 .gallery-equipo
+  padding: 0
   .gallery-element
-    .img-gallery
+    .img-gallery.imgEquipo
       overflow: hidden
       .gallery-text-content
         background-color: $blue-opacity
@@ -20,19 +29,22 @@
     .glyphicon.glyphicon-chevron-left
       border: 1px solid $blue-light
       border-radius: 50px
-      margin-top: 36px
-      margin-left: -82px
+      margin-top: 60px
+      margin-left: -14px
     .glyphicon.glyphicon-chevron-right
       border: 1px solid $blue-light
       border-radius: 50px
-      margin-top: 36px
-      margin-right: -82px
+      margin-top: 60px
+      margin-right: -14px
 @media only screen and (max-width: $mobile-width)
+  .cauroselEquipo
+    padding-left: 70px
+    padding-right: 70px
   .controlsEquipo
     a
       .glyphicon.glyphicon-chevron-left
-        margin-top: 100px
-        margin-left: -33px
+        margin-top: 50px
+        margin-left: 20px
       .glyphicon.glyphicon-chevron-right
-        margin-top: 100px
-        margin-right: -33px
+        margin-top: 50px
+        margin-right: 20px
