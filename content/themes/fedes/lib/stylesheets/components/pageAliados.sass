@@ -1,4 +1,32 @@
+.controlsAliados
+  a
+    display: inline-table
+    color: $blue-light
+    .glyphicon.glyphicon-chevron-left
+      border: 1px solid $blue-light
+      border-radius: 50px
+      margin-top: 60px
+      margin-left: -14px
+    .glyphicon.glyphicon-chevron-right
+      border: 1px solid $blue-light
+      border-radius: 50px
+      margin-top: 60px
+      margin-right: -14px
 @media only screen and (max-width: $mobile-width)
+  .carouselAliados
+    padding-left: 38px
+    padding-right: 38px
+  .carouselAliados > .item
+    border-left: 1px solid $blue-dark
+    border-right: 1px solid $blue-dark
   .carouselAliados > .item > img,
-    height: 200px
-    width: 300px
+    padding-left: 20px
+    padding-right: 20px
+    height: 115px
+    width: 200px
+  .controlsAliados
+    a
+      .glyphicon.glyphicon-chevron-left
+        margin-top: 50px
+      .glyphicon.glyphicon-chevron-right
+        margin-top: 50px
