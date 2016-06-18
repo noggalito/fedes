@@ -33,7 +33,7 @@
   FedesMap.prototype.createMap = function () {
     this.map = new google.maps.Map(this.$selector[0], {
       center: this.latLng,
-      zoom: 18
+      zoom: 17
     });
   };
 
