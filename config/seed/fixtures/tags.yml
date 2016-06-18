@@ -36,6 +36,11 @@
   uuid: <%= uuid %>
 
 - hidden: false
+  name: Aliados
+  slug: aliados
+  uuid: <%= uuid %>
+
+- hidden: false
   name: Blog-category
   slug: blog-category
   uuid: <%= uuid %>
