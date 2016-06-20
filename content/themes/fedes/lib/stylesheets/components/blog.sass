@@ -8,9 +8,10 @@
     .carousel-footer-secondary
       height: 50px
 
+$leftSpace: 15px
+
 .blog-content
   .blog-post-content
-    margin-bottom: 30px
     padding-left: 0px
     padding-right: 0px
   .blog-post-link
@@ -20,27 +21,31 @@
       border-left: 1px solid
       border-color: $blue-dark
       .blog-post-link-date
-        margin-left: 20px
-        color: $blue-light
+        margin-left: $leftSpace
+        color: $blue-dark
+        padding-top: 5px
       .blog-post-link-item
         position: relative
       .blog-post-link-title
         font-size: 20px
-        font-weight: bold
-        padding: 3% 5% 1% 20px
-        margin-top: -20px
+        font-weight: 500
+        padding: 5px $leftSpace
         width: 95%
         color: $blue-dark
         background-color: $dark-grey
         margin-bottom: 10px
+        letter-spacing: -1px
+        line-height: 22px
       .blog-post-link-summary
-        margin-left: 20px
+        margin-left: $leftSpace
         margin-right: 20px
         text-align: justify
+        line-height: 17px
+        padding-bottom: 25px
       img
         height: 20vh
         width: 100%
-        margin: 0 0 15px
+        background-size: cover
       .blog-post-link-overlay
         position: absolute
         top: 0
@@ -51,6 +56,7 @@
 
   .blog-pagination
     text-align: center
+    margin: 10px 0
     .page-box-common
       margin: 0 5px 0 5px
       border-radius: 0px
