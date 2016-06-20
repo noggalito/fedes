@@ -1,4 +1,5 @@
 {{!< default}}
+{{> "facebook-sdk"}}
 {{#post}}
   <main id="content" class="content post-container" role="main">
     {{> "carousel-footer"}}
@@ -18,6 +19,17 @@
             </div>
           </div>
           <div class="post-contents--content">{{content}}</div>
+        </div>
+
+        <div class="col-xs-12 post-tags-and-share">
+          <div class="col-xs-offset-2 col-xs-5 post-tags">
+            {{tags from="2"}}
+          </div>
+          <div class="col-xs-3 post-share">
+            <div class="fb-share-button" data-href="{{@blog.url}}{{url}}" data-layout="icon" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{@blog.url}}{{url}}">Share</a></div>
+            <span class="glyphicon glyphicon-share"></span>
+            <span class="glyphicon glyphicon-share"></span>
+          </div>
         </div>
 
         <div class="col-xs-12 col-sm-4">
