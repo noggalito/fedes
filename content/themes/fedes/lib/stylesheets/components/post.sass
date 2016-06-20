@@ -1,0 +1,36 @@
+.post-breadcrumbs
+  margin-top: 3em
+  .breadcrumb
+    background-color: white
+    margin-bottom: 0
+    li:not(:first-child)
+      &:before
+        content: ">"
+
+$postMarginLeft: 3vw
+
+.post-contents
+  padding-left: 0
+  padding-right: 0
+  .post-contents--header
+    border-left: 1px solid $blue-dark
+    padding: 0 0 1.5em 0
+  h2
+    color: $blue-dark
+    font-size: 20px
+    margin-left: $postMarginLeft
+  .img-responsive
+    width: 100%
+    height: 15vh
+    min-height: 120px
+    background-size: cover
+    background-position: center
+  .post-contents--caption
+    margin-top: 5px
+    margin-left: $postMarginLeft
+    color: $grey
+  .post-contents--content
+    margin-left: $postMarginLeft
+    text-align: justify
+    font-size: 14px
+    line-height: 17px
