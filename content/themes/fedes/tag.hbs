@@ -14,17 +14,19 @@
         {{#foreach posts}}
           <div class="col-xs-12 col-sm-4 blog-post-content">
             <a href="{{url}}" class="blog-post-link">
-              <figure>
-                <div>
+              <figure class="blog-post-link-figure">
+                <div class="blog-post-link-date">
                   {{moment-date published_at format="D [de] MMMM, YYYY" locale="es"}}
                 </div>
-                <img src="{{image}}"
-                  class="img-responsive"
-                  alt="{{title}}"/>
-                <div>
+                <div class="blog-post-link-item">
+                  <div class="blog-post-link-overlay"></div>
+                  <img class="img-responsive"
+                      src="{{#if image}} {{image}} {{else}} {{asset 'img/no-image.jpg'}} {{/if}}"/>
+                </div>
+                <div class="blog-post-link-title">
                   <p>{{title}}</p>
                 </div>
-                <div>
+                <div class="blog-post-link-summary">
                   {{excerpt}}
                 </div>
               </figure>
