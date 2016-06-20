@@ -1,5 +1,6 @@
 {{!< default}}
 {{> "facebook-sdk"}}
+{{> "twitter-sdk"}}
 {{#post}}
   <main id="content" class="content post-container" role="main">
     {{> "carousel-footer"}}
@@ -26,9 +27,8 @@
             {{tags from="2"}}
           </div>
           <div class="col-xs-3 post-share">
-            <div class="fb-share-button" data-href="{{@blog.url}}{{url}}" data-layout="icon" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{@blog.url}}{{url}}">Share</a></div>
-            <span class="glyphicon glyphicon-share"></span>
-            <span class="glyphicon glyphicon-share"></span>
+            <a class="twitter-share-button" href="https://twitter.com/intent/tweet" data-via="fdsloja">Tweet</a>
+            <div class="fb-share-button" data-href="{{@blog.url}}{{url}}" data-layout="button" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{@blog.url}}{{url}}">Share</a></div>
           </div>
         </div>
 
