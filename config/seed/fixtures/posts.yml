@@ -104,7 +104,7 @@
   published_at: <%= Time.now %>
   page: false
   slug: cima
-  title: cima
+  title: CIMA
   featured: false
   language: en_US
   status: published
@@ -118,7 +118,7 @@
   published_at: <%= Time.now %>
   page: false
   slug: prendho
-  title: prendho
+  title: PRENDHO
   featured: false
   language: en_US
   status: published
