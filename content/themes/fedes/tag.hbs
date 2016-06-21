@@ -1,39 +1,38 @@
 {{!< default}}
-{{#tag}}
-  <div class="blog-header">
-    {{> "carousel-footer"}}
-  </div>
-  <div class="container">
-    {{> "navigation-blog"}}
-  </div>
-{{/tag}}
 <main id="content" class="content blog-content" role="main">
+  {{> "carousel-footer"}}
+
+  {{#tag}}
+    <div class="container">
+      {{> "navigation-blog"}}
+    </div>
+  {{/tag}}
+
   <div class="container">
     <div class="row">
-      <section>
-        {{#foreach posts}}
-          <div class="col-xs-12 col-sm-4 blog-post-content">
-            <a href="{{url}}" class="blog-post-link">
-              <figure class="blog-post-link-figure">
-                <div class="blog-post-link-date">
-                  {{moment-date published_at format="D [de] MMMM, YYYY" locale="es"}}
-                </div>
-                <div class="blog-post-link-item">
-                  <div class="blog-post-link-overlay"></div>
-                  <img class="img-responsive"
-                      src="{{#if image}} {{image}} {{else}} {{asset 'img/no-image.jpg'}} {{/if}}"/>
-                </div>
-                <div class="blog-post-link-title">
-                  <p>{{title}}</p>
-                </div>
-                <div class="blog-post-link-summary">
-                  {{excerpt}}
-                </div>
-              </figure>
-            </a>
-          </div>
-        {{/foreach}}
-      </section>
+      {{#foreach posts}}
+        <div class="blog-post-content col-xs-offset-2 col-xs-8 col-sm-4">
+          <a href="{{url}}" class="blog-post-link">
+            <figure class="blog-post-link-figure">
+              <div class="blog-post-link-date">
+                {{moment-date published_at format="D [de] MMMM, YYYY" locale="es"}}
+              </div>
+              <div class="blog-post-link-item">
+                <div class="blog-post-link-overlay"></div>
+                <img class="img-responsive"
+                  {{#if image}}
+                    style="background-image: url('{{image}}')"
+                  {{else}}
+                    style="background-image: url('{{asset 'img/no-image.jpg'}}')"
+                  {{/if}}
+                 />
+              </div>
+              <div class="blog-post-link-title">{{title}}</div>
+              <div class="blog-post-link-summary">{{excerpt}}</div>
+            </figure>
+          </a>
+        </div>
+      {{/foreach}}
     </div>
   </div>
   <div class="container blog-pagination">
