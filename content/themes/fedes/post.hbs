@@ -32,25 +32,24 @@
           </div>
         </div>
 
-        <div class="post-categories-section col-xs-offset-2 col-xs-10 col-sm-4">
+        <div class="post-footer-section col-xs-offset-2 col-xs-10 col-sm-4">
           <h3>Categorías</h3>
-          <div class="col-xs-10 post-categories--tags">
+          <div class="post-categories--tags col-xs-10">
             {{> "navigation-blog"}}
           </div>
 
-          <div class="col-xs-12">
-            <h3>Otros Posts</h3>
+          <div class="clearfix"></div>
 
+          <h3>Otros Posts</h3>
+          <div class="post-categories--other-posts col-xs-12">
             {{#get "posts" limit="4" include="tags" filter="tag:blog" as |posts|}}
-              {{#foreach posts}}
-                <div>
-                  <a href="{{url}}">
-                    <div>
-                      {{title}}
-                    </div>
-                  </a>
-                </div>
-              {{/foreach}}
+              <ul class="nav nav-pills nav-stacked">
+                {{#foreach posts}}
+                  <li>
+                    <a href="{{url}}">{{title}}</a>
+                  </li>
+                {{/foreach}}
+              </ul>
             {{/get}}
           </div>
         </div>
