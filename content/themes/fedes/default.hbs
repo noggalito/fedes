@@ -21,6 +21,17 @@
   <div class="site-wrapper">
     {{{body}}}
   </div>
+<div id ="google_translate_element"></div>
+<script>
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+          pageLanguage: 'es',
+          includedLanguages: 'en',
+          layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
+    }, 'google_translate_element');
+}
+</script>
+<script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
   <script type="text/javascript" src="{{asset 'js/vendor/jquery.min.js'}}"></script>
   <script type="text/javascript" src="{{asset 'js/vendor/bootstrap.min.js'}}"></script>
