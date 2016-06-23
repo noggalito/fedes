@@ -1,4 +1,4 @@
-!function(a){var e=window.location.href,i=a(".blog-nav .nav li a").filter(function(){return this.href===e?!0:void a(this).parent().removeClass("active")});i.parent().addClass("active")}(jQuery);
+!function(e){var t=window.location.href,a=e(".blog-nav .nav li a").filter(function(){var a=/([^]*)page\/[^]*/,n=a.exec(t);return t=n?n[1]:t,this.href===t?!0:void e(this).parent().removeClass("active")});a.parent().addClass("active"),e(".blog-post-content").matchHeight()}(jQuery);
 $(document).ready(function(){$(".carousel-inner .item").filter(":first").addClass("active"),$(".navbar-carousel li a").addClass("navbar-menuItem"),$(".listHeader li a").addClass("navbar-menuItem")});
 $(document).ready(function(){$(".carouselAliados .item").filter(":first").addClass("active")});
 $(document).ready(function(){$(".cauroselEquipo .item").filter(":first").addClass("active"),$("#myCarouselEquipo").carousel({interval:4e3})});

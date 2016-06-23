@@ -8,10 +8,10 @@
     </div>
   {{/tag}}
 
-  <div class="container">
+  <div class="container blog-post-container">
     <div class="row">
       {{#foreach posts}}
-        <div class="blog-post-content col-xs-offset-2 col-xs-8 col-sm-4">
+        <div class="blog-post-content col-xs-12 col-sm-6 col-lg-4">
           <a href="{{url}}" class="blog-post-link">
             <figure class="blog-post-link-figure">
               <div class="blog-post-link-date">
@@ -34,8 +34,8 @@
         </div>
       {{/foreach}}
     </div>
-  </div>
-  <div class="container blog-pagination">
-    {{pagination limit="6"}}
+    <div class="container blog-pagination">
+      {{pagination limit="6"}}
+    </div>
   </div>
 </main>
