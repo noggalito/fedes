@@ -1,51 +1,68 @@
-.container.gallery-principal
-  .row-equipo
-    .img-gallery img
-      height: 20vh
-      width: 100%
-.cauroselEquipo
-  padding-left: 107px
-  padding-right: 107px
-.gallery-equipo
-  padding: 0
-  .gallery-element
-    .img-gallery.imgEquipo
-      overflow: hidden
-      .gallery-text-content
-        background-color: $blue-opacity
-      .projectContent
-        color: $white
-        height: 90%
-        overflow: hidden
-        font-size: 15px
-        font-weight: 200
-        font-family: latoLight
-        text-align: justify
-        @media (max-width: $mobile-width)
-          font-size: 13px
-.controlsEquipo
-  a
-    display: inline-table
-    color: $blue-light
-    .glyphicon.glyphicon-chevron-left
-      border: 1px solid $blue-light
-      border-radius: 50px
-      margin-top: 60px
-      margin-left: -14px
-    .glyphicon.glyphicon-chevron-right
-      border: 1px solid $blue-light
-      border-radius: 50px
-      margin-top: 60px
-      margin-right: -14px
-@media only screen and (max-width: $mobile-width)
-  .cauroselEquipo
-    padding-left: 70px
-    padding-right: 70px
-  .controlsEquipo
-    a
-      .glyphicon.glyphicon-chevron-left
-        margin-top: 50px
-        margin-left: 20px
-      .glyphicon.glyphicon-chevron-right
-        margin-top: 50px
-        margin-right: 20px
+#myCarouselEquipo
+  .carousel-control
+    background: none
+    width: 30px
+    opacity: .8
+    &.left
+      left: -40px
+    &.right
+      right: -40px
+    span.glyphicon
+      border: 1px solid $blue-dark
+      border-radius: 50%
+      padding: 4px 3px 3px 3px
+      color: $blue-dark
+      text-shadow: none
+      font-size: 15px
+
+// .container.gallery-principal
+//   .row-equipo
+//     .img-gallery img
+//       height: 20vh
+//       width: 100%
+// .cauroselEquipo
+  // padding-left: 107px
+  // padding-right: 107px
+// .gallery-equipo
+//   padding: 0
+//   .gallery-element
+//     .img-gallery.imgEquipo
+//       overflow: hidden
+//       .gallery-text-content
+//         background-color: $blue-opacity
+//       .projectContent
+//         color: $white
+//         height: 90%
+//         overflow: hidden
+//         font-size: 15px
+//         font-weight: 200
+//         font-family: latoLight
+//         text-align: justify
+//         @media (max-width: $mobile-width)
+//           font-size: 13px
+// .controlsEquipo
+//   a
+//     display: inline-table
+//     color: $blue-light
+//     .glyphicon.glyphicon-chevron-left
+//       border: 1px solid $blue-light
+//       border-radius: 50px
+//       margin-top: 60px
+//       margin-left: -14px
+//     .glyphicon.glyphicon-chevron-right
+//       border: 1px solid $blue-light
+//       border-radius: 50px
+//       margin-top: 60px
+//       margin-right: -14px
+// @media only screen and (max-width: $mobile-width)
+//   .cauroselEquipo
+//     // padding-left: 70px
+//     // padding-right: 70px
+//   .controlsEquipo
+//     a
+//       .glyphicon.glyphicon-chevron-left
+//         margin-top: 50px
+//         margin-left: 20px
+//       .glyphicon.glyphicon-chevron-right
+//         margin-top: 50px
+//         margin-right: 20px
