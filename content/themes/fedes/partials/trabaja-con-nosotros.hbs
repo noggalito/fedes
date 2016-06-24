@@ -1,7 +1,9 @@
 {{#get "posts" filter="slug:registrate" as |post|}}
   {{#post}}
     <div class="row">
-      <div class="toggable-header col-xs-offset-2 col-xs-8">
+      <div class="toggable-header col-xs-offset-2 col-xs-8"
+           data-toggle="collapse"
+           data-target="#register-form">
         <div class="gallery-element">
           <div class="img-gallery">
             <img class="img-responsive"
@@ -14,9 +16,9 @@
             </div>
           </div>
         </div>
+        <div class="clearfix"></div>
       </div>
-      <div class="clearfix"></div>
-      <div class="register-content toggable-content">
+      <div class="register-content toggable-content collapse col-xs-12" id="register-form">
         <div class="top-arrow"></div>
         <div class="toggable-content--content col-xs-9">
           <div class="content">
