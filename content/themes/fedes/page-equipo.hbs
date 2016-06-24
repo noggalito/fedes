@@ -10,40 +10,24 @@
       <h2 class="gallery-title">Trabaja con nosotros</h2>
       {{> "trabaja-con-nosotros"}}
 
-      <div class="row row-services">
-        <section>
-          <div class="row">
-          {{#get "posts" filter="tag:equipocontactos" order="title desc" as |images|}}
-            {{#foreach images}}
-              <div class="col-xs-12 col-sm-4">
-                <figure class="img-gallery-services">
-                  <img src="{{image}}"
-                    class="img-responsive"
-                    alt="{{title}}"
-                    data-toggle="collapse"
-                    data-target="#equipo-{{@number}}"/>
-                  <div>
+      <div class="row">
+        {{#get "posts" filter="tag:equipocontactos" order="title desc" as |post|}}
+          {{#foreach post}}
+            <div class="col-xs-offset-2 col-xs-8">
+              <div class="gallery-element">
+                <div class="img-gallery">
+                  <img class="img-responsive"
+                        style="background-image: url('{{image}}')" />
+                </div>
+                <div class="gallery-caption-wrapper">
+                  <div class="gallery-caption">
                     <p>{{title}}</p>
                   </div>
-                </figure>
-              </div>
-            {{/foreach}}
-          </div>
-          <div class="row contentEquipo">
-              {{#foreach images}}
-                <div class="item">
-                  <div class="collapse" id="equipo-{{@number}}">
-                    <div class="col-lg-12 colFooter">
-                      <div class="col-md-6">
-                        {{content}}
-                      </div>
-                    </div>
-                  </div>
                 </div>
-              {{/foreach}}
-          </div>
+              </div>
+            </div>
+          {{/foreach}}
         {{/get}}
-        </section>
       </div>
     </div>
   </main>
