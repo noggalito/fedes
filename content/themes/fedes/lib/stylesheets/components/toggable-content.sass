@@ -1,0 +1,22 @@
+$topArrowHeight: 10px
+
+.toggable-header
+  z-index: -1
+
+.toggable-content
+  background-color: $light-grey
+  margin-top: -8px
+  p
+    text-align: justify
+    color: $grey
+  .top-arrow
+    margin: auto
+    margin-top: $topArrowHeight*-1
+    width: 0
+    height: 0
+    border-left: $topArrowHeight solid transparent
+    border-right: $topArrowHeight solid transparent
+    border-bottom: $topArrowHeight solid $light-grey
+  .toggable-content--content
+    float: none
+    margin: 1.5em auto
