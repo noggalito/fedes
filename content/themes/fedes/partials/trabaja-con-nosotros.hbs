@@ -1,0 +1,30 @@
+{{#get "posts" filter="slug:registrate" as |post|}}
+  {{#post}}
+    <div class="row">
+      <div class="toggable-header col-xs-offset-2 col-xs-8">
+        <div class="gallery-element">
+          <div class="img-gallery">
+            <img class="img-responsive"
+                 style="background-image: url('{{image}}')" />
+            <div class="gallery-text-content"></div>
+          </div>
+          <div class="gallery-caption-wrapper">
+            <div class="gallery-caption">
+              <p>{{title}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+      <div class="row register-content toggable-content">
+        <div class="top-arrow"></div>
+        <div class="toggable-content--content col-xs-9">
+          <div class="content">
+            {{content}}
+          </div>
+          {{> "formEquipo"}}
+        </div>
+      </div>
+    </div>
+  {{/post}}
+{{/get}}
