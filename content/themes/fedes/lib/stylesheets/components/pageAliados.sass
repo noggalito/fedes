@@ -1,32 +1,47 @@
+.aliado
+  max-width: 200px
+  margin: auto
+  border-left: 1px solid $dark-grey
+  border-right: 1px solid $dark-grey
+  padding: 0 1em
+  .img-responsive
+    height: 160px
+    height: 25vh
+    background-size: contain
+    width: 100%
+    background-repeat: no-repeat
+    background-position: 50%
+
 .controlsAliados
   a
     display: inline-table
-    color: $blue-light
-    .glyphicon.glyphicon-chevron-left
-      border: 1px solid $blue-light
-      border-radius: 50px
+    &.left.carousel-control
+      left: -35px
+    &.right.carousel-control
+      right: -35px
+    .glyphicon
+      text-shadow: none
+      font-size: 15px
+      padding: 3px
+      color: $blacky-grey
+      border: 1px solid $blacky-grey
+      border-radius: 50%
       margin-top: 60px
-      margin-left: -14px
-    .glyphicon.glyphicon-chevron-right
-      border: 1px solid $blue-light
-      border-radius: 50px
-      margin-top: 60px
-      margin-right: -14px
 @media only screen and (max-width: $mobile-width)
   .carouselAliados
-    padding-left: 38px
-    padding-right: 38px
+    // padding-left: 38px
+    // padding-right: 38px
   .carouselAliados > .item
-    border-left: 1px solid $blue-dark
-    border-right: 1px solid $blue-dark
-  .carouselAliados > .item > img,
-    padding-left: 20px
-    padding-right: 1px
-    height: 134px
-    width: 262px
-  .controlsAliados
-    a
-      .glyphicon.glyphicon-chevron-left
-        margin-top: 50px
-      .glyphicon.glyphicon-chevron-right
-        margin-top: 50px
+    // border-left: 1px solid $blue-dark
+    // border-right: 1px solid $blue-dark
+  // .carouselAliados > .item > img
+  //   padding-left: 20px
+  //   padding-right: 1px
+  //   height: 134px
+  //   width: 262px
+  // .controlsAliados
+  //   a
+  //     .glyphicon.glyphicon-chevron-left
+  //       margin-top: 50px
+  //     .glyphicon.glyphicon-chevron-right
+  //       margin-top: 50px
