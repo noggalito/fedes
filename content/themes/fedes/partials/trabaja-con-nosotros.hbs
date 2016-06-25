@@ -1,29 +1,28 @@
 {{#get "posts" filter="slug:registrate" as |post|}}
   {{#post}}
     <div class="row">
-      <div class="toggable-header col-xs-offset-2 col-xs-8"
-           data-toggle="collapse"
-           data-target="#register-form">
-        <div class="gallery-element">
-          <div class="img-gallery">
-            <img class="img-responsive"
-                 style="background-image: url('{{image}}')" />
-            <div class="gallery-text-content"></div>
-          </div>
-          <div class="gallery-caption-wrapper">
-            <div class="gallery-caption">
-              <p>{{title}}</p>
+      <a class="toggable-header col-xs-offset-2 col-xs-8" href="#register-form">
+        <div class="gallery-element trabaja-con-nosotros"
+             data-toggle="collapse"
+             data-target="#register-form">
+          <div class="overlay">
+            <div class="img-gallery">
+              <div class="img-responsive"
+                   style="background-image: url('{{image}}')"></div>
+            </div>
+            <div class="gallery-caption-wrapper">
+              <div class="gallery-caption">
+                <p>{{title}}</p>
+              </div>
             </div>
           </div>
         </div>
         <div class="clearfix"></div>
-      </div>
+      </a>
       <div class="register-content toggable-content collapse col-xs-12" id="register-form">
         <div class="top-arrow"></div>
         <div class="toggable-content--content col-xs-9">
-          <div class="content">
-            {{content}}
-          </div>
+          <div class="content">{{content}}</div>
           {{> "formEquipo"}}
         </div>
       </div>
