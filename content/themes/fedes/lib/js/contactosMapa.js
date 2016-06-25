@@ -12,33 +12,44 @@
     var $script = $('<script />', {
       async: 'async',
       defer: 'defer',
-      src: 'https://maps.googleapis.com/maps/api/js?key=' + apiKey + '&callback=cafrilosaMap.gmapsLoaded'
+      src: 'https://maps.googleapis.com/maps/api/js?key=' + apiKey + '&callback=fedesMap.gmapsLoaded'
     });
     $('body').append($script);
   };
 
   FedesMap.prototype.gmapsLoaded = function () {
     this.setLatLng();
+    this.setCenter();
     this.createMap();
     this.createMarker();
   };
 
+  FedesMap.prototype.setCenter = function () {
+    this.mapCenter = new google.maps.LatLng(
+      -3.986531,
+      -79.1974876
+    );
+  };
+
   FedesMap.prototype.setLatLng = function () {
     this.latLng = new google.maps.LatLng(
-      -3.987231,
-      -79.1964876
+      -3.986651,
+      -79.196911
     );
   };
 
   FedesMap.prototype.createMap = function () {
     this.map = new google.maps.Map(this.$selector[0], {
-      center: this.latLng,
-      zoom: 17
+      center: this.mapCenter,
+      zoom: 16
     });
   };
 
-  var image ='../../default/icono_mapa_fedes.png'
   FedesMap.prototype.createMarker = function () {
+    var image = {
+      url: '../../default/icono_mapa_fedes.png',
+      anchor: new google.maps.Point(0, 0)
+    };
     this.marker = new google.maps.Marker({
       position: this.latLng,
       title: 'Fedes',
@@ -52,7 +63,7 @@
   $(document).on('ready', function () {
     var $selector = $(selector);
     if ($selector.length > 0) {
-      window.cafrilosaMap = new FedesMap($selector);
+      window.fedesMap = new FedesMap($selector);
     }
   });
 })();

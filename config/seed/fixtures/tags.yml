@@ -6,6 +6,12 @@
   uuid: <%= uuid %>
 
 - hidden: false
+  name: Comunícate con nosotros
+  slug: ponte-en-contacto
+  description: nam ea quod aperiri eruditi.
+  uuid: <%= uuid %>
+
+- hidden: false
   name: Imágenes de carrusel
   slug: carouselimagen
   uuid: <%= uuid %>

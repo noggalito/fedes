@@ -1,7 +1,10 @@
-$( document ).ready(function() {
-  var pathname = window.location.pathname;
-  if(pathname === "/contactos/"){
-    $(".footerPrincipal .hideForm").hide();
-    $(".footerPrincipal .showLogo").removeClass("hidden");
-  }
-});
+(function($) {
+  $(document).on("ready", function() {
+    var pathname = window.location.pathname;
+    if(pathname === "/contactos/"){
+      $(".hide-on-contacts").hide();
+      $(".show-on-contacts").removeClass("hidden");
+      $(".when-on-contacts").addClass("actually-on-contacts");
+    }
+  });
+})(jQuery);

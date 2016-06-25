@@ -5,21 +5,11 @@
 </div>
 
 <footer>
-  <div class="footer-inner">
-    <h3 class="footer-main-title textFooter">Contactos</h3>
-    <div class="container footerPrincipal">
+  <div class="footer-inner footerPrincipal">
+    <h3 class="footer-main-title textFooter hide-on-contacts">Contactos</h3>
+    <div class="container">
       <div class="row colFooter">
-        <div class="col-md-5 hidden showLogo">
-          <section>
-            {{#get "posts" slug="logofedesfooter" as |article|}}
-              {{#article}}
-                <img src="{{image}}"
-                class="img-responsive"/>
-              {{/article}}
-            {{/get}}
-          </section>
-        </div>
-        <div class="col-md-4 hideForm">
+        <div class="col-md-4 hide-on-contacts">
           <div class="directionText">
             <ul class="nav nav-pills nav-stacked">
               {{#get "posts" slug="contactos-direccion" as |article|}}
@@ -34,7 +24,7 @@
           </div>
         </div>
         <div class="col-md-3">
-          <div class="redesSociales">
+          <div class="redesSociales when-on-contacts">
             <h6 class="textFooter-title">Síguenos en:</h6>
             <div class="row">
               <div class="col-md-4 col-xs-2 imgContainerFooter">
@@ -54,8 +44,16 @@
               </div>
             </div>
           </div>
+          <div class="logo-fedes-footer hidden show-on-contacts">
+            {{#get "posts" slug="logofedesfooter" as |article|}}
+              {{#article}}
+                <img src="{{image}}"
+                class="img-responsive"/>
+              {{/article}}
+            {{/get}}
+          </div>
         </div>
-        <div class="col-md-5 footer-form hideForm">
+        <div class="col-md-5 footer-form hide-on-contacts">
           {{> "footer-form"}}
         </div>
       </div>
