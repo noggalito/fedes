@@ -7,7 +7,7 @@
     {{/get}}
   </div>
   <div class="row projectList">
-    {{#get "posts" limit="3" filter="tag:proyectos"  as |projects|}}
+    {{#get "posts" filter="tag:proyectos" order="published_at asc"  as |projects|}}
       {{#foreach projects}}
         <section class="col-xs-offset-2 col-xs-8 col-md-4 col-sm-4">
           <a class="gallery-element" href="{{url}}">

@@ -6,9 +6,34 @@
     font-family: latoLight
 
   .projectList
+    @media screen and (min-width: $tablet-width)
+      margin-left: 15px
+      margin-right: 15px
+      section
+        padding-right: 0
+        padding-left: 0
     .gallery-element
       .img-gallery
         overflow: hidden
+        @media screen and (min-width: $tablet-width)
+          img
+            height: 16vh
+    @media screen and (min-width: $tablet-width)
+      .gallery-element
+        // border-left: 1px solid $blue-dark
+        border-right: 1px solid #003c71
+        margin-top: 20px
+        .img-gallery
+          padding-top: 8px
+          width: 100%
+        .gallery-caption-wrapper
+          width: 100%
+          padding-bottom: 5px
+          .gallery-caption
+            p
+              font-size: 9px
+              font-family: latoRegular
+
         .gallery-text-content
           height: 90%
           overflow: hidden
@@ -17,3 +42,4 @@
           text-align: justify
           @media (max-width: $mobile-width)
             font-size: 13px
+// 1px solid #003c71
