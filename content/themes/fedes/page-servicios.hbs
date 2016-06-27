@@ -28,14 +28,20 @@
             </section>
 
             <div class="col-xs-12 collapse toggable-content" id="service-{{@number}}">
-              <div class="top-arrow"></div>
-              <div class="col-xs-10 toggable-content--content">
                 {{content}}
               </div>
             </div>
           {{/foreach}}
-        {{/get}}
       </div>
+      {{#foreach services}}
+      <div class="col-xs-12 collapse toggable-content" id="service-{{@number}}" >
+        <div class="top-arrow"></div>
+        <div class="col-xs-10 toggable-content--content">
+          {{content}}
+        </div>
+      </div>
+      {{/foreach}}
+      {{/get}}
     </div>
   </main>
 {{/post}}
