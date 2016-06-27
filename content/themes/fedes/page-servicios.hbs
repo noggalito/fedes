@@ -9,10 +9,10 @@
           {{> "gallery-title" currentTag=serviciosTag}}
         {{/serviciosTag}}
       {{/get}}
-      <div class="row row-services">
+      <div class="row row-services serviceList">
         {{#get "posts" filter="tag:servicios" as |services|}}
           {{#foreach services}}
-            <section class="col-xs-offset-2 col-xs-8">
+            <section class="col-xs-offset-2 col-xs-8 col-sm-4">
               <div class="gallery-element" data-toggle="collapse"
               data-target="#service-{{@number}}">
                 <div class="img-gallery">
