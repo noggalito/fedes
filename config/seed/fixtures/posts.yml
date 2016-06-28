@@ -86,12 +86,12 @@
   updated_at: <%= Time.now %>
   published_at: <%= Time.now %>
   page: false
-  slug: cooperacion-para-el-desarrollo
-  title: Cooperación para el desarrollo
+  slug: prendho
+  title: PRENDHO
   featured: false
   language: en_US
   status: published
-  image: /default/copdesarrollo.jpg
+  image: /default/prendho.jpg
   markdown: <%= lipsum %>
 
 - uuid: <%= uuid %>
@@ -112,14 +112,52 @@
   updated_at: <%= Time.now %>
   published_at: <%= Time.now %>
   page: false
-  slug: prendho
-  title: PRENDHO
+  slug: cooperacion-para-el-desarrollo
+  title: Cooperación para el desarrollo
   featured: false
   language: en_US
   status: published
-  image: /default/prendho.jpg
+  image: /default/copdesarrollo.jpg
   markdown: <%= lipsum %>
 
+- uuid: <%= uuid %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  published_at: <%= Time.now %>
+  page: false
+  slug: sinfin
+  title: SINFÍN
+  featured: false
+  language: en_US
+  status: published
+  image: /default/imgsinfin.jpg
+  markdown: <%= lipsum %>
+
+- uuid: <%= uuid %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  published_at: <%= Time.now %>
+  page: false
+  slug: la-palma
+  title: Centro Agropecuario "La Palma"
+  featured: false
+  language: en_US
+  status: published
+  image: /default/agropecuario.jpg
+  markdown: <%= lipsum %>
+
+- uuid: <%= uuid %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  published_at: <%= Time.now %>
+  page: false
+  slug: escuela-de-negocios
+  title: Escuela de Negocios
+  featured: false
+  language: en_US
+  status: published
+  image: /default/negocios.jpg
+  markdown: <%= lipsum %>
 # tag:servicios
 - uuid: <%= uuid %>
   created_at: <%= Time.now %>

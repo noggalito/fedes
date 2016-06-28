@@ -6,14 +6,16 @@
     font-family: latoLight
 
   .projectList
-    .gallery-element
-      .img-gallery
-        overflow: hidden
-        .gallery-text-content
-          height: 90%
-          overflow: hidden
-          font-size: 15px
-          font-weight: 200
-          text-align: justify
-          @media (max-width: $mobile-width)
-            font-size: 13px
+    @media (max-width: $mobile-width)
+      // hide last 3 proyectos
+      .proyecto-preview-4, .proyecto-preview-5, .proyecto-preview-6
+        display: none
+    @media (min-width: $tablet-width)
+      width: $maxTabletWidth
+      margin: auto
+      & > section
+        padding-left: 0
+        padding-right: 0
+        margin-left: -1px
+        &.proyecto-preview-3, &.proyecto-preview-6
+          border-right: 1px solid $blue-dark

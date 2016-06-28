@@ -7,19 +7,19 @@
     {{/get}}
   </div>
   <div class="row projectList">
-    {{#get "posts" limit="3" filter="tag:proyectos"  as |projects|}}
+    {{#get "posts" filter="tag:proyectos" order="published_at asc"  as |projects|}}
       {{#foreach projects}}
-        <section class="col-xs-offset-2 col-xs-8 col-md-4">
+        <section class="proyecto-preview-{{@number}} col-xs-offset-2 col-xs-8 col-md-4 col-sm-offset-0 col-sm-4">
           <a class="gallery-element" href="{{url}}">
             <div class="img-gallery">
-              <img
+              <div
                 class="img-responsive"
                 {{#if image}}
                   style="background-image: url('{{image}}')"
                 {{else}}
                   style="background-image: url('{{asset 'img/no-image.jpg'}}')"
                 {{/if}}
-                / >
+                ></div>
               <div class="gallery-text-content">
                 <div class="projectContent">{{content}}</div>
               </div>
