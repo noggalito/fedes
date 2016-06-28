@@ -8,11 +8,11 @@
   .gallery-element
     display: block
     width: 100%
+    overflow: hidden
+    padding: 0.5em 0
+    border-left: 1px solid $blue-dark
     &:hover
       text-decoration: none
-    @media (max-width: $mobile-width)
-      padding: 0.5em 0
-      border-left: 1px solid $blue-dark
 
   .gallery-caption-wrapper
     background-color: white
@@ -20,24 +20,23 @@
     clip-path: polygon(0 75%, 100% 30%, 100% 100%, 0% 100%)
 
   .gallery-caption
+    font-family: latoRegular
     text-transform: capitalize
     width: 95%
     margin-top: -70px
     text-align: right
     color: $blue-dark
     background-color: $dark-grey
-    font-size: 20px
     padding: 50px 2% 2% 30%
     webkit-clip-path: polygon(0 75%, 100% 30%, 100% 100%, 0% 100%)
     clip-path: polygon(0 75%, 100% 30%, 100% 100%, 0% 100%)
     p
       margin-bottom: 10px
       width: 98%
-    @media (max-width: $mobile-width)
+      margin: 1% 2%
       font-size: 13px
-      text-align: right
-      p
-        margin: 1% 2%
+      max-height: 38px
+      overflow: hidden
 
   .img-gallery
     position: relative
@@ -49,7 +48,13 @@
       background-size: cover
       background-position: 50%
       width: 99% // fix overlapping with bottom container
+      @media (min-width: $tablet-width)
+        min-height: 200px
+        height: 20vh
+        max-height: 250px
+        width: 100%
     .gallery-text-content
+      font-family: latoThin
       top: 0
       position: absolute
       visibility: hidden
