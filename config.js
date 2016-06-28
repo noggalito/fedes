@@ -12,19 +12,30 @@ config = {
     // When running Ghost in the wild, use the production environment.
     // Configure your URL and mail settings here
     production: {
-        url: 'http://my-ghost-blog.com',
-        mail: {},
+        url: 'http://produccion.fedes.ec',
+        mail: {
+          transport: 'SMTP',
+          options: {
+            service: 'mailgun',
+            auth: {
+              user: process.env.SMTP_LOGIN,
+              pass: process.env.SMTP_PASSWORD
+            }
+          }
+        },
         database: {
-            client: 'sqlite3',
+            client: 'postgres',
             connection: {
-                filename: path.join(__dirname, '/content/data/ghost.db')
+              host: '127.0.0.1',
+              user: process.env.DB_FEDES_USER,
+              password: process.env.DB_FEDES_PASSWORD,
+              database: process.env.DB_FEDES_DATABASE
             },
             debug: false
         },
-
         server: {
             host: '127.0.0.1',
-            port: '2368'
+            port: process.env.PORT
         }
     },
 
