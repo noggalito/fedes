@@ -132,7 +132,6 @@
   status: published
   image: /default/imgsinfin.jpg
   markdown: <%= lipsum %>
-  html: "<p><%= lipsum %></p>"
 
 - uuid: <%= uuid %>
   created_at: <%= Time.now %>
@@ -146,7 +145,6 @@
   status: published
   image: /default/agropecuario.jpg
   markdown: <%= lipsum %>
-  html: "<p><%= lipsum %></p>"
 
 - uuid: <%= uuid %>
   created_at: <%= Time.now %>
