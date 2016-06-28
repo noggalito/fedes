@@ -19,6 +19,10 @@ class Seed
       DEFAULT_SETTINGS
     end
 
+    def self.wipe_records!
+      Logger.info "can't wipe", self
+    end
+
     def seed!
       setting.update!(value: record.value)
       Logger.success self.class, "#{record.key}:", record.value

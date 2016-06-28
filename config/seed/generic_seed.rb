@@ -11,6 +11,11 @@ class Seed
         end
       end
 
+      def wipe_records!
+        Logger.warn "wiping", klass
+        klass.destroy_all
+      end
+
       def load_fixtures(identifier)
         YAML.load(
           ERB.new(

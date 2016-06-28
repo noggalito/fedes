@@ -27,6 +27,7 @@ class Seed
     db.connect!
     Logger.warn "seeding database for", environment
     klasses.each do |klass|
+      klass.wipe_records! if wipe_db?
       klass.perform_queries
       Logger.success klass
     end
@@ -35,6 +36,10 @@ class Seed
   end
 
   private
+
+  def wipe_db?
+    ENV["WIPE_DB"]
+  end
 
   def db
     @db ||= DbConnection.new(environment)
