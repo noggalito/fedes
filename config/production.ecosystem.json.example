@@ -1,0 +1,15 @@
+{
+  "apps" : [
+    {
+      "name"      : "fedes",
+      "script"    : "index.js",
+      "env_production" : {
+        "PORT"                     :"2373",
+        "NODE_ENV"                 :"production",
+        "DB_FEDES_USER"            :"fedes",
+        "DB_FEDES_DATABASE"        :"fedes_production",
+        "DB_FEDES_PASSWORD"        :"$PASSWD"
+      }
+    }
+  ]
+}

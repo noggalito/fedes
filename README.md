@@ -23,3 +23,9 @@ $ ./seed.rb
 ```
 $ gulp
 ```
+
+## Deployment
+
+```
+$ ./deploy.bash production
+```
