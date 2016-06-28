@@ -33,7 +33,7 @@
     execute("git config --global user.email", function(email) {
       var deployEmail = email.replace("\n", "");
 
-      execute("pm2 -s deploy ecosystem.json5 " + process.env.ENV + " curr", function (sha) {
+      execute("pm2 -s deploy ecosystem.json " + process.env.ENV + " curr", function (sha) {
         var version = sha.replace("\n", "");
 
         slack.webhook({
