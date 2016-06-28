@@ -17,6 +17,8 @@ GEM
     arel (6.0.3)
     builder (3.2.2)
     colorize (0.7.7)
+    faker (1.6.3)
+      i18n (~> 0.5)
     i18n (0.7.0)
     json (1.8.3)
     minitest (5.9.0)
@@ -32,8 +34,9 @@ PLATFORMS
 DEPENDENCIES
   activerecord (~> 4.2)
   colorize
+  faker
   pg
   sqlite3
 
 BUNDLED WITH
-   1.11.2
+   1.12.5

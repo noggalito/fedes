@@ -13,7 +13,8 @@ class Seed
         author_id: first_user.id,
         created_by: first_user.id,
         updated_by: first_user.id,
-        published_by: first_user.id
+        published_by: first_user.id,
+        html: "<p>#{record.markdown}</p>"
       )
     end
   end

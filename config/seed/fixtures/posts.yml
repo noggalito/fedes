@@ -10,7 +10,6 @@
   slug: texto-principal
   title: Texto principal
   markdown: '"La innovación es lo que distingue a los líderes de los seguidores" - Steve Jobs'
-  html: '<p>"La innovación es lo que distingue a los líderes de los seguidores" - Steve Jobs</p>'
 
 - uuid: <%= uuid %>
   created_at: <%= Time.now %>
@@ -23,7 +22,6 @@
   title: "Dirección:"
   slug: contactos-direccion
   markdown: San Cayatano alto, calle París\ninstalaciones UTPL. Loja_Ecuador
-  html: <p>San Cayatano alto, calle París<br />instalaciones UTPL. Loja_Ecuador</p>
 
 - uuid: <%= uuid %>
   created_at: <%= Time.now %>
@@ -36,7 +34,6 @@
   status: published
   slug: contactos-fono
   markdown: "(593-7) 258-5700\n\n(593-7) 258-5706\n\nEmail: info@fedes.ec"
-  html: "<p>(593-7) 258-5700</p><p>(593-7) 258-5706</p><p><strong>Email:</strong> info@fedes.ec</p>"
 
 # static pages
 - uuid: <%= uuid %>
@@ -96,7 +93,6 @@
   status: published
   image: /default/copdesarrollo.jpg
   markdown: <%= lipsum %>
-  html: "<p><%= lipsum %></p>"
 
 - uuid: <%= uuid %>
   created_at: <%= Time.now %>
@@ -110,7 +106,6 @@
   status: published
   image: /default/cima.jpg
   markdown: <%= lipsum %>
-  html: "<p><%= lipsum %></p>"
 
 - uuid: <%= uuid %>
   created_at: <%= Time.now %>
@@ -124,7 +119,6 @@
   status: published
   image: /default/prendho.jpg
   markdown: <%= lipsum %>
-  html: "<p><%= lipsum %></p>"
 
 # tag:servicios
 - uuid: <%= uuid %>
@@ -139,7 +133,6 @@
   status: published
   image: /default/consultoria.jpg
   markdown: <%= lipsum %>
-  html: "<p><%= lipsum %></p>"
 
 - uuid: <%= uuid %>
   created_at: <%= Time.now %>
@@ -153,7 +146,6 @@
   status: published
   image: /default/asesoramiento.jpg
   markdown: <%= lipsum %>
-  html: "<p><%= lipsum %></p>"
 
 - uuid: <%= uuid %>
   created_at: <%= Time.now %>
@@ -167,7 +159,6 @@
   status: published
   image: /default/trabajo.jpg
   markdown: <%= lipsum %>
-  html: "<p><%= lipsum %></p>"
 
 # tag:blog
 - uuid: <%= uuid %>
@@ -182,7 +173,6 @@
   status: published
   image: /default/consultoria.jpg
   markdown: <%= lipsum %>
-  html: "<p><%= lipsum %></p>"
 
 - uuid: <%= uuid %>
   created_at: <%= Time.now %>
@@ -196,7 +186,6 @@
   status: published
   image: /default/asesoramiento.jpg
   markdown: <%= lipsum %>
-  html: "<p><%= lipsum %></p>"
 
 - uuid: <%= uuid %>
   created_at: <%= Time.now %>
@@ -210,7 +199,6 @@
   status: published
   image: /default/trabajo.jpg
   markdown: <%= lipsum %>
-  html: "<p><%= lipsum %></p>"
 
 - uuid: <%= uuid %>
   created_at: <%= Time.now %>
@@ -224,7 +212,6 @@
   status: published
   image: /default/consultoria.jpg
   markdown: <%= lipsum %>
-  html: "<p><%= lipsum %></p>"
 
 - uuid: <%= uuid %>
   created_at: <%= Time.now %>
@@ -238,7 +225,6 @@
   status: published
   image: /default/asesoramiento.jpg
   markdown: <%= lipsum %>
-  html: "<p><%= lipsum %></p>"
 
 - uuid: <%= uuid %>
   created_at: <%= Time.now %>
@@ -252,7 +238,6 @@
   status: published
   image: /default/trabajo.jpg
   markdown: <%= lipsum %>
-  html: "<p><%= lipsum %></p>"
 
 # tag:blog-category
 - uuid: <%= uuid %>
@@ -323,7 +308,6 @@
   status: published
   image: /default/carousel1.jpg
   markdown: Imagen 1
-  html: "<p>Imagen 1</p>"
 
 - uuid: <%= uuid %>
   created_at: <%= Time.now %>
@@ -337,7 +321,6 @@
   status: published
   image: /default/carousel2.jpg
   markdown: Imagen 2
-  html: "<p>Imagen 2</p>"
 
 - uuid: <%= uuid %>
   created_at: <%= Time.now %>
@@ -351,7 +334,6 @@
   status: published
   image: /default/consultoria.jpg
   markdown: Imagen 3
-  html: "<p>Imagen 3</p>"
 
 # tag:imagenequipo
 - uuid: <%= uuid %>
@@ -366,7 +348,6 @@
   status: published
   image: /default/consultoria.jpg
   markdown: Imagen 1
-  html: "<p>Imagen 1</p>"
 
 - uuid: <%= uuid %>
   created_at: <%= Time.now %>
@@ -380,7 +361,6 @@
   status: published
   image: /default/asesoramiento.jpg
   markdown: Imagen 2
-  html: "<p>Imagen 2</p>"
 
 - uuid: <%= uuid %>
   created_at: <%= Time.now %>
@@ -394,7 +374,6 @@
   status: published
   image: /default/trabajo.jpg
   markdown: Imagen 3
-  html: "<p>Imagen 3</p>"
 
 - uuid: <%= uuid %>
   created_at: <%= Time.now %>
@@ -408,7 +387,6 @@
   status: published
   image: /default/equipo4.jpg
   markdown: Imagen 4
-  html: "<p>Imagen 4</p>"
 
 # tag:equipocontactos
 - uuid: <%= uuid %>
@@ -423,7 +401,6 @@
   title: Registrate
   image: /default/consultoria.jpg
   markdown: Registrate Lorem ipsum dolor sit amet, consectetur adipisicing elit
-  html: <p>Registrate Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
 
 - uuid: <%= uuid %>
   created_at: <%= Time.now %>
@@ -437,7 +414,6 @@
   title: Colabora
   image: /default/asesoramiento.jpg
   markdown: Lorem ipsum dolor sit amet, consectetur adipisicing elit
-  html: <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
 
 # tag:aliadosfedes
 - uuid: <%= uuid %>
@@ -452,7 +428,6 @@
   status: published
   image: /default/ecolac.png
   markdown: Esta es la descripcion de ecolac
-  html: "<p>Esta es la descripcion de ecolac</p>"
 
 - uuid: <%= uuid %>
   created_at: <%= Time.now %>
@@ -466,7 +441,6 @@
   status: published
   image: /default/crisfe.png
   markdown: Esta es la descripcion de crisfe
-  html: "<p>Esta es la descripcion de crisfe</p>"
 
 - uuid: <%= uuid %>
   created_at: <%= Time.now %>
@@ -480,7 +454,6 @@
   status: published
   image: /default/gad.png
   markdown: Esta es la descripcion de GAD
-  html: "<p>Esta es la descripcion de GAD</p>"
 
 - uuid: <%= uuid %>
   created_at: <%= Time.now %>
@@ -494,7 +467,6 @@
   status: published
   image: /default/holcim.png
   markdown: Esta es la descripcion de holcim
-  html: "<p>Esta es la descripcion de holcim</p>"
 
 - uuid: <%= uuid %>
   created_at: <%= Time.now %>
@@ -508,7 +480,6 @@
   status: published
   image: /default/Lundin-Foundation-logo.png
   markdown: Esta es la descripcion de lundin
-  html: "<p>Esta es la descripcion de lundin</p>"
 
 - uuid: <%= uuid %>
   created_at: <%= Time.now %>
@@ -522,7 +493,6 @@
   status: published
   image: /default/nobis.png
   markdown: Esta es la descripcion de nobis
-  html: "<p>Esta es la descripcion de nobis</p>"
 
 - uuid: <%= uuid %>
   created_at: <%= Time.now %>
@@ -536,7 +506,6 @@
   status: published
   image: /default/prefecturaloja.png
   markdown: Esta es la descripcion de Prefectura de Loja
-  html: "<p>Esta es la descripcion de Prefectura de Loja</p>"
 
 - uuid: <%= uuid %>
   created_at: <%= Time.now %>
@@ -550,7 +519,6 @@
   status: published
   image: /default/red.png
   markdown: Esta es la descripcion de redeamerica
-  html: "<p>Esta es la descripcion de redeamerica</p>"
 
 - uuid: <%= uuid %>
   created_at: <%= Time.now %>
@@ -564,7 +532,6 @@
   status: published
   image: /default/utpl.png
   markdown: Esta es la descripcion de UTPL
-  html: "<p>Esta es la descripcion de UTPL</p>"
 
 - uuid: <%= uuid %>
   created_at: <%= Time.now %>
@@ -578,7 +545,6 @@
   status: published
   image: /default/aei.png
   markdown: Esta es la descripcion de AEI
-  html: "<p>Esta es la descripcion de AEI</p>"
 
 # tag:logo-fedes-footer
 
@@ -594,4 +560,3 @@
   status: published
   image: /default/logo_fedes_blanco.png
   markdown: este es el logo del footer
-  html: "<p>este es el logo del footer</p>"
