@@ -63,6 +63,7 @@
     "rss": "1.2.1",
     "semver": "5.1.0",
     "showdown-ghost": "0.3.6",
+    "slack-node": "^0.2.0",
     "sqlite3": "3.1.1",
     "unidecode": "0.1.8",
     "validator": "4.5.0",
