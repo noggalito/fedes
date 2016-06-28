@@ -14,9 +14,12 @@ config = {
     production: {
         url: 'http://produccion.fedes.ec',
         mail: {
+          from: 'info@fedes.ec',
           transport: 'SMTP',
           options: {
-            service: 'mailgun',
+            host: process.env.SMTP_HOST,
+            port: process.env.SMTP_PORT,
+            secureConnection: true,
             auth: {
               user: process.env.SMTP_LOGIN,
               pass: process.env.SMTP_PASSWORD
