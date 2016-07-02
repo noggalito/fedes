@@ -11,32 +11,41 @@
     overflow: hidden
     padding: 0.5em 0
     border-left: 1px solid $blue-dark
+    position: relative
     &:hover
       text-decoration: none
 
   .gallery-caption-wrapper
     background-color: white
-    webkit-clip-path: polygon(0 75%, 100% 30%, 100% 100%, 0% 100%)
-    clip-path: polygon(0 75%, 100% 30%, 100% 100%, 0% 100%)
+    position: absolute
+    bottom: 0
+    width: 100%
+    min-height: 75px
+    webkit-clip-path: polygon(0 60%, 100% 30%, 100% 100%, 0% 100%)
+    clip-path: polygon(0 60%, 100% 30%, 100% 100%, 0% 100%)
 
   .gallery-caption
     font-family: latoRegular
     text-transform: capitalize
     width: 95%
-    margin-top: -70px
     text-align: right
     color: $blue-dark
     background-color: $dark-grey
-    padding: 50px 2% 2% 30%
-    webkit-clip-path: polygon(0 75%, 100% 30%, 100% 100%, 0% 100%)
-    clip-path: polygon(0 75%, 100% 30%, 100% 100%, 0% 100%)
+    position: absolute
+    bottom: 7px
+    height: 100%
+    webkit-clip-path: polygon(0 60%, 100% 30%, 100% 100%, 0% 100%)
+    clip-path: polygon(0 60%, 100% 30%, 100% 100%, 0% 100%)
     p
+      padding: 0 2% 2% 30%
       margin-bottom: 10px
-      width: 98%
       margin: 1% 2%
       font-size: 13px
       max-height: 38px
       overflow: hidden
+      position: absolute
+      right: 0
+      bottom: 0
 
   .img-gallery
     position: relative
