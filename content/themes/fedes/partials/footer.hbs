@@ -9,7 +9,7 @@
     <h3 class="footer-main-title textFooter hide-on-contacts">Contactos</h3>
     <div class="container">
       <div class="row colFooter">
-        <div class="col-md-4 col-sm-4 col-sm-offset-5 hide-on-contacts">
+        <div class="col-md-4 col-sm-4 col-sm-offset-4 hide-on-contacts">
           <div class="directionText">
             <ul class="nav nav-pills nav-stacked">
               {{#get "posts" slug="contactos-direccion" as |article|}}
@@ -23,21 +23,21 @@
             </ul>
           </div>
         </div>
-        <div class="col-md-3 col-sm-3">
+        <div class="col-md-4 col-sm-4">
           <div class="redesSociales when-on-contacts">
             <h6 class="textFooter-title">Síguenos en:</h6>
             <div class="row">
-              <div class="col-md-4 col-xs-2 imgContainerFooter">
+              <div class="col-md-3 col-sm-3 col-xs-2 imgContainerFooter">
                 <a href="#" class="thumbnail imgGalleryFooter">
                   <img src="{{asset 'img/icono_face.png'}}" alt="facebook">
                 </a>
               </div>
-              <div class="col-md-4 col-xs-2 imgContainerFooter">
+              <div class="col-md-3 col-sm-3 col-xs-2 imgContainerFooter">
                 <a href="#" class="thumbnail imgGalleryFooter">
                   <img src="{{asset 'img/icono_rss.png'}}" alt="rss">
                 </a>
               </div>
-              <div class="col-md-4 col-xs-2 imgContainerFooter">
+              <div class="col-md-3 col-sm-3 col-xs-2 imgContainerFooter">
                 <a href="#" class="thumbnail imgGalleryFooter">
                   <img src="{{asset 'img/icono_twitter.png'}}" alt="twitter">
                 </a>
@@ -53,7 +53,7 @@
             {{/get}}
           </div>
         </div>
-        <div class="col-md-5 col-sm-5 footer-form hide-on-contacts">
+        <div class="col-md-4 col-sm-4 footer-form hide-on-contacts">
           {{> "footer-form"}}
         </div>
       </div>
