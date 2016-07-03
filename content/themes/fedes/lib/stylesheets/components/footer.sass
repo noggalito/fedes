@@ -18,8 +18,10 @@ footer
     font-family: latoLight
   .textFooter-title
     margin: 0.5em 0 0 0
-    font-size: 1.1em
-    font-family: latoLight
+    font-size: 1.2em
+    font-family: latoMedium
+    @media (min-width: $tablet-width)
+      font-size: 1.3em
 
   .textFooter-content
     font-weight: 200
@@ -36,14 +38,7 @@ footer
     .textFooter-title
       color: $turquoise
       margin: 0 0 0.5em 0
-
-  .colFooter
-    @media (min-width: $mobile-width)
-      .directionText
-        margin-left: 1em
-    @media (max-width: $mobile-width)
-      .directionText > ul
-        margin: 0 0 $mobileVerticalMargin 0
+      font-family: latoThin
 
   .imgGalleryFooter
     border: 0px solid
@@ -53,10 +48,33 @@ footer
     width: 25px
     height: 25px
 
+  .footer-form
+    .form-group
+      margin-bottom: 5px
+    @media (min-width: $tablet-width)
+      position: absolute
+      top: 0
+
+  .colFooter
+    position: relative
+    .directionText > ul
+      margin: 0 0 $mobileVerticalMargin 0
+    @media (min-width: $mobile-width)
+      .directionText
+        margin-left: 1em
+    @media (min-width: $tablet-width)
+      min-height: 280px
+@media (min-width: $tablet-width)
   .leyendfooter
     color: $blue-one
     margin: 0.5em 0 3em 0
     text-align: right
+    @media (min-width: $tablet-width)
+      display: inline
+      text-align: left
+      font-size: 1em
+      a
+        margin-left: 5%
     font-size: 0.8em
     font-family: latoLight
     a
@@ -67,10 +85,3 @@ footer
     background: $blue-dark
     padding-top: 1px
     padding-bottom: 25px
-    .imgGalleryFooter
-      border: 0px solid
-      border-radius: 0px
-      background-color: $blue-dark
-      padding: 0
-      width: 25px
-      height: 25px
