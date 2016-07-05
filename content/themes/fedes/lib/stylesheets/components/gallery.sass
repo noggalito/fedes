@@ -14,7 +14,9 @@
     position: relative
     &:hover
       text-decoration: none
-
+    @media (max-width: $mobile-width)
+      padding: 0.5em 0
+      border-left: 1px solid $blue-dark
   .gallery-caption-wrapper
     background-color: white
     position: absolute
@@ -53,6 +55,8 @@
       width: 100%
       height: 190px
       height: 40vh
+      @media (min-width: $tablet-width)
+        height: 20vh
     .img-responsive
       background-size: cover
       background-position: 50%
@@ -92,5 +96,23 @@
   .gallerySecondary
     padding-bottom: 33px
 
+@media (min-width: $tablet-width)
+  .container.gallery-principal
+    padding-left: 0
+    padding-right: 0
+    margin-left: 0
+    .serviceList
+      margin-left: 30px
+      margin-right: 6px
+      .gallery-element--3
+        border-right: 1px solid $blue-dark
+      section
+        padding-left: 0
+        padding-right: 0
+      .img-gallery
+        padding-bottom: 10px
+        padding-top: 10px
+    .serviceDetail
+      width: 100%
 .textImgServicios
   background: #f2f2f2
