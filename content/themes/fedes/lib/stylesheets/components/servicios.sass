@@ -1,0 +1,19 @@
+.serviceList
+  @media (min-width: $tablet-width)
+    position: relative
+    min-height: 250px
+    & > section
+      position: absolute
+      &.service-in-list--2
+        left: 33.33%
+      &.service-in-list--3
+        right: 0
+    .toggable-content
+      margin-top: 230px
+      z-index: 2
+      &--1
+        .top-arrow
+          margin-left: 16.66%
+      &--3
+        .top-arrow
+          margin-right: 16.66%

@@ -12,8 +12,8 @@
       <div class="row row-services serviceList">
         {{#get "posts" filter="tag:servicios" as |services|}}
           {{#foreach services}}
-            <section class="col-xs-offset-2 col-xs-8 col-sm-4">
-              <div class="gallery-element" data-toggle="collapse"
+            <section class="col-xs-offset-2 col-xs-8 col-sm-offset-0 col-sm-4 service-in-list--{{@number}}">
+              <div class="gallery-element gallery-element--{{@number}}" data-toggle="collapse"
               data-target="#service-{{@number}}">
                 <div class="img-gallery">
                   <img class="img-responsive"
@@ -27,7 +27,7 @@
               </div>
             </section>
 
-            <div class="col-xs-12 collapse toggable-content" id="service-{{@number}}">
+            <div class="col-xs-12 collapse toggable-content toggable-content--{{@number}}" id="service-{{@number}}">
                 <div class="top-arrow"></div>
                 <div class="col-xs-10 toggable-content--content">
                 {{content}}
