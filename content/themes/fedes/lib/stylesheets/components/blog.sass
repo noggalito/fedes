@@ -1,17 +1,30 @@
-$blogLeftSpace: 15px
+.circle-common
+  border-radius: 50%
+  width: $blog-circle
+  height: $blog-circle
+  display: inline-block
+  margin: 0px 5px 1px 0px
+  background-color: $grey
 
 .blog-content
+  .blog-post-container
+    @media only screen and (max-width:$desktop-width)
+      padding-left: $blog-padding
+      padding-right: $blog-padding
+
   .blog-post-content
     padding-left: 0px
     padding-right: 0px
+    border-left: 1px solid
+    border-color: $blue-dark
+    margin-bottom: 20px
+
   .blog-post-link
     text-decoration: none
-    color: #000
+    color: $black
     &-figure
-      border-left: 1px solid
-      border-color: $blue-dark
       .blog-post-link-date
-        margin-left: $blogLeftSpace
+        margin-left: $blog-left-space
         color: $blue-dark
         padding-top: 5px
       .blog-post-link-item
@@ -19,35 +32,45 @@ $blogLeftSpace: 15px
       .blog-post-link-title
         font-size: 20px
         font-weight: 500
-        padding: 5px $blogLeftSpace
+        padding: 5px $blog-left-space
         width: 95%
-        color: $blue-dark
         background-color: $dark-grey
         margin-bottom: 10px
         letter-spacing: -1px
         line-height: 22px
+        text-align: justify
+        @media (min-width: $tablet-width)
+          height: 53px
+          overflow: hidden
       .blog-post-link-summary
-        margin-left: $blogLeftSpace
+        margin-left: $blog-left-space
         margin-right: 20px
         text-align: justify
         line-height: 17px
-        padding-bottom: 25px
-      img
+        margin-bottom: 25px
+        @media (min-width: $tablet-width)
+          height: 138px
+          overflow: hidden
+      .img-responsive
         height: 100px
         height: 20vh
-        width: 100%
+        width: $blog-all-width
         background-size: cover
       .blog-post-link-overlay
         position: absolute
         top: 0
-        width: 100%
-        height: 100%
-        &:hover
+        width: $blog-all-width
+        height: $blog-all-width
+      &:hover
+        .blog-post-link-overlay
           background-color: $blue-opacity
+        .blog-post-link-title
+          color: $blue-dark
 
   .blog-pagination
     text-align: center
     margin: 10px 0
+    width: $blog-all-width
     .page-box-common
       margin: 0 5px 0 5px
       border-radius: 0px
@@ -88,6 +111,10 @@ $blogLeftSpace: 15px
     text-align: center
     margin: 10px 0 30px 0
 
+    .blog-tab
+      margin-right: 3em
+      margin-bottom: 0.5em
+
     .blog-main-tab
       display: none
 
@@ -99,25 +126,19 @@ $blogLeftSpace: 15px
 
     .carousel-footer-secondary
       height: 50px
-    .circle-common
-      border-radius: 50%
-      width: 0.6em
-      height: 0.6em
-      display: inline-block
-      margin: 0px 5px 1px 0px
     .active
       a
-        color: $blue-one
+        color: $blue-light
         border-color: $white
         &:hover
-          color: $blue-one
+          color: $blue-light
           border-color: $white
           .circle
             @extend .circle-common
-            background-color: $blue-one
+            background-color: $blue-light
         .circle
           @extend .circle-common
-          background-color: $blue-one
+          background-color: $blue-light
     a
       color: $grey
       display: inline
@@ -135,7 +156,6 @@ $blogLeftSpace: 15px
 
       .circle
         @extend .circle-common
-        background-color: $grey
 
 
   .nav-justified

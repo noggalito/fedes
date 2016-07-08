@@ -3,9 +3,15 @@
   .breadcrumb
     background-color: white
     margin-bottom: 0
+    .breadcrumb-parent
+      .circle-common
+        background-color: $blue-one
+      a
+        color: $blue-one
     li:not(:first-child)
       &:before
         content: ">"
+        color: $blue-one
 
 $postMarginLeft: 3vw
 
@@ -29,6 +35,10 @@ $postMarginLeft: 3vw
     margin-top: 5px
     margin-left: $postMarginLeft
     color: $grey
+    font-style: italic;
+    .post-contents--author
+      font-weight: bold;
+      color: $blue-dark
   .post-contents--content
     margin-left: $postMarginLeft
     text-align: justify
@@ -76,3 +86,10 @@ $postMarginLeft: 3vw
     li
       border-bottom: 1px solid $dark-grey
       padding-right: 1em
+    .post-categories--item
+      a
+        color: $grey
+      &:hover
+        a
+          color: $blue-dark
+

@@ -16,7 +16,7 @@
               style="background-image: url('{{image}}')"
             />
             <div class="post-contents--caption">
-              Por: {{author autolink="false"}}, {{moment-date published_at format="D [de] MMMM [de] YYYY" locale="es"}}
+              Por: <span class="post-contents--author">{{author autolink="false"}}</span>, {{moment-date published_at format="D [de] MMMM [de] YYYY" locale="es"}}
             </div>
           </div>
           <div class="post-contents--content">{{content}}</div>
@@ -45,7 +45,7 @@
             {{#get "posts" limit="4" include="tags" filter="tag:blog" as |posts|}}
               <ul class="nav nav-pills nav-stacked">
                 {{#foreach posts}}
-                  <li>
+                  <li class="post-categories--item">
                     <a href="{{url}}">{{title}}</a>
                   </li>
                 {{/foreach}}

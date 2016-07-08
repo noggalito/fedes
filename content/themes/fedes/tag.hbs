@@ -8,10 +8,10 @@
     </div>
   {{/tag}}
 
-  <div class="container">
+  <div class="container blog-post-container">
     <div class="row">
       {{#foreach posts}}
-        <div class="blog-post-content col-xs-offset-2 col-xs-8 col-sm-4">
+        <div class="blog-post-content col-xs-12 col-sm-6 col-lg-4">
           <a href="{{url}}" class="blog-post-link">
             <figure class="blog-post-link-figure">
               <div class="blog-post-link-date">
@@ -19,13 +19,13 @@
               </div>
               <div class="blog-post-link-item">
                 <div class="blog-post-link-overlay"></div>
-                <img class="img-responsive"
+                <div class="img-responsive"
                   {{#if image}}
                     style="background-image: url('{{image}}')"
                   {{else}}
                     style="background-image: url('{{asset 'img/no-image.jpg'}}')"
                   {{/if}}
-                 />
+                ></div>
               </div>
               <div class="blog-post-link-title">{{title}}</div>
               <div class="blog-post-link-summary">{{excerpt}}</div>
@@ -34,8 +34,8 @@
         </div>
       {{/foreach}}
     </div>
-  </div>
-  <div class="container blog-pagination">
-    {{pagination limit="6"}}
+    <div class="container blog-pagination">
+      {{pagination limit="6"}}
+    </div>
   </div>
 </main>
