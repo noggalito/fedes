@@ -19,13 +19,13 @@
               </div>
               <div class="blog-post-link-item">
                 <div class="blog-post-link-overlay"></div>
-                <img class="img-responsive"
+                <div class="img-responsive"
                   {{#if image}}
                     style="background-image: url('{{image}}')"
                   {{else}}
                     style="background-image: url('{{asset 'img/no-image.jpg'}}')"
                   {{/if}}
-                 />
+                ></div>
               </div>
               <div class="blog-post-link-title">{{title}}</div>
               <div class="blog-post-link-summary">{{excerpt}}</div>

@@ -39,13 +39,19 @@
         letter-spacing: -1px
         line-height: 22px
         text-align: justify
+        @media (min-width: $tablet-width)
+          height: 53px
+          overflow: hidden
       .blog-post-link-summary
         margin-left: $blog-left-space
         margin-right: 20px
         text-align: justify
         line-height: 17px
-        padding-bottom: 25px
-      img
+        margin-bottom: 25px
+        @media (min-width: $tablet-width)
+          height: 138px
+          overflow: hidden
+      .img-responsive
         height: 100px
         height: 20vh
         width: $blog-all-width
@@ -107,6 +113,7 @@
 
     .blog-tab
       margin-right: 3em
+      margin-bottom: 0.5em
 
     .blog-main-tab
       display: none
@@ -121,17 +128,17 @@
       height: 50px
     .active
       a
-        color: $blue-one
+        color: $blue-light
         border-color: $white
         &:hover
-          color: $blue-one
+          color: $blue-light
           border-color: $white
           .circle
             @extend .circle-common
-            background-color: $blue-one
+            background-color: $blue-light
         .circle
           @extend .circle-common
-          background-color: $blue-one
+          background-color: $blue-light
     a
       color: $grey
       display: inline
