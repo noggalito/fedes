@@ -15,6 +15,20 @@
 
 $postMarginLeft: 3vw
 
+.post-container
+  @media (min-width: $tablet-width)
+    .container
+      margin-right: 0
+      padding-right: 0
+    .post-contents
+      padding-right: 30px
+    .post-categories--other-posts
+      .post-categories--item
+        margin-top: 0
+        padding-right: 0
+    .post-contents--content
+      margin-bottom: 2em
+
 .post-contents
   padding-left: 0
   padding-right: 0
@@ -59,6 +73,7 @@ $postMarginLeft: 3vw
         color: $blue-dark
   .post-share
     padding-right: 0
+    text-align: right
   .fb-share-button
     @media (min-width: $mobile-width)
       top: -5px
@@ -92,4 +107,3 @@ $postMarginLeft: 3vw
       &:hover
         a
           color: $blue-dark
-
