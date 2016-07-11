@@ -1,9 +1,31 @@
-$( document ).ready(function() {
-  if(window.matchMedia('(max-width: 480px)').matches){
-    $(".navbar-carousel").children().addClass("navbar-ItemMovil");
-  }else{
-    $(".navbar-carousel .navbar-menuItem").filter(function( index ) {
+(function () {
+  var NavbarChecker = function () {
+    this.$mediaQuery = window.matchMedia('(max-width: 480px)');
+    var $selector = $(".navbar-carousel .navbar-menuItem");
+    this.$elements = $selector.filter(function( index ) {
       return index === 0 || index === 1 || index === 2;
-    }).hide();
-  }
-});
+    });
+  };
+
+  NavbarChecker.prototype.checkForHide = function () {
+    if ( this.$mediaQuery.matches ) {
+      this.$elements.show();
+    } else {
+      this.$elements.hide();
+    }
+  };
+
+  NavbarChecker.prototype.addListener = function () {
+    this.$mediaQuery.addListener(
+      $.proxy(this.checkForHide, this)
+    );
+  };
+
+  var checker;
+
+  $(document).ready(function() {
+    checker = new NavbarChecker();
+    checker.checkForHide();
+    checker.addListener();
+  });
+})();

@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-  $(".cauroselEquipo .item").filter(":first").addClass("active");
+  $(".carouselEquipo .item").filter(":first").addClass("active");
   $('#myCarouselEquipo').carousel({
     interval: 4000
   });

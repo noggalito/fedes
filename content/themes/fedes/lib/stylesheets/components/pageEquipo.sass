@@ -41,7 +41,21 @@
 //   .row-equipo
 //     .img-gallery img
 //       width: 100%
-// .cauroselEquipo
+.carouselEquipo
+  @media (min-width: $tablet-width)
+    text-align: center
+    max-height: 218px
+    overflow: hidden
+    .item
+      width: 32.333%
+      // display: inline-block
+      margin: 0
+      &.active, &.visible
+        display: inline-block
+      &.active.left, &.active.right, &.next, &.prev
+        position: relative
+        -webkit-transform: none
+        transform: none
   // padding-left: 107px
   // padding-right: 107px
 // .gallery-equipo
