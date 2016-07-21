@@ -9,25 +9,23 @@
           {{> "gallery-title" currentTag=aliadosTag}}
         {{/aliadosTag}}
       {{/get}}
-      <div class = "hidden-xs">
-        <div class="row row-services">
-          <section>
-            {{#get "posts" filter="tag:aliadosfedes" as |services|}}
-              {{#foreach services}}
-                <div class="col-xs-12 col-sm-4">
-                  <figure class="img-gallery-services">
-                    <img src="{{image}}"
-                      class="img-responsive"
-                      alt="{{title}}"/>
-                    <div>
-                      <p>{{title}}</p>
-                    </div>
-                  </figure>
-                </div>
-              {{/foreach}}
-            {{/get}}
-          </section>
-        </div>
+      <div class="row row-services hidden-xs">
+        <section>
+          {{#get "posts" filter="tag:aliadosfedes" as |services|}}
+            {{#foreach services}}
+              <div class="col-xs-12 col-sm-4">
+                <figure class="aliado img-gallery-services">
+                  <div style="background-image: url({{image}});"
+                    class="img-responsive"
+                    alt="{{title}}"></div>
+                  <div>
+                    <p>{{title}}</p>
+                  </div>
+                </figure>
+              </div>
+            {{/foreach}}
+          {{/get}}
+        </section>
       </div>
       {{> "carouselAliados"}}
     </div>
