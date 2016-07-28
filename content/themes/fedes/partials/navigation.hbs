@@ -1,3 +1,8 @@
 {{#foreach navigation}}
-  <li class="{{#if current}} nav-current{{/if}}"><a href="{{url absolute="true"}}">{{label}}</a></li>
+  <li class="{{#if current}} nav-current{{/if}}">
+    <a href="{{url absolute="true"}}">
+      <span class="bullet-marker">•</span>
+      {{label}}
+    </a>
+  </li>
 {{/foreach}}
