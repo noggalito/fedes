@@ -59,13 +59,16 @@ footer
 
   .colFooter
     position: relative
-    .directionText > ul
-      margin: 0 0 $mobileVerticalMargin 0
     @media (min-width: $mobile-width)
       .directionText
         margin-left: 1em
     @media (min-width: $tablet-width)
       min-height: 280px
+      &.actually-on-contacts
+        min-height: 200px
+    .directionText > ul
+      margin: 0 0 $mobileVerticalMargin 0
+
 @media (min-width: $tablet-width)
   .leyendfooter
     color: $blue-one

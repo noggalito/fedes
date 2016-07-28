@@ -8,7 +8,7 @@
   <div class="footer-inner footerPrincipal">
     <h3 class="footer-main-title textFooter hide-on-contacts">Contactos</h3>
     <div class="container">
-      <div class="row colFooter">
+      <div class="row colFooter when-on-contacts">
         <div class="col-md-4 col-sm-4 col-sm-offset-4 hide-on-contacts">
           <div class="directionText">
             <ul class="nav nav-pills nav-stacked">
@@ -44,7 +44,7 @@
               </div>
             </div>
           </div>
-          <div class="logo-fedes-footer hidden show-on-contacts">
+          <div class="logo-fedes-footer hidden show-on-contacts when-on-contacts">
             {{#get "posts" slug="logofedesfooter" as |article|}}
               {{#article}}
                 <img src="{{image}}"

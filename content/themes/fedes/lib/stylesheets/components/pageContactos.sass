@@ -12,9 +12,16 @@
 .redesSociales.actually-on-contacts
   margin-top: 3em
   text-align: center
+  @media (min-width: $tablet-width)
+    position: absolute
+    width: 250px
+    left: 270px
+    margin-top: 65px
   .textFooter-title
     font-size: 20px
     margin: 1em 0
+    @media (min-width: $tablet-width)
+      text-align: left
   .row
     margin-top: 1em
     text-align: center
@@ -25,5 +32,14 @@
 
 .logo-fedes-footer
   text-align: center
+  &.actually-on-contacts
+    @media (min-width: $tablet-width)
+      margin-top: 80px
   img
     margin: 1em auto
+
+.address-wrapper
+  @media (min-width: $tablet-width)
+    position: absolute
+    right: 8.3333%
+    margin-top: 1em
