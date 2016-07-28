@@ -23,6 +23,8 @@
         height: 300px
         .carousel.text .content-wrapper
           max-height: 80px
+      @media (min-width: $desktop-width)
+        height: 550px
       .img-responsive
         height: 100%
         background-size: cover
@@ -41,7 +43,7 @@
     .carousel.text
       text-align: left
       color: #fff
-      margin-top: 4%
+      margin-top: 3%
       margin-left: 18%
       margin-right: 15%
       white-space: normal
@@ -75,8 +77,8 @@
 .carousel-footer
   background-color: $blue-dark
   width: 100%
-  padding-top: 50px
-  padding-bottom: 50px
+  padding-top: 40px
+  padding-bottom: 40px
 
   .textFooter
     color: #FFFFFF
@@ -92,11 +94,11 @@
       font-weight: 200
 @media (min-width: $tablet-width)
   .container.carousel
-    margin-top: 77px
+    margin-top: 32px
 @media (min-width: $mobile-width)
   .container.carousel
     .menu-carousel
-      height: 184px
+      height: 174px
       .carousel-controls-wrapper
         display: block
         width: 100%
