@@ -1,3 +1,6 @@
+.navbar-default .navbar-nav>li>a, .navbar-default .navbar-text
+  color: $white
+
 .main-navbar
   border-width: 0px
   background-color: $blue-light
@@ -17,9 +20,9 @@
     .navbar-menuItem
       color: #FFFFFF
       &:hover
-        color: #00cfff
-    .nav-current
-      color: #00cfff
+        color: $blue-one
+    .nav-current a
+      color: $blue-one
     .bullet-marker
       @media (max-width: $tablet-width)
         display: none
