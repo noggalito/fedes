@@ -23,6 +23,7 @@
     bottom: 0
     width: 100%
     min-height: 75px
+    z-index: 0
     webkit-clip-path: polygon(0 60%, 100% 30%, 100% 100%, 0% 100%)
     clip-path: polygon(0 60%, 100% 30%, 100% 100%, 0% 100%)
 
@@ -36,6 +37,7 @@
     position: absolute
     bottom: 7px
     height: 100%
+    z-index: 1
     webkit-clip-path: polygon(0 60%, 100% 30%, 100% 100%, 0% 100%)
     clip-path: polygon(0 60%, 100% 30%, 100% 100%, 0% 100%)
     p
@@ -54,6 +56,7 @@
     .img-responsive
       width: 100%
       height: 190px
+      z-index: 10
 
     .img-responsive
       background-size: cover
@@ -61,15 +64,16 @@
       width: 99% // fix overlapping with bottom container
       @media (min-width: $desktop-width)
         height: 210px
-    .gallery-text-content
-      font-family: latoThin
+    .transparent-overlay
+      background-color: $blue-opacity
       top: 0
       position: absolute
-      visibility: hidden
-      padding: 2em
       width: 99%
       height: 100%
-      background-color: $blue-opacity
+      visibility: hidden
+    .gallery-text-content
+      font-family: latoThin
+      padding: 2em
       color: $white
       p
         margin: 0 0 0.5em 0
