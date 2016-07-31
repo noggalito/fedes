@@ -9,12 +9,11 @@
       {{> "post-breadcrumbs"}}
 
       <div class="row">
-        <div class="post-contents col-xs-offset-2 col-xs-8 col-sm-offset-1 col-sm-8">
+        <div class="post-contents col-xs-offset-2 col-xs-8 col-sm-offset-1 col-sm-8 col-md-offset-0 col-md-8">
           <div class="post-contents--header">
-            <h2>{{title}}</h2>
-            <img class="img-responsive"
-              style="background-image: url('{{image}}')"
-            />
+            <h2>{{title}}Nemo laborum iure sunt dolores et.</h2>
+            <div class="img-responsive"
+              style="background-image: url('{{image}}')"></div>
             <div class="post-contents--caption">
               Por: <span class="post-contents--author">{{author autolink="false"}}</span>, {{moment-date published_at format="D [de] MMMM [de] YYYY" locale="es"}}
             </div>
@@ -34,7 +33,7 @@
           <div class="clearfix"></div>
         </div>
 
-        <div class="post-footer-section col-xs-offset-2 col-xs-10 col-sm-3 col-sm-offset-0">
+        <div class="post-footer-section col-xs-offset-2 col-xs-10 col-sm-3 col-sm-offset-0 col-md-4">
           <h3>Categorías</h3>
           <div class="post-categories--tags col-xs-10">
             {{> "navigation-blog"}}

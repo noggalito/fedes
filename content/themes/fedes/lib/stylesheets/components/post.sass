@@ -13,7 +13,8 @@
         content: ">"
         color: $blue-one
 
-$postMarginLeft: 3vw
+$postMarginLeftXS: 8px
+$postMarginLeftSM: 20px
 
 .post-container
   @media (min-width: $tablet-width)
@@ -32,31 +33,43 @@ $postMarginLeft: 3vw
 .post-contents
   padding-left: 0
   padding-right: 0
+  @media (min-width: $desktop-width)
+    padding-left: 30px
   .post-contents--header
     border-left: 1px solid $blue-dark
     padding: 0 0 1.5em 0
   h2
     color: $blue-dark
     font-size: 20px
-    margin-left: $postMarginLeft
+    margin-left: $postMarginLeftXS
+    font-family: latoSemibold
+    @media (min-width: $tablet-width)
+      margin-left: $postMarginLeftSM
   .img-responsive
     width: 100%
     min-height: 100px
     background-size: cover
     background-position: center
+    @media (min-width: $desktop-width)
+      min-height: 180px
   .post-contents--caption
     margin-top: 5px
-    margin-left: $postMarginLeft
+    margin-left: $postMarginLeftXS
     color: $grey
-    font-style: italic;
+    font-style: italic
+    @media (min-width: $tablet-width)
+      margin-top: 20px
+      margin-left: $postMarginLeftSM
     .post-contents--author
       font-weight: bold;
       color: $blue-dark
   .post-contents--content
-    margin-left: $postMarginLeft
+    margin-left: $postMarginLeftXS
     text-align: justify
     font-size: 14px
     line-height: 17px
+    @media (min-width: $tablet-width)
+      margin-left: $postMarginLeftSM
 
 .post-tags-and-share
   border-top: 1px solid $light-grey
