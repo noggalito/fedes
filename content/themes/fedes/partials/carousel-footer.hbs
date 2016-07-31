@@ -1,4 +1,4 @@
-<section>
+<section class="{{#if fixed}} carousel-footer-secondary--fixed-wrapper {{/if}}">
   {{#get "posts" slug="texto-principal" as |article|}}
     {{#article}}
       <div class="carousel-footer {{^is "index"}} carousel-footer-secondary {{/is}}">

@@ -1,8 +1,10 @@
 <div class="post-breadcrumbs">
   <ol class="breadcrumb">
-    <li class="breadcrumb-parent">
-      <div class="circle-common"></div><a href="/tag/blog/">Blog</a>
-    </li>
+    {{#has tag="blog"}}
+      <li class="breadcrumb-parent">
+        <div class="circle-common"></div><a href="/tag/blog/">Blog</a>
+      </li>
+    {{/has}}
     <li class="active">
       {{tags from='2' autolink='false'}}
     </li>
