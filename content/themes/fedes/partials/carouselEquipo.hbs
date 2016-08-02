@@ -7,13 +7,13 @@
             <div class="item">
               <div class="gallery-element">
                 <div class="img-gallery imgEquipo">
-                  <img class="img-responsive"
+                  <div class="img-responsive"
                        {{#if image}}
                          style="background-image: url('{{image}}')"
                        {{else}}
                          style="background-image: url('{{asset 'img/no-image.jpg'}}')"
                        {{/if}}
-                  / >
+                  ></div>
                   <div class="gallery-text-content transparent-overlay">{{content}}</div>
                 </div>
                 <div class="gallery-caption-wrapper">
