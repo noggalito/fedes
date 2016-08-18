@@ -14,17 +14,19 @@
     overflow: hidden
     position: absolute
     right: 100%
-  .container-fluid .listHeader
-    font-family: latoLight
-    float: right
-    margin-top: 5px
-    margin-right: 108px
-    &.navbar-nav>li>a
-      color: #333
-    .glyphicon
-      color: $blue-dark
-      font-size: 8px
-      border: 1px solid $blue-dark
-      border-radius: 50%
-      padding: 2px
-      top: 0
+  .container-fluid
+    position: relative
+    .listHeader
+      position: absolute
+      font-family: latoLight
+      top: 5px
+      right: 108px
+      &.navbar-nav>li>a
+        color: #333
+      .glyphicon
+        color: $blue-dark
+        font-size: 8px
+        border: 1px solid $blue-dark
+        border-radius: 50%
+        padding: 2px
+        top: 0
