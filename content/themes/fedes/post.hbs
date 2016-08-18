@@ -12,8 +12,12 @@
         <div class="post-contents col-xs-offset-2 col-xs-8 col-sm-offset-1 col-sm-8 col-md-offset-0 col-md-8">
           <div class="post-contents--header">
             <h2>{{title}}</h2>
-            <div class="img-responsive"
-              style="background-image: url('{{image}}')"></div>
+            {{#has tag="blog"}}
+              <div class="img-responsive"
+                style="background-image: url('{{image}}')"></div>
+            {{else}}
+              <img src="{{image}}" class="img-responsive" />
+            {{/has}}
             <div class="post-contents--caption">
               Por: <span class="post-contents--author">{{author autolink="false"}}</span>, {{moment-date published_at format="D [de] MMMM [de] YYYY" locale="es"}}
             </div>
