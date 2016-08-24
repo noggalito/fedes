@@ -6,7 +6,7 @@
 
   var defaults = {
     hook_url: "https://hooks.slack.com/services/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",
-    project_url: "http://produccion.fedes.ec",
+    project_url: "http://fedes.ec",
     slack_channel: "#web-cima-fedes",
     project_name: "fedes",
     repo: "http://github.com/noggalito/fedes"

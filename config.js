@@ -12,7 +12,7 @@ config = {
     // When running Ghost in the wild, use the production environment.
     // Configure your URL and mail settings here
     production: {
-        url: 'http://produccion.fedes.ec',
+        url: 'http://fedes.ec',
         mail: {
           from: 'info@fedes.ec',
           transport: 'SMTP',
