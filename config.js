@@ -14,12 +14,12 @@ config = {
     production: {
         url: 'http://fedes.ec',
         mail: {
-          from: 'info@fedes.ec',
+          from: process.env.SMTP_LOGIN,
           transport: 'SMTP',
           options: {
             host: process.env.SMTP_HOST,
             port: process.env.SMTP_PORT,
-            secureConnection: true,
+            secureConnection: process.env.SMTP_SECURE == "true",
             auth: {
               user: process.env.SMTP_LOGIN,
               pass: process.env.SMTP_PASSWORD
