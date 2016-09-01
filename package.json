@@ -1,6 +1,6 @@
 {
   "name": "fedes-website",
-  "version": "0.0.1",
+  "version": "0.10.0",
   "description": "fedes website",
   "author": "noggalito",
   "homepage": "https://github.com/noggalito/fedes",
@@ -118,7 +118,8 @@
     "should-http": "0.0.4",
     "sinon": "1.17.5",
     "supertest": "1.2.0",
-    "tmp": "0.0.28"
+    "tmp": "0.0.28",
+    "vinyl-map": "^1.0.1"
   },
   "greenkeeper": {
     "ignore": [

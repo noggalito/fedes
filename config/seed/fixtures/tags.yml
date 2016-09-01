@@ -1,83 +1,67 @@
 ---
-- hidden: false
-  name: Proyectos
+- name: Proyectos
   slug: proyectos
   description: nam ea quod aperiri eruditi.
   uuid: <%= uuid %>
 
-- hidden: false
-  name: Comunícate con nosotros
+- name: Comunícate con nosotros
   slug: ponte-en-contacto
   description: nam ea quod aperiri eruditi.
   uuid: <%= uuid %>
 
-- hidden: false
-  name: Imágenes de carrusel
+- name: Imágenes de carrusel
   slug: carouselimagen
   uuid: <%= uuid %>
 
-- hidden: false
-  name: Imagen Equipo
+- name: Imagen Equipo
   slug: imagenequipo
   uuid: <%= uuid %>
 
-- hidden: false
-  name: Equipo Contactos
+- name: Equipo Contactos
   slug: equipocontactos
   uuid: <%= uuid %>
 
-- hidden: false
-  name: Servicios
+- name: Servicios
   slug: servicios
   uuid: <%= uuid %>
 
-- hidden: false
-  name: Blog
+- name: Blog
   slug: blog
   uuid: <%= uuid %>
 
-- hidden: false
-  name: Aliados-fedes
+- name: Aliados-fedes
   slug: aliadosfedes
   uuid: <%= uuid %>
 
-- hidden: false
-  name: Aliados
+- name: Aliados
   slug: aliados
   uuid: <%= uuid %>
 
-- hidden: false
-  name: Blog-category
+- name: Blog-category
   slug: blog-category
   uuid: <%= uuid %>
 
-- hidden: false
-  name: logo-fedes-footer
+- name: logo-fedes-footer
   slug: logo-fedes-footer
   uuid: <%= uuid %>
 
 #blog-categories
-- hidden: false
-  name: Minería
+- name: Minería
   slug: mineria
   uuid: <%= uuid %>
 
-- hidden: false
-  name: Desarrollo Territorial
+- name: Desarrollo Territorial
   slug: desarrollo-territorial
   uuid: <%= uuid %>
 
-- hidden: false
-  name: Emprendimiento
+- name: Emprendimiento
   slug: emprendimiento
   uuid: <%= uuid %>
 
-- hidden: false
-  name: Negocios
+- name: Negocios
   slug: negocios
   uuid: <%= uuid %>
 
-- hidden: false
-  name: Cultura
+- name: Cultura
   slug: cultura
   uuid: <%= uuid %>
