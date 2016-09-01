@@ -67,22 +67,21 @@
     "passport-http-bearer": "1.0.1",
     "passport-oauth2-client-password": "0.1.2",
     "path-match": "1.2.4",
+    "pg": "4.1.1",
     "rss": "1.2.1",
     "sanitize-html": "1.13.0",
     "semver": "5.3.0",
     "showdown-ghost": "0.3.6",
-    "sqlite3": "3.1.4",
     "superagent": "2.2.0",
     "unidecode": "0.1.8",
     "validator": "5.5.0",
     "xml": "1.0.1"
   },
   "optionalDependencies": {
-    "mysql": "2.1.1",
-    "pg": "4.1.1"
   },
   "devDependencies": {
     "clean-css": "^3.4.19",
+    "sqlite3": "3.1.4",
     "gh-contrib-list": "0.1.2",
     "git-wrapper": "0.1.1",
     "grunt": "1.0.1",
