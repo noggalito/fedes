@@ -598,3 +598,18 @@
   status: published
   image: /default/logo_fedes_blanco.png
   markdown: este es el logo del footer
+
+# main-fedes
+- uuid: <%= uuid %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  published_at: <%= Time.now %>
+  page: false
+  featured: false
+  language: en_US
+  status: published
+  title: "Descripción Fedes"
+  slug: fedes-main
+  image: /default/icono.png
+  markdown: Este es la descripción de fedes
+  html: "<p>Este es la descripción de fedes</p>"

@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'activerecord', '~> 4.2'
-gem 'colorize'
+gem 'colorize', '~> 0.8'
 gem 'faker'
 
 group :development do

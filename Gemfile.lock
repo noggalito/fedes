@@ -16,7 +16,7 @@ GEM
       tzinfo (~> 1.1)
     arel (6.0.3)
     builder (3.2.2)
-    colorize (0.7.7)
+    colorize (0.8.1)
     faker (1.6.3)
       i18n (~> 0.5)
     i18n (0.7.0)
@@ -33,7 +33,7 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord (~> 4.2)
-  colorize
+  colorize (~> 0.8)
   faker
   pg
   sqlite3

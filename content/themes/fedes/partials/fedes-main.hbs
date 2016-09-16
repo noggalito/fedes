@@ -1,0 +1,10 @@
+{{#get "posts" filter="slug:fedes-main" as |post|}}
+   {{#post}}
+     <div class="fedes-main">
+       <div class="title-fedes">
+         <div>{{title}}</div>
+       </div>
+       <div class="content-fedes">{{content}}</div>
+     </div>
+   {{/post}}
+ {{/get}}
