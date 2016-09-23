@@ -33,7 +33,19 @@
   language: en_US
   status: published
   slug: contactos-fono
-  markdown: "(593-7) 258-5700\n\n(593-7) 258-5706\n\nEmail: info@fedes.ec"
+  markdown: "(593-7) 258-5700\n\n(593-7) 258-5706"
+
+- uuid: <%= uuid %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  published_at: <%= Time.now %>
+  page: false
+  title: "Email:"
+  featured: false
+  language: en_US
+  status: published
+  slug: email-fedes
+  markdown: info@fedes.ec
 
 # static pages
 - uuid: <%= uuid %>
