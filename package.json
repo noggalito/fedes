@@ -114,6 +114,7 @@
     "should": "11.1.0",
     "should-http": "0.0.4",
     "sinon": "1.17.5",
+    "slack-node": "^0.1.8",
     "sqlite3": "^3.1.4",
     "supertest": "1.2.0",
     "tmp": "0.0.28",
