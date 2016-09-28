@@ -22,7 +22,11 @@
       <div class="top-arrow"></div>
       <div class="toggable-content--content col-xs-9">
         <div class="content">{{content}}</div>
-        {{> "formEquipo"}}
+        {{subscribe_form placeholder="E-mail"
+                         input_class="form-control"
+                         button_class="btn btn-primary"
+                         button_text="Enviar"}}
+        <div class="clearfix"></div>
       </div>
     </div>
   {{/post}}
