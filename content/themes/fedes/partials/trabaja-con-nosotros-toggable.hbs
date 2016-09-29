@@ -1,0 +1,25 @@
+{{#get "posts" filter="tag:equipocontactos" order="title desc" as |post|}}
+  {{#foreach post}}
+    <div class="col-xs-offset-2 col-xs-8 col-sm-3 col-sm-offset-0">
+      <div class="gallery-element">
+        <div class="img-gallery" data-toggle="collapse" data-target="#colabora">
+          <div class="img-responsive"
+                style="background-image: url('{{image}}')"></div>
+        </div>
+        <div class="gallery-caption-wrapper">
+          <div class="gallery-caption">
+            <p>{{title}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="register-content toggable-content collapse col-xs-12" id="colabora">
+      <div class="top-arrow-wrapper">
+        <div class="top-arrow"></div>
+      </div>
+      <div class="toggable-content--content col-xs-9">
+        <div class="content">{{content}}</div>
+      </div>
+    </div>
+  {{/foreach}}
+{{/get}}

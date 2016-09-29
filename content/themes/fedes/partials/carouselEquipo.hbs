@@ -1,37 +1,35 @@
 <div class="row">
   <div class="col-xs-offset-2 col-xs-8">
-    <div class="carousel slide" id="myCarouselEquipo">
+    <div class="carousel slide myCarouselEquipo" id="myCarouselEquipo-{{index}}">
       <div class="carousel-inner carouselEquipo">
-        {{#get "posts" filter="tag:imagenequipo" as |images|}}
-          {{#foreach images}}
-            <a class="item" href="{{url}}">
-              <div class="gallery-element">
-                <div class="img-gallery imgEquipo">
-                  <div class="img-responsive"
-                       {{#if image}}
-                         style="background-image: url('{{image}}')"
-                       {{else}}
-                         style="background-image: url('{{asset 'img/no-image.jpg'}}')"
-                       {{/if}}
-                  ></div>
-                  <div class="gallery-text-content transparent-overlay">{{meta_description}}</div>
-                </div>
-                <div class="gallery-caption-wrapper">
-                  <div class="gallery-caption">
-                    <p>{{title}}</p>
-                  </div>
+        {{#foreach images}}
+          <a class="item" href="{{url}}">
+            <div class="gallery-element">
+              <div class="img-gallery imgEquipo">
+                <div class="img-responsive"
+                     {{#if image}}
+                       style="background-image: url('{{image}}')"
+                     {{else}}
+                       style="background-image: url('{{asset 'img/no-image.jpg'}}')"
+                     {{/if}}
+                ></div>
+                <div class="gallery-text-content transparent-overlay">{{meta_description}}</div>
+              </div>
+              <div class="gallery-caption-wrapper">
+                <div class="gallery-caption">
+                  <p>{{title}}</p>
                 </div>
               </div>
-            </a>
-          {{/foreach}}
-        {{/get}}
+            </div>
+          </a>
+        {{/foreach}}
       </div>
       <div class="carousel-controls-wrapper controlsEquipo">
-        <a class="left carousel-control" href="#myCarouselEquipo" role="button" data-slide="prev">
+        <a class="left carousel-control" href="#myCarouselEquipo-{{index}}" role="button" data-slide="prev">
           <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
           <span class="sr-only">Previous</span>
         </a>
-        <a class="right carousel-control" href="#myCarouselEquipo" role="button" data-slide="next">
+        <a class="right carousel-control" href="#myCarouselEquipo-{{index}}" role="button" data-slide="next">
           <span class="glyphicon glyphicon-chevron-right"  aria-hidden="true"></span>
           <span class="sr-only">Next</span>
         </a>

@@ -21,14 +21,23 @@
 
   $(document).on(
     'slide.bs.carousel',
-    '#myCarouselEquipo',
+    '.myCarouselEquipo',
     function (event) {
-      $(event.currentTarget).find('.item').removeClass('visible');
-      var currentItem = $(event.relatedTarget);
+      $(document).trigger(
+        'fedes:slideCarouselEquipo',
+        event
+      );
+    }
+  );
+
+  $(document).on(
+    'fedes:slideCarouselEquipo',
+    function (event, e) {
+      $(e.currentTarget).find('.item').removeClass('visible');
+      var currentItem = $(e.relatedTarget);
       currentItem.addClass('active');
       previousFor(currentItem).addClass('visible');
       nextFor(currentItem).addClass('visible');
-
     }
   );
 
