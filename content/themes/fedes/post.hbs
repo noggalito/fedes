@@ -9,18 +9,24 @@
       {{> "post-breadcrumbs"}}
 
       <div class="row">
-        <div class="post-contents col-xs-offset-2 col-xs-8 col-sm-offset-1 col-sm-8 col-md-offset-0 col-md-8">
+        <div class="post-contents col-xs-offset-2 col-xs-8
+          {{#has tag="blog"}}
+            col-sm-offset-1 col-sm-8 col-md-offset-0 col-md-8
+          {{else}}
+            col-sm-offset-2 col-sm-8 col-md-offset-2 col-md-8
+          {{/has}}">
           <div class="post-contents--header">
             <h2>{{title}}</h2>
             {{#has tag="blog"}}
               <div class="img-responsive"
                 style="background-image: url('{{image}}')"></div>
+
+              <div class="post-contents--caption">
+                Por: <span class="post-contents--author">{{author autolink="false"}}</span>, {{moment-date published_at format="D [de] MMMM [de] YYYY" locale="es"}}
+              </div>
             {{else}}
               <img src="{{image}}" class="img-responsive" />
             {{/has}}
-            <div class="post-contents--caption">
-              Por: <span class="post-contents--author">{{author autolink="false"}}</span>, {{moment-date published_at format="D [de] MMMM [de] YYYY" locale="es"}}
-            </div>
           </div>
 
           <div class="post-contents--content">{{content}}</div>
@@ -37,27 +43,29 @@
           <div class="clearfix"></div>
         </div>
 
-        <div class="post-footer-section col-xs-offset-2 col-xs-10 col-sm-3 col-sm-offset-0 col-md-4">
-          <h3>Categorías</h3>
-          <div class="post-categories--tags col-xs-12">
-            {{> "navigation-blog"}}
-          </div>
+        {{#has tag="blog"}}
+          <div class="post-footer-section col-xs-offset-2 col-xs-10 col-sm-3 col-sm-offset-0 col-md-4">
+            <h3>Categorías</h3>
+            <div class="post-categories--tags col-xs-12">
+              {{> "navigation-blog"}}
+            </div>
 
-          <div class="clearfix"></div>
+            <div class="clearfix"></div>
 
-          <h3>Otros Posts</h3>
-          <div class="post-categories--other-posts col-xs-12">
-            {{#get "posts" limit="4" include="tags" filter="tag:blog" as |posts|}}
-              <ul class="nav nav-pills nav-stacked">
-                {{#foreach posts}}
-                  <li class="post-categories--item">
-                    <a href="{{url}}">{{title}}</a>
-                  </li>
-                {{/foreach}}
-              </ul>
-            {{/get}}
+            <h3>Otros Posts</h3>
+            <div class="post-categories--other-posts col-xs-12">
+              {{#get "posts" limit="4" include="tags" filter="tag:blog" as |posts|}}
+                <ul class="nav nav-pills nav-stacked">
+                  {{#foreach posts}}
+                    <li class="post-categories--item">
+                      <a href="{{url}}">{{title}}</a>
+                    </li>
+                  {{/foreach}}
+                </ul>
+              {{/get}}
+            </div>
           </div>
-        </div>
+        {{/has}}
       </div>
     </div>
   </main>

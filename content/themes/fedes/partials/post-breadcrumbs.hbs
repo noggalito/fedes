@@ -5,8 +5,19 @@
         <div class="circle-common"></div><a href="/tag/blog/">Blog</a>
       </li>
     {{/has}}
+
+    {{#has tag="Imagen Equipo"}}
+      <li class="breadcrumb-parent">
+        <div class="circle-common"></div><a href="/equipo/">Equipo</a>
+      </li>
+    {{/has}}
+
     <li class="active">
-      {{tags from='2' autolink='false'}}
+      {{#has tag="Imagen Equipo"}}
+        {{title}}
+      {{else}}
+        {{tags from='2' autolink='false'}}
+      {{/has}}
     </li>
   </ol>
 </div>

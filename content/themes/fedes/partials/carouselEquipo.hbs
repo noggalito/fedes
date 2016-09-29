@@ -4,7 +4,7 @@
       <div class="carousel-inner carouselEquipo">
         {{#get "posts" filter="tag:imagenequipo" as |images|}}
           {{#foreach images}}
-            <div class="item">
+            <a class="item" href="{{url}}">
               <div class="gallery-element">
                 <div class="img-gallery imgEquipo">
                   <div class="img-responsive"
@@ -14,7 +14,7 @@
                          style="background-image: url('{{asset 'img/no-image.jpg'}}')"
                        {{/if}}
                   ></div>
-                  <div class="gallery-text-content transparent-overlay">{{content}}</div>
+                  <div class="gallery-text-content transparent-overlay">{{meta_description}}</div>
                 </div>
                 <div class="gallery-caption-wrapper">
                   <div class="gallery-caption">
@@ -22,7 +22,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </a>
           {{/foreach}}
         {{/get}}
       </div>
