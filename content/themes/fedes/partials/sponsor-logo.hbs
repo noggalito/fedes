@@ -1,0 +1,9 @@
+{{#get "posts" slug="footer-sponsor" as |sponsor|}}
+  {{#sponsor}}
+    <div class="sponsor-logo">
+      <a href="{{meta_description}}" target="_blank">
+        <img src="{{image}}" class="img-responsive" />
+      </a>
+    </div>
+  {{/sponsor}}
+{{/get}}
