@@ -23,6 +23,15 @@
           {{> "carouselEquipo" images=images index=2}}
         {{/get}}
       {{/get}}
+
+      {{#get "tags" filter="slug:asamblea" as |tag|}}
+        {{#tag}}
+          <h2 class="gallery-title">{{name}}</h2>
+        {{/tag}}
+        {{#get "posts" filter="tag:asamblea" as |images|}}
+          {{> "carouselEquipo" images=images index=3}}
+        {{/get}}
+      {{/get}}
     </div>
   </main>
 {{/post}}
