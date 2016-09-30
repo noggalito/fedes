@@ -1,13 +1,14 @@
 <h6 class="textFooter-title">Use este formulario para enviarnos un mensaje:</h6>
-<form data-toggle="validator" role="form">
+<form data-toggle="validator" action="https://mrthomas.herokuapp.com/api/v1/notification" method="POST" role="form">
+  <input type="hidden" name="token" value="85150971a55d5e6ef489f6febe14a69d">
   <div class="form-group">
-    <input type="text" class="form-control" id="nameInput" placeholder="nombre" required>
+    <input type="text" class="form-control" id="nameInput" placeholder="nombre" name="nombre" required>
   </div>
   <div class="form-group">
-    <input type="email" class="form-control" id="emailInput" placeholder="e-mail" required>
+    <input type="email" class="form-control" id="emailInput" placeholder="e-mail" name="email" required>
   </div>
   <div class="form-group">
-    <textarea class="form-control" id="mensajeTextarea" rows="3" placeholder="mensaje" required ></textarea>
+    <textarea class="form-control" id="mensajeTextarea" rows="3" placeholder="mensaje" name="mensaje"></textarea>
   </div>
   <div class="help-block with-errors"></div>
   <button type="submit" class="btn btn-primary">enviar</button>
