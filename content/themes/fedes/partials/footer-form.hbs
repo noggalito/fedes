@@ -6,6 +6,7 @@
 -->
 <div class="hidden">
   <img src="https://mrthomas.herokuapp.com/keepalive" />
+  <script src="https://mrthomas.herokuapp.com/api/v1/recaptcha.js" async defer></script>
 </div>
 <form data-toggle="validator" action="https://mrthomas.herokuapp.com/api/v1/notification" method="POST" role="form">
   <input type="hidden" name="token" value="4381848c543f2142254ad274e539b0e0d4c555eefb48098a30560ab7f205f433">
@@ -18,6 +19,7 @@
   <div class="form-group">
     <textarea class="form-control" id="mensajeTextarea" rows="3" placeholder="mensaje" name="mensaje" required></textarea>
   </div>
+  <div class="g-recaptcha"></div>
   <div class="help-block with-errors"></div>
   <button type="submit" class="btn btn-primary">enviar</button>
 </form>
