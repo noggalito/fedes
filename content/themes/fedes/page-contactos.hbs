@@ -35,17 +35,28 @@
       </div>
 
       <div class="col-xs-offset-2 col-xs-8 col-sm-offset-1 col-sm-6">
-        <form class="form-with-gray-inputs" data-toggle="validator" role="form">
+        <form class="form-with-gray-inputs" data-toggle="validator" action="https://mrthomas.herokuapp.com/api/v1/notification" method="POST" role="form">
           <fieldset>Use este formulario para enviarnos un mensaje:</fieldset>
-          <div class="form-group">
-            <input type="text" class="form-control" id="nameInput" placeholder="nombre" required>
+          <!--
+            this form is handled by a third party service.
+            your token needs to match your referrer's request
+            so it may not work on local/dev/staging
+          -->
+          <div class="hidden">
+            <img src="https://mrthomas.herokuapp.com/keepalive" />
+            <script src="https://mrthomas.herokuapp.com/api/v1/recaptcha.js" async defer></script>
           </div>
           <div class="form-group">
-            <input type="email" class="form-control" id="emailInput" placeholder="e-mail" required>
+            <input type="hidden" name="token" value="4381848c543f2142254ad274e539b0e0d4c555eefb48098a30560ab7f205f433">
+            <input type="text" class="form-control" id="nameInput" placeholder="nombre" name="nombre" required>
           </div>
           <div class="form-group">
-            <textarea class="form-control" id="mensajeTextarea" rows="3" placeholder="mensaje" required ></textarea>
+            <input type="email" class="form-control" id="emailInput" placeholder="e-mail" name="email" required>
           </div>
+          <div class="form-group">
+            <textarea class="form-control" id="mensajeTextarea" rows="3" placeholder="mensaje" name="mensaje" required ></textarea>
+          </div>
+          <div class="g-recaptcha"></div>
           <div class="help-block with-errors"></div>
           <button type="submit" class="btn btn-primary">enviar</button>
         </form>
