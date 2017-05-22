@@ -2,11 +2,11 @@
   deploy : {
     production : {
       user : "macool",
-      host : "produccion.fedes.ec",
+      host : "fedes.ec",
       ref  : "origin/master",
       repo : "git@github.com:noggalito/fedes.git",
       path : "~/fedes",
-      "post-deploy" : "export PATH=~/.nvm/versions/v0.12.14/bin:$PATH && npm install --production && pm2 restart fedes"
+      "post-deploy" : "export PATH=~/.nvm/versions/node/v0.12.14/bin:$PATH && npm install --production && pm2 startOrRestart ~/fedes/shared/ecosystem.json --env production"
     }
   }
 }
